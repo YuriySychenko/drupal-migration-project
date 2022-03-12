@@ -1,0 +1,7 @@
+name: Day infinite scroll next node
+description: Realize next node for infinite scroll via ajax.
+package: Other
+type: module
+core_version_requirement: ^8 || ^9
+libraries:
+  - day_infinite_scroll_next_node/main-scripts

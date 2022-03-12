@@ -1,0 +1,6 @@
+load_next_node.routing:
+  path: '/load-next-node/{nid}'
+  defaults:
+    _controller: '\Drupal\day_infinite_scroll_next_node\Controller\LoadNextNodeController::loadNextNodeUrl'
+  requirements:
+    _permission: 'access content'

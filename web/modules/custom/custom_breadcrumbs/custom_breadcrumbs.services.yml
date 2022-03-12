@@ -1,0 +1,6 @@
+services:
+  custom_breadcrumbs.custom_breadcrumbs:
+    class: Drupal\custom_breadcrumbs\Breadcrumb\CustomPageBreadcrumbBuilder
+    arguments: ['@entity_type.manager', '@config.factory', '@entity.repository', '@router.admin_context','@path.current', '@current_user', '@language_manager', '@router.request_context', '@access_manager', '@router', '@path_processor_manager', '@title_resolver', '@path.matcher', '@current_route_match']
+    tags:
+      - { name: breadcrumb_builder, priority: 1003 }

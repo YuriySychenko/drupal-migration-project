@@ -1,0 +1,7 @@
+name: 'CKEditor Day Blockquote'
+type: module
+description: 'CKEditor button add custom style blockquote'
+core_version_requirement: ^8 || ^9
+package: 'CKEditor'
+dependencies:
+  - drupal:ckeditor

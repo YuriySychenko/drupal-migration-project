@@ -1,0 +1,4 @@
+main-scripts:
+  version: 1.x
+  js:
+    js/scripts.js: {}

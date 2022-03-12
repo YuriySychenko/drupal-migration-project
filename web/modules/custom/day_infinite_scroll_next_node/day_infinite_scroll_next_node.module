@@ -1,0 +1,54 @@
+<?php
+
+use Drupal\node\NodeInterface;
+
+/**
+ * Implement hook_preprocess_page.
+ *
+ * @param $variables
+ *
+ * @return void
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function day_infinite_scroll_next_node_preprocess_page(&$variables) {
+  // Node.
+  /** @var Drupal\node\Entity\Node $node */
+  $node = \Drupal::routeMatch()->getParameter('node');
+  // Get langcode.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  // Get logged in.
+  $logged_in = \Drupal::currentUser()->isAuthenticated();
+
+
+
+  // Functionality to load the next post.
+  if ($node instanceof NodeInterface) {
+    if (!$logged_in) {
+      $libraries['#attached']['library'][] = 'core/drupal.ajax';
+      render($libraries);
+    }
+
+    $variables['#attached']['library'][] =  'day_infinite_scroll_next_node/main-scripts';
+
+    $node_created_time = $node->getCreatedTime();
+    $query = \Drupal::entityQuery('node');
+    $next = $query->condition('status', 1)
+      ->condition('created', $node_created_time, '<')
+      ->condition('type', $node->getType())
+      ->condition('langcode', $language)
+      ->sort('created', 'DESC')
+      ->range(0, 1)
+      ->execute();
+
+    // Pass next post link to variables.
+    if (!empty($next) && is_array($next)) {
+      $next = array_values($next);
+      $next_node_id = $next[0];
+      $next_node_url = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$next_node_id);
+
+      $variables['next_node_id'] = $next_node_id;
+      $variables['next_node_url'] = $GLOBALS['base_url'] . $next_node_url;
+    }
+  }
+}

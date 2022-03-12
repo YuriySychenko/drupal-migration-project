@@ -1,0 +1,190 @@
+<?php
+
+use Drupal\Core\Link;
+
+/**
+ * @param $variables
+ *
+ * @return void
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function day_hooks_preprocess_views_view_field(&$variables) {
+  /** @var Drupal\node\NodeStorageInterface $node_storage */
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  /** @var Drupal\taxonomy\TermStorageInterface $taxonomy_storage */
+  $taxonomy_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
+  $view = $variables['view'];
+  $field = $variables['field'];
+  $row = $variables['row'];
+
+  // Mark hot news to tabs news blocks.
+  if ($view->storage->id() == 'news' && $field->field == 'nothing' && $view->current_display == 'block_3' ||
+    $view->storage->id() == 'news' && $field->field == 'nothing' && $view->current_display == 'block_4' ||
+    $view->storage->id() == 'news' && $field->field == 'nothing' && $view->current_display == 'block_5' ||
+    $view->storage->id() == 'news' && $field->field == 'nothing' && $view->current_display == 'block_6' ||
+    $view->storage->id() == 'news' && $field->field == 'nothing' && $view->current_display == 'block_7' ||
+    $view->storage->id() == 'news' && $field->field == 'nothing' && $view->current_display == 'block_8') {
+
+    /** @var \Drupal\node\Entity\Node $node */
+    $node = $node_storage->load($row->nid);
+    $field_tag_news = $node->get('field_tag_news')->getValue();
+
+    $created = $view->field['created']->original_value;
+    $title = $view->field['title']->original_value;
+
+    $tag_news_array = [];
+    foreach ($field_tag_news as $key => $tag_news) {
+      /** @var Drupal\taxonomy\Entity\Term $term */
+      if ($term = $taxonomy_storage->load($tag_news["target_id"])) {
+        if ($term->hasField('field_hot_theme')) {
+          $tag_news_array[$term->getName()] = $term->get('field_hot_theme')->value != NULL ? $term->get('field_hot_theme')->value : 0;
+        }
+      }
+    }
+
+    $hot_news = '';
+    if (in_array(1, $tag_news_array)) {
+      $hot_news = 'class=hot-new';
+    }
+
+    $markup = [
+      '#type' => 'inline_template',
+      '#template' => '<div {{ hot_news }}>
+                        <p>{{ created }}</p>
+                        {{ title }}
+                       </div>',
+      '#context' => [
+        'created' => $created,
+        'title' => $title,
+        'hot_news' => $hot_news,
+      ],
+    ];
+
+    $variables['output'] = $markup;
+  }
+
+  // Add main tags to '/news' page.
+  if ($view->storage->id() == 'news' && $field->field == 'nothing' && $view->current_display == 'page_1' ||
+      $view->storage->id() == 'last_news_block' && $field->field == 'nothing' && $view->current_display == 'block_1') {
+
+    // Load node.
+    /** @var \Drupal\node\Entity\Node $node */
+    $node = $node_storage->load($row->nid);
+
+    // Get node field news tags value.
+    $field_tag_news = $node->get('field_tag_news')->getValue();
+
+    // Get views formatted field value.
+    $created = $view->field['created']->original_value;
+    $title = $view->field['title']->original_value;
+    $main_image_big = $view->field['field_main_image_big']->original_value;
+
+
+    // Get main tags.
+    $news_tags_array = [];
+    foreach ($field_tag_news as $key => $tag_news) {
+      /** @var Drupal\taxonomy\Entity\Term $term */
+      if ($term = $taxonomy_storage->load($tag_news["target_id"])) {
+        if ($term->hasField('field_main_tag')) {
+          $main_tag = $term->get('field_main_tag')->value;
+
+          if ($main_tag) {
+            $news_tags_array[] = Link::createFromRoute($term->getName(), 'entity.taxonomy_term.canonical', ['taxonomy_term' => $term->id()]);
+          }
+        }
+      }
+    }
+
+    $tag_news = $news_tags_array[0] ?? NULL;
+
+    $template =
+        '<li class="news-item">
+           <article>
+            {{ field_main_image_big }}
+            <div>
+             <div>
+               <p>{{ created }} </p>
+               {% if tag_news %} <strong>{{ tag_news }}</strong> {% endif %}
+             </div>
+             <h2>
+               {{ title }}
+             </h2>
+            </div>
+          </article>
+        </li>';
+
+    $markup = [
+      '#type' => 'inline_template',
+      '#template' => $template,
+      '#context' => [
+        'created' => $created,
+        'title' => $title,
+        'field_main_image_big' => $main_image_big,
+        'tag_news' => $tag_news,
+      ],
+    ];
+
+    $variables['output'] = $markup;
+  }
+
+  // Add longread marks tags to '/newspaper' page.
+  if ($view->storage->id() == 'main_section_newspaper' && $field->field == 'nothing' && $view->current_display == 'page_2') {
+
+    // Load node.
+    /** @var \Drupal\node\Entity\Node $node */
+    $node = $node_storage->load($row->nid);
+
+    // Get views formatted field value.
+    $link_to_node = $view->field['view_node']->original_value;
+    $title = $view->field['title']->original_value;
+    $created = $view->field['created_1']->original_value;
+    $main_image_big = $view->field['field_op_main_image']->original_value;
+    $section_term = $view->field['field_op_section_term']->original_value;
+
+
+    // Check if current node from Longread content type.
+    $is_longread = '';
+    if ($node->getType() == 'longread_article') {
+      $is_longread = t('Special topic');
+    }
+
+
+    $templates = [
+      'main_section_newspaper' =>
+        '<li class="article-item">
+          <article>
+             <a href="{{ link_to_node }}">
+               <img src="{{ field_op_main_image }}" alt>
+             </a>
+              <div>
+                 <div>
+                    <p class="date">{{ created_date }}</p>
+                    <strong>{{ field_op_section_term }}</strong>
+                    {% if longread_mark %} <p class="longread-mark">{{ longread_mark }}</p> {% endif %}
+                 </div>
+                 <h2>
+                   <a href="{{ link_to_node }}">{{ title }}</a>
+                 </h2>
+              </div>
+          </article>
+        </li>',
+    ];
+
+    $markup = [
+      '#type' => 'inline_template',
+      '#template' => $templates[$view->storage->id()],
+      '#context' => [
+        'created_date' => $created,
+        'link_to_node' => $link_to_node,
+        'title' => $title,
+        'field_op_main_image' => $main_image_big,
+        'field_op_section_term' => $section_term,
+        'longread_mark' => $is_longread,
+      ],
+    ];
+
+    $variables['output'] = $markup;
+  }
+}
