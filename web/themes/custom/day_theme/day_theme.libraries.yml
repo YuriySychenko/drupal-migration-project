@@ -1,0 +1,33 @@
+global-styling:
+  css:
+    base:
+      dist/css/tailwind.css: { }
+
+global-scripts:
+  js:
+    js/app.js: { }
+    lib/lazyload.min.js: { minified: true }
+    lib/svgxuse.min.js: { minified: true, attributes: { defer: true } }
+    lib/ofi.min.js: { minified: true, attributes: { defer: true } }
+    lib/clsoest-ie11.js: { attributes: { defer: true } }
+    lib/matches-ie11.js: { attributes: { defer: true } }
+    lib/arrayFrom-ie11.js: { attributes: { defer: true } }
+    js/lazyLoad.js: { }
+    js/writeBrowserPolyfill.js: { }
+    js/objectFitImages.js: { }
+    lib/infinite-scroll/infinite-scroll.pkgd.min.js: { minifiad: true }
+    js/main.js: { }
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+lightbox-lib:
+  js:
+    lib/polyfill-ie11-nodelist-foreach.js: { }
+    lib/tobii.min.js: { minified: true }
+    js/tobii.js: { }
+  css:
+    base:
+      lib/tobii.min.css: { minified: true }

@@ -1,0 +1,76 @@
+<nav class="header__nav-top">
+  <ul>
+    <li>
+      <a href="/news"> {{ 'News'|t }} </a>
+    </li>
+    <li>
+      <a href="/newspaper"> {{ 'Newspaper'|t }} </a>
+    </li>
+    <li>
+      <a href="/blogs"> {{ 'Authors blogs'|t }} </a>
+    </li>
+    <li>
+      <a href="/photo-reports">{{ 'Photo'|t }}</a>
+    </li>
+    <li>
+      <a href="./video-page.html"> Відео </a>
+    </li>
+    <li>
+      <a href="./arhive-page.html"> Архів </a>
+    </li>
+    <li>
+      <a href="https://day.kyiv.ua/uk/library"> Магазин </a>
+    </li>
+  </ul>
+  <button class="header__btn burger-top" id="burgerTop">
+    <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+      <rect class="top-line" width="20" height="2" rx="1" />
+      <rect class="center-line" x="5" y="6" width="15" height="2" rx="1" />
+      <rect class="bottom-line" y="12" width="20" height="2" rx="1" />
+    </svg>
+  </button>
+</nav>
+
+
+{#<div class="main-menu">#}
+{#  #}{# Get main menu items #}
+{#  {% set main_menu_items = simplify_menu('main') %}#}
+
+{#  <ul class="main-menu--list" role="menu">#}
+{#    {% for menu_item in main_menu_items.menu_tree %}#}
+{#      #}{# Check if this is the active item. #}
+{#      {% set active = (menu_item.active) ? ' is-active' : '' %}#}
+
+{#      #}{# Check if this item is in the active trail. #}
+{#      {% set active = active ~ ((menu_item.active_trail) ? ' is-active-trail' : '') %}#}
+
+{#      #}{# Check if this item had submenu #}
+{#      {% set children = (menu_item.submenu) ? ' children' : '' %}#}
+
+{#      <li class="main-menu--item{{ active ~ children }}">#}
+{#        <a href="{{ menu_item.url }}"#}
+{#           class="main-menu--link{{ active }}">#}
+{#          <span>{{ menu_item.text }}</span>#}
+{#        </a>#}
+
+{#        #}{# Submenu #}
+{#        {% if menu_item.submenu %}#}
+{#          <ul#}
+{#            class="main-menu--submenu submenu">#}
+{#            {% for submenu_item in menu_item.submenu %}#}
+{#              #}{# Submenu active item #}
+{#              {% set active_submenu = (submenu_item.active) ? ' is-active' : '' %}#}
+{#              {% set active_submenu = active_submenu ~ ((submenu_item.active_trail) ? ' is-active-trail' : '') %}#}
+{#              <li class="submenu--menu_item{{ active_submenu }}">#}
+{#                <a href="{{ submenu_item.url }}"#}
+{#                   class="submenu--menu_link{{ active_submenu }}">{{ submenu_item.text }}</a>#}
+{#              </li>#}
+{#            {% endfor %}#}
+{#          </ul>#}
+{#        {% endif %}#}
+
+{#      </li>#}
+
+{#    {% endfor %}#}
+{#  </ul>#}
+{#</div>#}

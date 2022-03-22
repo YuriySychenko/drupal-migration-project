@@ -1,0 +1,9 @@
+{% if drupal_view_result('last_newspapers_block', 'block_1') is not empty %}
+  <div class="sidebar__newspaper">
+    <h2 class="sidebar__title">{{ 'Last newspapers'|t }}</h2>
+    <div class="sidebar__newspaper-box">
+      {{ drupal_view('last_newspapers_block', 'block_1') }}
+    </div>
+    <a href="/newspapers-archive" class="sidebar__link">{{ 'All newspapers'|t }}</a>
+  </div>
+{% endif %}

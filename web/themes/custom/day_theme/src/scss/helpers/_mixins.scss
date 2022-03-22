@@ -1,0 +1,333 @@
+// PX to EM/REM
+@function em($pixels, $base: 16) {
+	@return #{$pixels/$base}em;
+}
+
+@function rem($val, $base: 16) {
+	// if it's a unitless number
+	@if type-of($val) == number and unitless($val) {
+		// don't convert 0
+		@if $val == 0 {
+			@return 0;
+		}
+		// assume its px and convert it to rem based on $base document font-size
+		@return #{calc($val / $base)}rem;
+	}
+
+	@return $val;
+}
+
+// Font Face
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+}
+
+
+// Hover underline
+@mixin hover-underline($type: fade, $dir: null, $weight: 1px, $color: $brand-color) {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+    transition: color $transition-fast;
+
+	@if $dir == null {
+		@if $type == fade {
+			$dir: "top";
+		}
+
+		@else if $type == slide {
+			$dir: "center";
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: $weight;
+		background: $color;
+
+		@if $type == fade {
+			transition: .3s;
+			opacity: 0;
+			visibility: hidden;
+
+			@if $dir == bottom {
+				bottom: $weight * -4;
+			}
+
+			@else {
+				bottom: $weight;
+			}
+		}
+
+		@else if $type == slide {
+			bottom: $weight * -1;
+			transform: scale(0, 1);
+			transition: transform .3s;
+
+			@if $dir == left-right or $dir == right-in-left {
+				transform-origin: left top;
+			}
+
+			@else if $dir == right-left or $dir == left-in-right {
+				transform-origin: right top;
+			}
+
+			@else {
+				transform-origin: center top;
+			}
+		}
+	}
+
+    &:hover {
+        color: $brand-color;
+    }
+
+	&:hover::after {
+		@if $type == fade {
+			bottom: $weight * -2;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		@else if $type == slide {
+			@if $dir == left-in-right {
+				transform-origin: left top;
+			}
+
+			@else if $dir == right-in-left {
+				transform-origin: right top;
+			}
+			transform: scale(1, 1);
+		}
+	}
+}
+
+@mixin hover-underline2($type: fade, $dir: null, $weight: 1px, $color: #C4C4C4) {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+    transition: color $transition-fast, transform $transition-fast;
+
+	@if $dir == null {
+		@if $type == fade {
+			$dir: "top";
+		}
+
+		@else if $type == slide {
+			$dir: "center";
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: $weight;
+		background: $color;
+
+		@if $type == fade {
+			transition: .3s;
+			opacity: 0;
+			visibility: hidden;
+
+			@if $dir == bottom {
+				bottom: $weight * -4;
+			}
+
+			@else {
+				bottom: $weight;
+			}
+		}
+
+		@else if $type == slide {
+			bottom: $weight * -8;
+			transform: scale(0, 1);
+			transition: transform .3s;
+
+			@if $dir == left-right or $dir == right-in-left {
+				transform-origin: left top;
+			}
+
+			@else if $dir == right-left or $dir == left-in-right {
+				transform-origin: right top;
+			}
+
+			@else {
+				transform-origin: center top;
+			}
+		}
+	}
+
+    &:hover {
+        color: $brand-color
+    }
+
+	&:hover::after {
+		@if $type == fade {
+			bottom: $weight * -2;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		@else if $type == slide {
+			@if $dir == left-in-right {
+				transform-origin: left top;
+			}
+
+			@else if $dir == right-in-left {
+				transform-origin: right top;
+			}
+			transform: scale(1, 1);
+		}
+	}
+}
+
+
+@mixin hover-underline-gray($type: fade, $dir: null, $weight: 1px, $color: #C4C4C4) {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+    transition: color $transition-fast, transform $transition-fast;
+
+	@if $dir == null {
+		@if $type == fade {
+			$dir: "top";
+		}
+
+		@else if $type == slide {
+			$dir: "center";
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: $weight;
+		background: $color;
+
+		@if $type == fade {
+			transition: .3s;
+			opacity: 0;
+			visibility: hidden;
+
+			@if $dir == bottom {
+				bottom: $weight * -4;
+			}
+
+			@else {
+				bottom: $weight;
+			}
+		}
+
+		@else if $type == slide {
+			bottom: $weight * -8;
+			transform: scale(0, 1);
+			transition: transform .3s;
+
+			@if $dir == left-right or $dir == right-in-left {
+				transform-origin: left top;
+			}
+
+			@else if $dir == right-left or $dir == left-in-right {
+				transform-origin: right top;
+			}
+
+			@else {
+				transform-origin: center top;
+			}
+		}
+	}
+
+    &:hover {
+        transform: translateX(0);
+    }
+
+	&:hover::after {
+		@if $type == fade {
+			bottom: $weight * -2;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		@else if $type == slide {
+			@if $dir == left-in-right {
+				transform-origin: left top;
+			}
+
+			@else if $dir == right-in-left {
+				transform-origin: right top;
+			}
+			transform: scale(1, 1);
+		}
+	}
+}
+
+
+// Color ratio
+// from https://jonnykates.medium.com/automating-colour-contrast-ratios-with-sass-e201f3b52797
+// See https://www.w3.org/TR/AERT/#color-contrast for original algorithm used for this function
+@function colour-difference($foreground, $background) {
+    $r: (max(red($foreground), red($background))) - (min(red($foreground), red($background)));
+    $g: (max(green($foreground), green($background))) - (min(green($foreground), green($background)));
+    $b: (max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background)));
+    $sum-rgb: $r + $g + $b;
+
+    @if $sum-rgb < 500 {
+        @return "false";
+    }
+
+    @else {
+        @return "true";
+    }
+}
+
+@mixin text-contrast($n) {
+    $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+    $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+    @if abs($color-brightness) < ($light-color/2) {
+        color: white;
+    }
+
+    @else {
+        color: black;
+    }
+}
+
+
+// Example for use
+// $button-background-colour: #fff;
+
+// button {
+    // background-color: $button-background-colour;
+    // @include text-contrast($button-background-colour);
+// }
+

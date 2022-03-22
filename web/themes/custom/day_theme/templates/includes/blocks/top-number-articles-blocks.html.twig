@@ -1,0 +1,20 @@
+{% if drupal_view_result('top_number_for_newspapers_category_blocks', 'block_1')
+  and drupal_view_result('top_number_for_newspapers_category_blocks', 'block_2')
+  and drupal_view_result('top_number_for_newspapers_category_blocks', 'block_3') is not empty %}
+  <section class="news__section news-section-top">
+    <div class="section__title-wrap">
+      <h2>{{ 'Top number'|t }}</h2>
+    </div>
+
+    <div class="grid-row">
+      <div class="grid-row-2-col-1 _cursor">
+        {{ drupal_view('top_number_for_newspapers_category_blocks', 'block_1') }}
+      </div>
+
+      <div class="grid-row-2-col-2 _cursor">
+        {{ drupal_view('top_number_for_newspapers_category_blocks', 'block_2') }}
+        {{ drupal_view('top_number_for_newspapers_category_blocks', 'block_3') }}
+      </div>
+    </div>
+  </section>
+{% endif %}

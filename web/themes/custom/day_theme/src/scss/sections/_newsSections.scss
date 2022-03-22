@@ -1,0 +1,153 @@
+.news {
+  &__section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+
+    &-main {
+      padding-top: 0 !important;
+
+      @media (max-width: $tablet) {
+        padding-bottom: 24px !important;
+      }
+
+      @media (max-width: $note) {
+        margin-right: calc(-1 * #{$mob-gap});
+        margin-left: calc(-1 * #{$mob-gap});
+      }
+    }
+
+    @media (max-width: $tablet) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    .grid-row {
+      @media (max-width: $phone-xl) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__section.category__section {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__main {
+    position: relative;
+
+    @media (max-width: $note) {
+      margin: 0 calc(-1 * #{$mob-gap});
+      min-height: 284px;
+    }
+  }
+
+  &__section-main,
+  &__section.project__section {
+    @media (max-width: $note) {
+      .grid-col-3._mob-slider {
+        article {
+          width: 245px;
+        }
+
+        article:not(:first-of-type) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__content,
+  &__main-content,
+  &__small-content {
+    h2, h3 {
+      transition: color $transition-fast;
+    }
+
+    a:hover {
+      h2, h3 {
+        color: $brand-color;
+      }
+    }
+  }
+
+  &__main-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 25px 25px 42px;
+    background: rgba(35, 31, 32, 0.7);
+    font-weight: 700;
+
+    @media (max-width: $laptop) {
+      padding: 14px 16px;
+    }
+
+    p {
+      padding-bottom: 8px;
+      color: $text-on-overlay;
+      font-size: rem(14);
+    }
+
+    h2 {
+      font-size: rem(24);
+      color: $text-on-overlay;
+
+      @media (max-width: $tablet) {
+        font-size: rem(18);
+      }
+    }
+  }
+
+  .news__img,
+  &__main-img,
+  &__small-img {
+    overflow: hidden;
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__small-content {
+    p {
+      padding: 8px 0;
+      color: #000;
+      font-size: rem(12);
+    }
+
+    h2 {
+      font-size: rem(16);
+      font-weight: bold;
+      color: #000;
+      letter-spacing: -0.35px;
+    }
+  }
+
+  &__main-img img {
+    max-height: 411px;
+
+    @media (max-width: $tablet) {
+      min-height: 284px;
+    }
+  }
+
+  &__small-img img {
+    max-height: 180px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: 'object-fit: cover';
+    transition: $transition-fast;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+}

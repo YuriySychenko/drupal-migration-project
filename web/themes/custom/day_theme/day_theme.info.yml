@@ -1,0 +1,14 @@
+name: Day theme
+description: Day theme based on Tailwind CSS.
+core: 8.x
+core_version_requirement: ^8 || ^9
+type: theme
+base theme: stable
+libraries:
+  - day_theme/global-styling
+  - day_theme/global-scripts
+
+regions:
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  phantom: 'Phantom'

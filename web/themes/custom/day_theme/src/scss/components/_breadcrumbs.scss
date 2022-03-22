@@ -1,0 +1,41 @@
+.breadcrumbs {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 34px;
+
+    @media (max-width: $tablet) {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    a {
+        display: flex;
+        color: inherit;
+        text-decoration: none;
+        transition: color $transition-fast;
+
+        &:hover {
+            color: $brand-color;
+        }
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-top: -2px;
+        margin-left: 8px;
+    }
+
+    li {
+        font-size: rem(12);
+        margin-right: 8px;
+    }
+
+    li:first-child {
+        color: #979797;
+    }
+
+    li:not(:first-child) {
+        color: #231F20;
+    }
+}

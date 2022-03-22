@@ -34,4 +34,4 @@
 #.lando.php.ini
 
 # Ignore custom theme node_modules/
-web/themes/custom/day_theme/node_modules
+/web/themes/custom/day_theme/node_modules/

@@ -1,0 +1,49 @@
+<div class="grid-row">
+  <div class="themes">
+    <div class="themes__top">
+      <h2>{{ 'Hot topics'|t }}:</h2>
+      <ul class="themes__list">
+        {% for tag in hot_tags[:4] %}
+          {% if tag.active %}
+            {% set active = ' themes__item-active' %}
+          {% else %}
+            {% set active = '' %}
+          {% endif %}
+
+          <li class="themes__item{{ active }}">
+            <div>
+              <h3>
+                <a href="{{ tag.alias }}">{{ tag.name }}</a>
+              </h3>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      <button class="themes__btn">
+        <span>Всі теми</span>
+        <svg class="icon icon-arrow-down">
+          <use xlink:href="/themes/custom/day_theme/assets/imgs/sprite.svg#icon-arrow-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="themes__bottom">
+      <ul class="themes__list">
+        {% for tag in hot_tags[4:] %}
+          {% if tag.active %}
+            {% set active = ' themes__item-active' %}
+          {% else %}
+            {% set active = '' %}
+          {% endif %}
+
+          <li class="themes__item{{ active }}">
+            <div>
+              <h3>
+                <a href="{{ tag.alias }}">{{ tag.name }}</a>
+              </h3>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

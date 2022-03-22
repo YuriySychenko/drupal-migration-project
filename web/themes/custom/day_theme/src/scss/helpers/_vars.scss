@@ -1,0 +1,39 @@
+$ff: 'Open Sans', sans-serif;
+$fs: 16px;
+
+
+$cursor-color: tomato;
+$border-color: #12e09b;
+$text-stroke: tomato;
+
+$brand-color: #EC2227;
+
+
+$grey-dark: #666;
+
+$text-on-overlay: #E5E5E5;
+
+
+$bg-color: #fff;
+$secondary-color: #bc956a;
+
+$transition-fast: .15s ease-out;
+$transition-standart: .3s ease-out;
+$transition-standart-cubic: .3s cubic-bezier(.455, .03, .427, .964);
+
+
+// Breakpoints for each query
+$phone: 375px;
+$phone-xl: 479px;
+$note: 768px;
+$note-min: 768.98px;
+$tablet: 1023px;
+$tablet-min: 1023.98px;
+$laptop: 1366px;
+$laptop-min: 1366.98px;
+$desktop: 1439px;
+$desktop-xl: 1920px;
+
+
+// $mob-gap: 20px;
+$mob-gap: 16px;

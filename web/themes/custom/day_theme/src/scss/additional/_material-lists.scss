@@ -1,0 +1,15 @@
+.news__list-block {
+  .article-item {
+    strong, p.date {
+      padding-top: 2px;
+    }
+
+    p.longread-mark {
+      margin-left: 15px;
+      color: #fff;
+      background: #e32020;
+      padding: 2px 7px;
+      font-weight: bold;
+    }
+  }
+}
