@@ -1,0 +1,12 @@
+{% if drupal_view_result('photoreports_block_in_homepage', 'block_1') is not empty %}
+  <section class="photo__section red _photo">
+    <div class="section__title-wrap">
+      <h2>{{ 'Photoreports'|t }}</h2>
+      <a href="/photo-reports">{{ 'All photoreports'|t }}</a>
+    </div>
+
+    <div class="grid-row">
+      {{ drupal_view('photoreports_block_in_homepage', 'block_1') }}
+    </div>
+  </section>
+{% endif %}

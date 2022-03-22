@@ -1,0 +1,104 @@
+.remodal-wrapper {
+	background: rgba(#454546, .8) !important;
+}
+
+.remodal-close {
+	z-index: 9999;
+	top: 30px;
+	right: 30px;
+
+	&:before {
+		color: grey;
+		font-size: 36px;
+	}
+}
+
+.formBox {
+	max-width: 450px;
+	background: transparent;
+
+	.form {
+		position: relative;
+		margin: 20px auto;
+		padding: 30px 0;
+		background: #fafafa;
+
+		&__title {
+			padding-top: 30px;
+			padding-bottom: 20px;
+			color: #515252;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 1.4;
+			text-transform: uppercase;
+		}
+
+		&__text {
+			padding-bottom: 8px;
+			font-size: 17px;
+			font-weight: 300;
+		}
+
+		&__line {
+			display: block;
+
+			width: 265px;
+			margin: 20px auto;
+			padding: 0 10px;
+			transition: border-color .25s ease-in;
+			border: 1px solid #969696;
+			outline: none;
+			color: #a7a7a7;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 48px;
+
+			&:active,
+			&:focus {
+				border-color: darken($color: #c1dddd, $amount: 40%);
+			}
+
+			&:hover {
+				border-color: darken($color: #c1dddd, $amount: 20%);
+			}
+		}
+
+		.btn {
+			width: 265px;
+			padding: 14px 10px;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.4;
+		}
+	}
+}
+
+.remodal-common {
+	max-width: 300px;
+	padding: 30px;
+	border-radius: 10px;
+	background: #3b3b3d;
+	text-align: center;
+}
+
+.remodal-common .remodal-close:before {
+	top: -30px !important;
+	left: 0px !important;
+}
+
+.thanks__title {
+	padding-bottom: 15px;
+	color: #515252;
+	font-size: 24px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.thanks__text {
+	display: block;
+	padding-bottom: 15px;
+	padding-left: 0;
+	font-size: 17px;
+}

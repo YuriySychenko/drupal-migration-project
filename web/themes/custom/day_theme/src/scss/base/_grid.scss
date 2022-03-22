@@ -1,0 +1,202 @@
+$column: 12;
+$min-width: 100% / $column;
+$gap: 20px;
+$wrap-width: 1320px;
+
+// make better
+.wrapper {
+	width: 100%;
+	max-width: $wrap-width;
+	margin: 0 auto;
+	padding: 0 $gap;
+
+	// @include respond-to(quad) {
+	// 	max-width: 1440px;
+	// 	padding: 0 22px;
+	// }
+
+	// @include respond-to(desktop) {
+	// 	max-width: 1200px;
+	// 	padding: 0 15px;
+	// }
+
+	// @include respond-to(laptop) {
+	// 	max-width: 1024px;
+	// 	padding: 0 9px;
+	// }
+
+	// @include respond-to(tablet) {
+	// 	padding: 0 40px;
+	// }
+
+	// @include respond-to(note) {
+	// 	padding: 0 30px;
+	// }
+
+	// @include respond-to(phone) {
+	// 	padding: 0 24px;
+	// }
+}
+
+.row {
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	margin-right: -#{$gap};
+	margin-left: -#{$gap};
+
+	@include respond-to(quad) {
+		margin-right: -22px;
+		margin-left: -22px;
+	}
+
+	@include respond-to(desktop) {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	@include respond-to(laptop) {
+		margin-right: -13px;
+		margin-left: -13px;
+	}
+
+	@include respond-to(tablet) {
+		margin-right: -20px;
+		margin-left: -20px;
+	}
+
+	@include respond-to(note) {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	&._middle {
+		align-items: center;
+	}
+}
+
+.col {
+	padding: 0 $gap;
+
+	@include respond-to(quad) {
+		padding: 0 22px;
+	}
+
+	@include respond-to(desktop) {
+		padding: 0 15px;
+	}
+
+	@include respond-to(laptop) {
+		padding: 0 13px;
+	}
+
+	@include respond-to(tablet) {
+		padding: 0 20px;
+	}
+
+	@include respond-to(note) {
+		padding: 0 15px;
+	}
+
+	&-flex {
+		flex: 1;
+	}
+}
+
+@for $i from 1 through $column {
+
+	.col-#{$i} {
+		width: $min-width * $i;
+	}
+}
+
+@for $i from 0 through ($column - 1) {
+
+	.offset-#{$i} {
+		margin-left: $min-width * $i;
+	}
+}
+
+@include respond-to(laptop) {
+	@for $i from 1 through $column {
+
+		.col-laptop-#{$i} {
+			width: $min-width * $i;
+		}
+	}
+
+	@for $i from 0 through ($column - 1) {
+
+		.offset-laptop-#{$i} {
+			margin-left: $min-width * $i;
+		}
+	}
+}
+
+@include respond-to(tablet) {
+	@for $i from 1 through $column {
+
+		.col-tablet-#{$i} {
+			width: $min-width * $i;
+		}
+	}
+
+	@for $i from 0 through ($column - 1) {
+
+		.offset-tablet-#{$i} {
+			margin-left: $min-width * $i;
+		}
+	}
+
+	.row-reverse-tablet {
+		flex-direction: column-reverse;
+	}
+}
+
+@include respond-to($tablet-portrait) {
+	@for $i from 1 through $column {
+
+		.col-tablet-portrait-#{$i} {
+			width: $min-width * $i;
+		}
+	}
+
+	@for $i from 0 through ($column - 1) {
+
+		.offset-tablet-portrait-#{$i} {
+			margin-left: $min-width * $i;
+		}
+	}
+}
+
+@include respond-to($note) {
+	@for $i from 1 through $column {
+
+		.col-note-#{$i} {
+			width: $min-width * $i;
+		}
+	}
+
+	@for $i from 0 through ($column - 1) {
+
+		.offset-note-#{$i} {
+			margin-left: $min-width * $i;
+		}
+	}
+}
+
+@include respond-to($phone) {
+	@for $i from 1 through $column {
+
+		.col-phone-#{$i} {
+			width: $min-width * $i;
+		}
+	}
+
+	@for $i from 0 through ($column - 1) {
+
+		.offset-phone-#{$i} {
+			margin-left: $min-width * $i;
+		}
+	}
+}

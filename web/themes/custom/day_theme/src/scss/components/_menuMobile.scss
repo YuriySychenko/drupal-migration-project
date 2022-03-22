@@ -1,0 +1,53 @@
+@import "_vars";
+
+@import "_mixin and function";
+
+// Small devices (landscape phones, less than 768px)
+@media only screen and (max-width: 767.98px) {
+
+	.nav {
+		// position: fixed;
+		// z-index: 100;
+		&__list {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			height: 100vh;
+			padding: 20vh 0;
+
+			.hide__mob {
+				display: none;
+			}
+		}
+
+		&__item {
+		}
+
+		&__link {
+			display: block;
+			text-transform: uppercase;
+		}
+	}
+
+	.overlay {
+		position: absolute;
+		z-index: 1000;
+		top: 0;
+		left: -305px;
+		width: 220px;
+		height: 100vh;
+		overflow-y: scroll;
+		transition: all .3s linear;
+		background: rgba(#343a3d, .9);
+
+		.wrapper {
+			padding: 0;
+		}
+	}
+
+	.open {
+		position: fixed;
+		transform: translateX(300px);
+		transition-duration: .3s;
+	}
+}

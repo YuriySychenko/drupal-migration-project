@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * The views infinite scroll pager template.
+ */
+#}
+
+{# {{ vardumper(items) }}#}
+<div class="news__pagination">
+  {# Infinite scroll button #}
+  {% if items.more %}
+    <ul{{ attributes.removeClass('pager') }}>
+      <li class="pager__item">
+        <a class="btn__more load-more-news" id="load-more" href="{{ items.more.href }}"
+           title="{{ 'Go to next page'|t }}"
+           rel="next">{{ options.button_text }}</a>
+      </li>
+    </ul>
+  {% endif %}
+  {% if items.pages|length > 1 %}
+    {% include '@day_theme/nav/pager.html.twig' %}
+  {% endif %}
+</div>

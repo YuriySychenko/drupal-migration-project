@@ -1,0 +1,33 @@
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local(''),
+  url('/themes/custom/day_theme/assets/fonts/open-sans-v20-latin_cyrillic-regular.woff2') format('woff2'),
+  url('/themes/custom/day_theme/assets/fonts/open-sans-v20-latin_cyrillic-regular.woff') format('woff');
+}
+
+/* open-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local(''),
+  url('/themes/custom/day_theme/assets/fonts/open-sans-v20-latin_cyrillic-700.woff2') format('woff2'),
+  url('/themes/custom/day_theme/assets/fonts/open-sans-v20-latin_cyrillic-700.woff') format('woff');
+}
+
+/* open-sans-800 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: local(''),
+  url('/themes/custom/day_theme/assets/fonts/open-sans-v20-latin_cyrillic-800.woff2') format('woff2'),
+  url('/themes/custom/day_theme/assets/fonts/open-sans-v20-latin_cyrillic-800.woff') format('woff');
+}
+

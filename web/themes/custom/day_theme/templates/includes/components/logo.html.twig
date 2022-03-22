@@ -1,0 +1,14 @@
+<div class="header__logo">
+  <h1 class="offscreen">{{ site_name }}</h1>
+
+  {% if not is_front %}
+    <a href="{{ front_page }}">
+  {% endif %}
+
+    <img src="/themes/custom/day_theme/assets/imgs/logo.svg" alt="{{ site_name }}" width="86" height="43">
+
+  {% if not is_front %}
+    </a>
+  {% endif %}
+
+</div>

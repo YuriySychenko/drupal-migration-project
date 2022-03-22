@@ -1,0 +1,72 @@
+.subcribe {
+    padding-top: 46px;
+    padding-bottom: 80px;
+
+    @media (max-width: $tablet) {
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        max-width: 480px;
+        font-size: rem(36);
+        letter-spacing: -0.3px;
+        font-weight: 700;
+        color: #231F20;
+
+        @media (max-width: $tablet) {
+            font-size: rem(24);
+        }
+    }
+
+    &__list {
+        display: flex;
+        padding-top: 36px;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+
+        li:not(:last-of-type) {
+            @media (min-width: $tablet-min) {
+                margin-right: 56px;
+            }
+
+            @media (max-width: $tablet) {
+                margin-bottom: 16px;
+            }
+        }
+
+        a {
+            font-size: rem(24);
+            color: #000;
+            font-weight: 700;
+            @include hover-underline("slide", "left-right");
+        }
+    }
+
+    &__img {
+
+        @media (min-width: $tablet-min) {
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+
+        @media (max-width: $tablet) {
+            max-width: 122px;
+            align-self: flex-end;
+            margin-bottom: 8px;
+
+        }
+
+        @media (max-width: $phone-xl) {
+            position: absolute;
+            right: 20px;
+        }
+    }
+}

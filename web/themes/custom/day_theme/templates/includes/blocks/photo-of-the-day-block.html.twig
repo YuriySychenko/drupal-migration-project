@@ -1,0 +1,11 @@
+{% if drupal_view_result('photo_of_the_day', 'block_1') is not empty %}
+  <div class="sidebar__photo sticky">
+    <h2 class="sidebar__title">{{ 'Photo of the day'|t }}</h2>
+
+    <div class="sidebar__photo-wrap">
+      <div class="sidebar__photo-slider">
+        {{ drupal_view('photo_of_the_day', 'block_1') }}
+      </div>
+    </div>
+  </div>
+{% endif %}

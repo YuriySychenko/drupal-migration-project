@@ -1,0 +1,326 @@
+.photoPage {
+
+  &__main {
+    display: flex;
+    margin-top: 56px;
+    margin-bottom: 56px;
+
+    @media (max-width: $laptop) {
+      flex-direction: column;
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__info {
+    max-width: calc(100% - 832px);
+    margin-right: 32px;
+    padding-top: 42px;
+
+    @media (max-width: $laptop) {
+      max-width: 800px;
+      padding-top: 0;
+      margin-right: 0;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+      font-size: rem(10);
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: rem(36);
+      line-height: 1.3;
+      letter-spacing: -0.35px;
+
+      @media (max-width: $laptop) {
+        font-size: rem(24);
+        margin-bottom: 24px;
+      }
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: rem(18);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__photo {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+
+    main:not(._rel-video) {
+
+      @media (max-width: $note) {
+        margin-right: calc(-1 * #{$mob-gap});
+        margin-left: calc(-1 * #{$mob-gap});
+        width: inherit;
+      }
+
+    }
+  }
+
+  &__photoDay {
+    padding: 56px 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -524px;
+      width: 1436px;
+      height: 1363px;
+      background: linear-gradient(221.84deg, rgba(236, 34, 39, 0.031) 23.62%, rgba(255, 255, 255, 0) 114.76%);
+      border-radius: 50%;
+      z-index: -1;
+
+
+      @media (max-width: $phone-xl) {
+        width: 542px;
+        height: 371px;
+        left: inherit;
+        right: 0;
+        top: -59px;
+
+      }
+    }
+
+    @media (max-width: $laptop) {
+      margin-bottom: 0;
+    }
+
+    &-img {
+      margin-bottom: 56px;
+
+      @media (max-width: $laptop) {
+        margin-top: -10px;
+      }
+    }
+  }
+
+
+  &__slider {
+    padding-bottom: 20px;
+
+    @media (max-width: $note) {
+      padding-left: $mob-gap;
+      padding-bottom: 0;
+    }
+
+    &-wrap {
+      margin-bottom: 56px;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      & > div {
+        @media (max-width: $laptop) {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover';
+            transition: $transition-fast;
+          }
+        }
+      }
+    }
+
+    h3 {
+      padding: 10px;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: rem(16);
+      font-weight: bold;
+      color: #F7F7F7;
+      max-width: 310px;
+      pointer-events: none;
+
+      @media (max-width: $laptop) {
+        font-size: rem(14);
+      }
+    }
+
+    // img {
+    //     max-width: 310px;
+    //     height: 228px;
+    //     margin: auto;
+
+    //     @media (max-width: $laptop) {
+    //         height: inherit;
+    //         margin: inherit;
+    //     }
+    // }
+
+  }
+
+
+  &__report {
+    padding: 56px 0;
+
+    @media (max-width: $tablet) {
+      padding-top: 0;
+    }
+
+
+    ul {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &.infinite-scroll {
+        @apply tw-justify-center tw-m-0;
+      }
+
+      @media (max-width: $laptop) {
+        margin-top: -10px;
+      }
+
+      @media (max-width: $note) {
+        justify-content: space-between;
+      }
+    }
+
+    li {
+      margin-bottom: 20px;
+      position: relative;
+      flex-basis: calc(33.33% - 20px);
+
+      @media (max-width: $note) {
+        flex-basis: calc(50% - 10px);
+      }
+
+      @media (max-width: $phone-xl) {
+        flex-basis: 100%;
+      }
+
+      &:nth-child(3n + 2) {
+        @media (min-width: 768.98px) {
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    h3 {
+      padding: 10px;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: rem(16);
+      font-weight: bold;
+      color: #F7F7F7;
+      max-width: 310px;
+    }
+
+    .btn__more {
+      @apply tw-text-center;
+
+      display: block;
+      margin: 36px auto auto auto;
+      max-width: 181px;
+
+      @media (max-width: $laptop) {
+        margin-top: 24px;
+      }
+    }
+
+  }
+
+
+  &__video {
+    padding: 56px 0;
+    margin-bottom: 56px;
+
+    @media (max-width: $tablet) {
+      padding-top: 0;
+    }
+
+    ul {
+      margin-top: 24px;
+
+      @media (max-width: $laptop) {
+        margin-top: 0;
+      }
+    }
+
+    li {
+      display: inline-block;
+
+      a > div {
+        position: relative;
+        overflow: hidden;
+
+        @media (max-width: $laptop) {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover';
+            transition: $transition-fast;
+          }
+        }
+      }
+    }
+
+    h3 {
+      padding-top: 16px;
+      font-weight: bold;
+    }
+
+    // img {
+    //     max-width: 310px;
+    //     height: 228px;
+    //     margin: auto;
+    // }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      transform: translate(-50%, -50%);
+      fill: #fff;
+    }
+
+    .section__title-wrap {
+      a {
+        padding-bottom: 4px;
+        overflow: visible;
+      }
+
+      @media (max-width: $note) {
+        flex-wrap: wrap;
+
+        a {
+          margin-top: 42px;
+          transform: none;
+
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    @media (min-width: $tablet-min) {
+      margin-top: 130px;
+    }
+  }
+
+}

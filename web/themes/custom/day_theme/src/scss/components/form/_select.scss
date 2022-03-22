@@ -1,0 +1,25 @@
+option[disabled] {
+	display: none;
+	background: transparent;
+}
+
+select {
+	z-index: 1;
+	border: 0;
+	background: transparent;
+	appearance: none;
+}
+
+select::-ms-expand {
+	display: none;
+
+	/* remove arrow IE     */
+}
+
+.select-icon {
+	position: absolute;
+	z-index: -9999;
+	top: 11px;
+	right: 15px;
+	color: rgba(24, 29, 35, .5);
+}

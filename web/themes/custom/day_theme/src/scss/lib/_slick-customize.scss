@@ -1,0 +1,72 @@
+// CUSTOMIZE PLUGINS
+.slider {
+	user-select: text;
+}
+
+// fix jumping for slide
+.slick-slider div {
+	transition: none;
+}
+
+.slick-prev,
+.slick-next {
+	z-index: 10;
+	top: 20%;
+	width: 18px;
+	height: 14px;
+	transform: translateY(-50%);
+	transition: opacity .3s linear;
+	opacity: 1;
+	background: transparent;
+	font-size: 0;
+	line-height: 0;
+}
+
+// .slick-prev {
+// 	left: 0px;
+// 	background: url(../img/arr-left.svg) no-repeat;
+// }
+
+// .slick-next {
+// 	right: 0px;
+// 	background: url(../img/arr-right.svg) no-repeat;
+// }
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+	opacity: .4;
+}
+
+.slick-prev:after,
+.slick-next:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -80px;
+	left: -80px;
+	width: 145px;
+	height: 145px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	width: 0;
+	height: 0;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+	opacity: 1;
+}
+
+.slick-disabled {
+	opacity: .35 !important;
+}
+
+.slick-current,
+.slick-slide,
+.slick-active {
+	outline: none !important;
+}

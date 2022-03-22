@@ -1,0 +1,107 @@
+@import "./helpers/_vars";
+
+@import "./helpers/_mixins";
+
+@media (max-width: $tablet) {
+    .cursor-swipe,
+    .cursor {
+        display: none;
+    }
+}
+
+
+// cursor 1 rules
+@media (min-width: $tablet-min) {
+    .cursor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translate(calc(-50% + 15px), -50%);
+        transition: $transition-fast;
+        pointer-events: none;
+        font-size: rem(12);
+        color: #fff;
+        background-color: rgba(233, 45, 34, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transform-style: preserve-3d;
+        transform: translate3d(0,0,0);
+        backface-visibility: hidden;
+    }
+
+    .cursor-hover {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    // .news a img,
+    ._cursor a img {
+        cursor: none;
+    }
+}
+
+@media (min-width: $laptop-min) {
+    .cursor {
+        width: 86px;
+        height: 86px;
+        font-size: rem(16);
+    }
+}
+
+
+// cursor 2 rules
+@media (min-width: $tablet-min) {
+    .cursor-swipe {
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translate(calc(-50% + 15px), -50%);
+        transition: $transition-fast;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transform-style: preserve-3d;
+        transform: translate3d(0,0,0);
+        backface-visibility: hidden;
+
+        .icon {
+            display: block;
+            fill: #fff;
+            width: 44px;
+            height: 44px;
+            pointer-events: none;
+        }
+    }
+
+    .cursor-swipe-hover {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    ._cursor-swipe {
+        cursor: none;
+
+        a, button {
+            cursor: pointer;
+        }
+    }
+
+    ._cursor-swipe {
+        padding-bottom: 65px;
+
+        @media (max-width: $tablet) {
+            padding-botom: 52px;
+        }
+    }
+
+}
+
+._cursor-swipe {
+    padding-bottom: 60px;
+}

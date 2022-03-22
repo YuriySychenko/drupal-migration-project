@@ -1,0 +1,89 @@
+.dropdown {
+    display: flex;
+
+    .select {
+        min-width: 120px;
+        position: relative;
+
+        &__selected-item {
+            padding: 8px 8px 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #F8F7FA;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color $transition-fast, color $transition-fast;
+            color: #E92D22;
+
+            &:hover {
+                background: #fff;
+                color: #19181A;
+
+                .select__arrow {
+                    filter: drop-shadow( 0 0 4px rgba(0, 0, 0, 0));
+                }
+
+                .arrow-stroke {
+                    stroke: #19181A;
+                }
+            }
+        }
+
+        &__arrow {
+            filter: drop-shadow( 0 0 5px rgba(0, 0, 0, .7));
+            transition: filter $transition-fast;
+
+            .arrow-stroke {
+                stroke: #E92D22;
+                transition: stroke $transition-fast;
+            }
+        }
+
+
+        &__list {
+            position: absolute;
+            width: 100%;
+            top: 40px;
+            z-index: 1;
+            transition: $transition-fast;
+            overflow-x: hidden;
+            overflow-y: auto;
+            max-height: 0;
+            opacity: 0;
+        }
+
+
+        &__list-item {
+            padding: 8px 8px 8px 16px;
+            min-width: 103px;
+            background: #F8F7FA;
+            cursor: pointer;
+            transition: color $transition-fast, background-color $transition-fast;
+
+            &:hover {
+                color: #E92D22;
+                background-color: #fff;
+
+            }
+
+            // &:first-child {
+                // border-radius: 8px 8px 0 0;
+            // }
+
+            // &:last-child {
+                // border-bottom: none;
+                // border-radius: 0 0 8px 8px;
+            // }
+        }
+
+        &__list-opened {
+            max-height: 200px;
+            opacity: 1;
+        }
+
+        &__input {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.project__section {
+
+    @media (max-width: $note) {
+        margin-right: calc(-1 * #{$mob-gap});
+
+        .tns-nav {
+            width: 100vw;
+            margin-top: 36px;
+        }
+
+        .tns-nav button:not(.tns-nav-active) {
+            background: #E5E5E5;
+        }
+    }
+
+
+    .news__small-img {
+        max-width: 244px;
+        margin-bottom: 20px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(221.84deg, rgba(236, 34, 39, 0.31) 23.62%, rgba(255, 255, 255, 0) 114.76%);
+            transition: background-color $transition-fast;
+            z-index: 1;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@media (max-width: $desktop-xl) {
+}
+
+@media (max-width: $desktop) {
+}
+
+@media (max-width: $laptop) {
+}
+
+@media (max-width: $tablet) {
+}
+
+@media (max-width: $note) {
+}
+
+@media (max-width: $phone-xl) {
+}
+
+
+@media #{$desktop-xl} {}
+
+@media #{$desktop} {}
+
+@media #{$laptop} {}
+
+@media #{$tablet} {}
+
+@media #{$note} {}
+
+@media #{$phone-xl} {}
+
+@media #{$phone} {}

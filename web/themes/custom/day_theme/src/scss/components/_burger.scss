@@ -1,0 +1,104 @@
+@import "../helpers/_vars";
+
+@import "../helpers/_mixins";
+
+.burger {
+	display: block;
+	position: relative;
+	z-index: 1000;
+	order: 0;
+	width: 50px;
+	height: 50px;
+	transition: all .6s ease-in-out;
+	border: 0;
+	outline: none;
+	background: transparent;
+
+
+	@media screen and (min-width: $tablet+1px) {
+		display: none;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		i {
+
+			&:before {
+				margin-top: -14px;
+			}
+
+			&:after {
+				margin-top: 14px;
+			}
+		}
+	}
+
+	i {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 40px;
+		height: 2px;
+		transform: translate(-50%, -50%);
+		transition: all .2s ease-in-out;
+		background: #fff;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 40px;
+			height: 2px;
+			transform: translate(-50%, -50%);
+			transition: all .2s ease-in-out;
+			background: #fff;
+		}
+
+		&:before {
+			margin-top: -12px;
+		}
+
+		&:after {
+			margin-top: 12px;
+		}
+	}
+
+	&.active {
+		background: transparent;
+
+		i {
+			background: transparent;
+
+			&:before,
+			&:after {
+				left: -5px;
+				width: 50px;
+			}
+
+			&:before {
+				top: 12px;
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				top: -12px;
+				transform: rotate(-45deg);
+			}
+		}
+
+		&:hover {
+
+			i:after,
+			i:before {
+				top: 0;
+				left: -10px;
+				width: 60px;
+				margin: 0;
+			}
+		}
+	}
+}

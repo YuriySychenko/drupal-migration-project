@@ -1,0 +1,31 @@
+// #phone-error,
+// #name-error,
+// #email-error,
+// #message-error,
+// #typeEvents-error,
+// #guest-error,
+// #budget-error,
+// #login-error,
+// #password-error {
+//     position: absolute;
+//     top: -15px;
+//     left: 10px;
+//     font-size: red!important;
+//     font-size: 10px;
+//     transition: all .3s linear;
+// }
+
+// .form__input {
+//     position: relative;
+//     .error {
+//         color: red;
+//         letter-spacing: 1px;
+//     }
+// }
+
+// .error {
+//     &:focus:required:invalid {
+//         border: 1px solid red;
+//         box-shadow: none;
+//     }
+// }

@@ -1,0 +1,97 @@
+.videoArticle {
+    .video {
+        position: relative;
+        margin-bottom: 80px;
+        filter: drop-shadow(0px 16px 32px rgba(35, 23, 5, 0.26));
+
+        @media (max-width: $tablet) {
+            margin-bottom: 0;
+            min-height: 210px;
+            height: inherit;
+        }
+
+        img {
+            margin: auto;
+
+            @media (max-width: $tablet) {
+                min-height: 210px;
+                height: inherit;
+            }
+        }
+
+        &:hover {
+            .icon {
+                fill: $brand-color;
+            }
+        }
+
+        &__button {
+            border: 0;
+            background: 0;
+            cursor: pointer;
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 95px;
+                height: 95px;
+                transform: translate(-50%, -50%);
+                fill: #fff;
+
+                @media (max-width: $tablet) {
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+
+        iframe {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 38px;
+            height: 598px;
+
+            @media (max-width: $laptop) {
+                height: 500px;
+            }
+
+            @media (max-width: $tablet) {
+                min-height: 210px;
+                height: inherit;
+            }
+
+            @media (max-width: $phone-xl) {
+                 margin-bottom: 30px;
+            }
+        }
+    }
+
+    .share__top {
+        margin-top: 80px;
+
+        @media (max-width: $tablet) {
+            margin-top: 32px;
+        }
+    }
+
+    .partners__list {
+        margin-top: 112px;
+        margin-bottom: 112px;
+    }
+
+    .btn__more-big {
+        display: block;
+        max-width: 592px;
+        margin: 56px auto;
+    }
+
+}
+
+.youtubePreview {
+    background:url('http://img.youtube.com/vi/aOPGepdbfpo/0.jpg') center no-repeat;
+    height:204px;
+    width:480px;
+}
+

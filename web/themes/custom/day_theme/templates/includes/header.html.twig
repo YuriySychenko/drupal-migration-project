@@ -1,0 +1,147 @@
+<header class="header">
+  <div class="header__top">
+    <div class="wrapper">
+      <div class="header__box">
+
+        {# Include logo twig template #}
+        {% include '@day_theme/includes/components/logo.html.twig' %}
+
+        {# Include main menu twig template #}
+        {% include '@day_theme/includes/components/main-menu.html.twig' %}
+
+        <div class="header__dropdown dropdown">
+
+          {% set lang_list = {'uk': 'укр', 'ru': 'рус', 'en': 'eng'} %}
+
+          <div class="header__dropdown-text" data-type="{{ lang_list[language] }}">{{ lang_list[language] }}</div>
+          <ul class="header__dropdown-content">
+            <li><a href="{% if not is_front %} {{ base_url ~ current_path }} {% else %} / {% endif %}" data-type="укр">укр</a>
+            </li>
+            <li><a href="/ru{% if not is_front %}{{ current_path }}{% endif %}" data-type="рус">рус</a></li>
+            <li><a href="/en{% if not is_front %}{{ current_path }}{% endif %}" data-type="eng">eng</a></li>
+          </ul>
+        </div>
+        <button class="header__btn search popup-trigger" data-popup-trigger="search">
+          <svg class="icon icon-search">
+            <use xlink:href="/themes/custom/day_theme/assets/imgs/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+        <a href="#" class="header__btn user">
+          <svg class="icon icon-user">
+            <use xlink:href="/themes/custom/day_theme/assets/imgs/sprite.svg#icon-user"></use>
+          </svg>
+        </a>
+        <div class="divider _mob-hidden"></div>
+        <!-- Thib link dublicated on footer on mobile devices  -->
+        <a class="header__link _mob-hidden" href="https://day.kyiv.ua/uk/peredplata"> Передплата </a>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <nav class="header__nav-bottom nav">
+      <div class="wrapper">
+        <div class="nav__box">
+          <div class="nav__box-left">
+            <div class="nav__col">
+              <h2> {{ 'News'|t }} </h2>
+
+              {# Include menu news category twig template #}
+              {% include '@day_theme/includes/components/menu-news-tags.html.twig' %}
+
+            </div>
+            <div class="nav__col">
+              <h2> {{ 'Newspaper'|t }} </h2>
+
+              {# Include menu news category twig template #}
+              {% include '@day_theme/includes/components/menu-archive-tags.html.twig' %}
+
+            </div>
+            <div class="nav__col nav__col-heading">
+              <ul class="nav__list">
+                <li>
+                  <a href="/blogs">
+                    <h2>{{ 'Authors blogs'|t }}</h2>
+                  </a>
+                </li>
+                <li>
+                  <a href="/photo-reports">
+                    <h2>{{ 'Photo'|t }}</h2>
+                  </a>
+                </li>
+                <li>
+                  <a href="./video-page.html">
+                    <h2> Відео </h2>
+                  </a>
+                </li>
+                <li>
+                  <a href="./arhive-page.html">
+                    <h2> Архів </h2>
+                  </a>
+                </li>
+              </ul>
+              <div class="nav__col">
+                <h2> Магазин </h2>
+                <ul class="nav__list">
+                  <li>
+                    <a href="https://day.kyiv.ua/uk/library">Де купити книги Дня</a>
+                  </li>
+                  <li>
+                    <a href="https://day.kyiv.ua/uk/dostavka">Доставка та оплата</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="nav__box-right">
+            <div class="nav__col">
+              <h2> Редакція </h2>
+              <ul class="nav__list">
+                <li>
+                  <a href="#">Контакти</a>
+                </li>
+                <li>
+                  <a href="#">Головний редактор</a>
+                </li>
+                <li>
+                  <a href="#">Вакансії</a>
+                </li>
+                <li>
+                  <a href="#">Реклама</a>
+                </li>
+                <li>
+                  <a href="https://day.kyiv.ua/uk/catalog/peredplatiti-gazetu">Передплата</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__col">
+              <h2> Проєкти дня </h2>
+              <ul class="nav__list">
+                <li>
+                  <a href="https://day.kyiv.ua/uk/catalog/peredplatiti-gazetu">Благодійний Фонд «Дня»</a>
+                </li>
+                <li>
+                  <a href="http://incognita.day.kyiv.ua/">Україна Incognita</a>
+                </li>
+                <li>
+                  <a href="#">Фотовиставка</a>
+                </li>
+                <li>
+                  <a href="#">Фотоконкурс</a>
+                </li>
+                <li>
+                  <a href="#">Літня школа журналістики</a>
+                </li>
+                <li>
+                  <a href="#">Премія імені Джеймса Мейса</a>
+                </li>
+              </ul>
+              <div class="nav__logo">
+                <img src="/themes/custom/day_theme/assets/imgs/logo-nav.svg" alt="Газета &quot;День&quot;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+{% if drupal_view_result('author_articles', 'block_1') is not empty %}
+  <div class="article-grouped-wrap-2">
+    <div class="article-grouped-2">
+      <p class="category__date">{{ 'Lasts'|t }}</p>
+    </div>
+
+    <div class="search__list-box">
+      {{ drupal_view('author_articles', 'block_1') }}
+    </div>
+  </div>
+{% endif %}

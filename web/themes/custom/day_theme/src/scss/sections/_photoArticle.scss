@@ -1,0 +1,198 @@
+.photoArticle {
+  &__title {
+    margin-bottom: 40px !important;
+    padding-left: 0 !important;
+    max-width: 100% !important;
+    font-size: rem(36);
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @media (max-width: $laptop) {
+      font-size: rem(24);
+      margin-bottom: 16px;
+
+    }
+  }
+
+  ._full {
+    width: 100vw;
+  }
+
+  &__photo {
+    figcaption {
+      text-align: right;
+    }
+  }
+
+  &__galleries {
+    @apply tw-flex tw-flex-wrap tw-justify-center;
+
+    img {
+      @apply tw-object-cover;
+
+      width: 350px;
+      height: 250px;
+      padding: 1px;
+    }
+  }
+
+  figcaption {
+    margin-top: 16px;
+    margin-bottom: 38px;
+    text-align: center;
+    font-size: rem(12);
+
+    @media (max-width: $phone-xl) {
+      margin-bottom: 24px;
+    }
+
+  }
+
+  &__box {
+    margin-bottom: 56px;
+
+    &:not(:first-child) {
+      margin-top: 112px;
+    }
+
+    p {
+      padding-bottom: 26px;
+      font-size: rem(18);
+      letter-spacing: -0.35px;
+      line-height: 1.5;
+    }
+
+    b {
+      display: block;
+      padding-bottom: 26px;
+      font-weight: 700;
+      font-size: rem(18);
+      letter-spacing: -0.35px;
+      line-height: 1.5;
+    }
+
+    h3 {
+      padding-bottom: 26px;
+      font-size: rem(24);
+      letter-spacing: -0.35px;
+      line-height: 1.5;
+    }
+
+    .share, .readIt, p, span, b, h2, h3, blockquote {
+      max-width: 608px;
+      padding-left: $mob-gap;
+      padding-right: $mob-gap;
+      margin: auto;
+    }
+
+    .branding-box {
+      margin-bottom: 26px;
+    }
+
+    a {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    figcaption {
+      @media (max-width: $tablet) {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 24px;
+      }
+    }
+
+    figure {
+      margin-bottom: 40px;
+    }
+
+    figure + .branding-box {
+      margin-top: 56px;
+    }
+
+    .readIt {
+      margin-bottom: 26px;
+
+      @media (min-width: $tablet-min) {
+        transform: translateX(-10px);
+      }
+
+      * {
+        display: inline !important;
+      }
+    }
+
+    .categoryArticle__links {
+      margin-bottom: 32px !important;
+    }
+  }
+
+  .share__top {
+    margin-bottom: 100px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 56px;
+    }
+  }
+
+  .share__bottom {
+    margin-top: 56px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #E5E5E5;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .categoryArticle__links {
+
+    @media (min-width: $tablet-min) {
+      margin-bottom: 112px;
+      transform: translateX(-10px);
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: 56px;
+    }
+  }
+
+  .tags {
+    // margin-bottom: 104px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .categoryArticle__links,
+  .tags {
+    max-width: 608px;
+    padding-left: $mob-gap;
+    padding-right: $mob-gap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .share__bottom {
+    max-width: 592px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .categoryArticle__links {
+    padding-bottom: 0;
+  }
+
+}
+

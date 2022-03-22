@@ -1,0 +1,1 @@
+var lazyLoadInstance = new LazyLoad({});

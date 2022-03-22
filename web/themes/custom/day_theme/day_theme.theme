@@ -1,0 +1,228 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Tailwind CSS theme.
+ */
+
+use Drupal\Core\Link;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\file\Entity\File;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function day_theme_preprocess_block(&$variables) {
+  if (day_theme_get_active_theme() == 'day_theme' && $variables['base_plugin_id'] == 'system_branding_block') {
+    $variables['site_logo'] = '';
+    if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+      $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+    }
+  }
+}
+
+
+/**
+ * Get the active theme.
+ *
+ * @return string
+ *   The name of the active theme.
+ */
+function day_theme_get_active_theme() {
+  return \Drupal::service('theme.manager')->getActiveTheme()->getName();
+}
+
+/**
+ * Implement hook_preprocess_page.
+ *
+ * @param $variables
+ *
+ * @return void
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function day_theme_preprocess_page(&$variables) {
+  // Get node.
+  $node = $variables['node'] ?? NULL;
+  // Route name.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  // Current path.
+  $current_path = \Drupal::service('path.current')->getPath();
+  // Alias manager.
+  $alias_manager = \Drupal::service('path_alias.manager');
+  // Get langcode.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  // Format url langcode variable.
+  $url_langcode = $language == 'uk' ? '' : '/' . $language;
+
+  /** @var Drupal\taxonomy\TermStorageInterface $taxonomy_storage */
+  $taxonomy_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+  /** @var Drupal\node\NodeStorageInterface $node_storage */
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  // Add base_url to templates.
+  $variables['base_url'] = $GLOBALS['base_url'];
+
+  // Add current path to templates.
+  $variables['current_path'] = $route_name != 'system.404' ? $alias_manager->getAliasByPath($current_path) : '';
+
+  // Add site name to templates.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+
+  // Add current langcode to templates.
+  $variables['language'] = $language;
+
+  // Add taxonomy terms by tags vocabulary.
+  $tags_terms_ids = $taxonomy_storage->getQuery()
+    ->condition('vid', 'tags')
+    ->condition('field_hot_theme', 1)
+    ->sort('weight', 'ASC')
+    ->execute();
+
+  $tags_terms = $taxonomy_storage->loadMultiple($tags_terms_ids);
+
+  $hot_tags = [];
+  /** @var Drupal\taxonomy\Entity\Term $tags_term */
+  foreach ($tags_terms as $tags_term) {
+    /** @var Drupal\taxonomy\Entity\Term $translated_tags_term */
+    $translated_tags_term = \Drupal::service('entity.repository')
+      ->getTranslationFromContext($tags_term, $language);
+    $tags_term_alias = $alias_manager->getAliasByPath('/taxonomy/term/' . $translated_tags_term->id());
+
+    $hot_tags[$translated_tags_term->id()]['name'] = $translated_tags_term->getName();
+    $hot_tags[$translated_tags_term->id()]['alias'] = $url_langcode . $tags_term_alias;
+
+    // Format active tag.
+    $current_path_alias = $alias_manager->getAliasByPath($current_path);
+    $hot_tags[$translated_tags_term->id()]['active'] = $current_path_alias == $tags_term_alias ? 'active' : '';
+  }
+
+  $variables['hot_tags'] = $hot_tags;
+
+  // Formatting author info for blog post node.
+  if ($node instanceof NodeInterface) {
+    if ($node->bundle() == 'profile') {
+      // Get author photo.
+      if ($author_photo_tid = $node->get('field_profile_photo')
+        ->getValue()[0]['target_id']) {
+        if (!empty($author_photo_tid)) {
+          $author_photo = File::load($author_photo_tid);
+          $image_uri = $author_photo->getFileUri();
+
+          $variables['author_photo_uri'] = $image_uri;
+        }
+      }
+
+      $variables['author_name'] = $node->getTitle();
+      if (!$node->get('body')->isEmpty()) {
+        $variables['author_bio'] = $node->get('body')->getValue()[0]['value'];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node.
+ */
+function day_theme_preprocess_node(&$variables) {
+  // Get langcode.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  /** @var Drupal\node\Entity\Node $node */
+  $node = $variables['node'];
+  /** @var Drupal\taxonomy\TermStorageInterface $taxonomy_storage */
+  $taxonomy_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+  /** @var Drupal\node\NodeStorageInterface $node_storage */
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  if ($node->bundle() == 'news' || $node->bundle() == 'openpublish_article' || $node->bundle() == 'openpublish_blog_post') {
+    // Load node tags taxonomy term.
+    if ($node->hasField('field_tag_news')) {
+      $field_tag_news = $node->get('field_tag_news')->getValue();
+      if (!empty($field_tag_news)) {
+        $tag_ids = [];
+        foreach ($field_tag_news as $tag_news) {
+          $tag_ids[] = $tag_news['target_id'];
+        }
+
+        $tag_news_terms = $taxonomy_storage->loadMultiple($tag_ids);
+
+        $tag_news_term_links = [];
+        foreach ($tag_news_terms as $tag_news_term) {
+          $tag_news_term_links[] = Link::createFromRoute($tag_news_term->getName(), 'entity.taxonomy_term.canonical', ['taxonomy_term' => $tag_news_term->id()]);
+        }
+
+        // Pass tags to variables.
+        $variables['tags'] = $tag_news_term_links;
+      }
+    }
+  }
+
+  // Formatting author info for blog post node.
+  if ($node->bundle() == 'openpublish_blog_post') {
+    if ($node->hasField('field_op_author')) {
+      $author_nid = $node->get('field_op_author')->getValue()[0]['target_id'];
+
+      $author_node = $node_storage->load($author_nid);
+
+      if ($author_node) {
+
+        // Get author photo.
+        if ($author_photo_tid = $author_node->get('field_profile_photo')
+          ->getValue()[0]['target_id']) {
+          $image_style = ImageStyle::load('85x85');
+
+          if (!empty($author_photo_tid)) {
+            $author_photo = File::load($author_photo_tid);
+            $image_url = $image_style->buildUrl($author_photo->uri->value);
+
+            $variables['author_photo_url'] = $image_url;
+          }
+        }
+
+        $variables['author_name'] = $author_node->getTitle();
+        $variables['author_url'] = \Drupal::service('path_alias.manager')
+          ->getAliasByPath('/node/' . $author_node->id());
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_grouping.
+ *
+ * @param $variables
+ *
+ * @return void
+ */
+
+function day_theme_preprocess_views_view_grouping(&$variables) {
+  // Add current langcode to templates.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['language'] = $language;
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function day_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  /** @var Drupal\taxonomy\TermStorageInterface $taxonomy_storage */
+  $taxonomy_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__' . $node->bundle() . '_type';
+  }
+
+  if (\Drupal::routeMatch()
+      ->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()
+      ->getRawParameter('taxonomy_term')) {
+    $term = $taxonomy_storage->load($tid);
+    $suggestions[] = 'page__taxonomy__' . $term->bundle();
+  }
+}
+
+function day_theme_theme_suggestions_container_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#type']) && isset($variables['element']['#name']) && isset($variables['element']['#display_id'])) {
+    $suggestions[] = 'container__' . $variables['element']['#type'] . '__' . $variables['element']['#name'] . '__' . $variables['element']['#display_id'];
+  }
+}

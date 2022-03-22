@@ -1,0 +1,16 @@
+<div class="sidebar__tab-wrapper _tab-short">
+
+  <ul class="sidebar__tab">
+    <li class="selected" data-id="actual-short" data-clicksvg="svg-actual-short"> Актуальне</li>
+    <li data-id="important-short" data-clicksvg="svg-important-short"> Важливе</li>
+    <li data-id="popular-short" data-clicksvg="svg-popular-short"> Популярне</li>
+  </ul>
+
+  <div class="sidebar__tabs">
+
+    {{ drupal_view('news', 'block_6') }}
+    {{ drupal_view('news', 'block_7') }}
+    {{ drupal_view('news', 'block_8') }}
+
+  </div>
+</div>

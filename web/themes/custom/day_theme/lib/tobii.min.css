@@ -1,0 +1,140 @@
+:root {
+  --base-font-size: 18px;
+  --transition-duration: 0.3s;
+  --transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  --zoom-icon-background: rgba(25, 41, 56, 0.94);
+  --zoom-icon-color: #fff;
+  --lightbox-background: rgba(25, 41, 56, 0.94);
+  --lightbox-z-index: 1337;
+  --caption-background: hsla(0, 0%, 100%, 0.94);
+  --caption-color: #192938;
+  --counter-background: transparent;
+  --counter-color: #fff;
+  --button-background: transparent;
+  --button-color: #fff;
+  --loader-color: #fff;
+  --slide-max-height: 85vh;
+  --slide-max-width: 85vw;
+}
+.tobii-is-open {
+  overflow-y: hidden;
+}
+.tobii {
+  bottom: 0;
+  box-sizing: border-box;
+  contain: strict;
+  left: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.tobii[aria-hidden="true"] {
+  display: none;
+}
+
+.tobii__slider {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  will-change: transform;
+}
+.tobii__slider[aria-hidden="true"] {
+  display: none;
+}
+.tobii__slider--is-draggable [data-type] {
+  cursor: grab;
+}
+.tobii__slider--is-dragging [data-type] {
+  cursor: grabbing;
+}
+.tobii__slide {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+.tobii__slide:not(.tobii__slide--is-active) {
+  visibility: hidden;
+}
+.tobii__slide [data-type] {
+  overflow: hidden;
+  overflow-y: auto;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+}
+.tobii__slide iframe,
+.tobii__slide video {
+  display: block !important;
+}
+.tobii__slide figure {
+  margin: 0;
+  position: relative;
+}
+.tobii__slide figure > img {
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.tobii__btn {
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--button-color);
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  touch-action: manipulation;
+  will-change: opacity;
+  z-index: 1;
+}
+.tobii__btn:disabled,
+.tobii__btn[aria-hidden="true"] {
+  display: none;
+}
+.tobii__counter {
+  position: absolute;
+  z-index: 1;
+}
+.tobii__counter[aria-hidden="true"] {
+  display: none;
+}
+.tobii__loader {
+  display: inline-block;
+  height: 5.55556em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5.55556em;
+}
+.tobii__loader:before {
+  animation: spin 1s infinite;
+  border-radius: 100%;
+  border: 0.22222em solid #949ba3;
+  border-top: 0.22222em solid var(--loader-color);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.tobii__slide .tobii-html {
+  background: #fff;
+  padding: 10px 20px;
+  max-width: 800px;
+}
