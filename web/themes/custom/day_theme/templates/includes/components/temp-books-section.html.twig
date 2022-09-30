@@ -1,13 +1,30 @@
 <section class="book__section dark">
   <div class="section__title-wrap">
-    <h2> Бібліотека дня </h2>
+    <h2>{{ 'Library of the day'|t }}</h2>
     <!-- This link dublicated on mobile devices -->
-    <a href="#"> Всі книги </a>
+    <a href="https://day.kyiv.ua/{{ language }}/library" target="_blank">{{ 'All books'|t }}</a>
   </div>
   <div class="grid-row">
     <div class="grid-col-3 book-slider _cursor-swipe">
       <article class="news news__small">
-        <a href="#">
+        <a href="https://day.kyiv.ua/uk/library/books/detoks" target="_blank">
+          <div class="news__small-img">
+            <picture>
+{#              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-002.webp">#}
+              <img src="/themes/custom/day_theme/assets/imgs/detox_face_1000.jpeg" alt loading="lazy" width="244" height="180">
+            </picture>
+          </div>
+        </a>
+        <div class="news__small-content">
+          <a href="https://day.kyiv.ua/uk/library/books/detoks" target="_blank">
+            <h3> Детокс </h3>
+          </a>
+          <strong> 320 грн </strong>
+          <a class="btn btn--buy" href="https://day.kyiv.ua/uk/library/books/detoks" target="_blank">{{ 'Buy'|t }}</a>
+        </div>
+      </article>
+      <article class="news news__small">
+        <a href="https://day.kyiv.ua/uk/library/books/den-vdyachnosti-peredzamovlennya" target="_blank">
           <div class="news__small-img">
             <picture>
               <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-001.webp">
@@ -16,32 +33,15 @@
           </div>
         </a>
         <div class="news__small-content">
-          <a href="#">
+          <a href="https://day.kyiv.ua/uk/library/books/den-vdyachnosti-peredzamovlennya" target="_blank">
             <h3> Книга «ДЕНЬ ВДЯЧНОСТІ» </h3>
           </a>
           <strong> 265 грн </strong>
-          <button> Придбати </button>
+          <a class="btn btn--buy" href="https://day.kyiv.ua/uk/library/books/den-vdyachnosti-peredzamovlennya" target="_blank">{{ 'Buy'|t }}</a>
         </div>
       </article>
       <article class="news news__small">
-        <a href="">
-          <div class="news__small-img">
-            <picture>
-              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-002.webp">
-              <img src="/themes/custom/day_theme/assets/imgs/book-002.png" alt loading="lazy" width="244" height="180">
-            </picture>
-          </div>
-        </a>
-        <div class="news__small-content">
-          <a href="#">
-            <h3> «Сестра моя, Софія…» - болгарською мовою </h3>
-          </a>
-          <strong> 200 грн </strong>
-          <button> Придбати </button>
-        </div>
-      </article>
-      <article class="news news__small">
-        <a href="#">
+        <a href="https://day.kyiv.ua/uk/library/books/ave-do-100-littya-getmanatu-pavla-skoropadskogo" target="_blank">
           <div class="news__small-img">
             <picture>
               <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-003.webp">
@@ -50,68 +50,68 @@
           </div>
         </a>
         <div class="news__small-content">
-          <a href="#">
+          <a href="https://day.kyiv.ua/uk/library/books/ave-do-100-littya-getmanatu-pavla-skoropadskogo" target="_blank">
             <h3> «Ave. До 100-ліття Гетьманату Павла Скоропадського» </h3>
           </a>
           <strong> 250 грн </strong>
-          <button> Придбати </button>
+          <a class="btn btn--buy" href="https://day.kyiv.ua/uk/library/books/ave-do-100-littya-getmanatu-pavla-skoropadskogo" target="_blank">{{ 'Buy'|t }}</a>
         </div>
       </article>
-      <article class="news news__small">
-        <a href="#">
-          <div class="news__small-img">
-            <picture>
-              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-001.webp">
-              <img src="/themes/custom/day_theme/assets/imgs/book-001.png" alt loading="lazy" width="244" height="180">
-            </picture>
-          </div>
-        </a>
-        <div class="news__small-content">
-          <a href="#">
-            <h3> Книга «ДЕНЬ ВДЯЧНОСТІ» </h3>
-          </a>
-          <strong> 265 грн </strong>
-          <button> Придбати </button>
-        </div>
-      </article>
-      <article class="news news__small">
-        <a href="">
-          <div class="news__small-img">
-            <picture>
-              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-002.webp">
-              <img src="/themes/custom/day_theme/assets/imgs/book-002.png" alt loading="lazy" width="244" height="180">
-            </picture>
-          </div>
-        </a>
-        <div class="news__small-content">
-          <a href="#">
-            <h3> «Сестра моя, Софія…» - болгарською мовою </h3>
-          </a>
-          <strong> 200 грн </strong>
-          <button> Придбати </button>
-        </div>
-      </article>
-      <article class="news news__small">
-        <a href="#">
-          <div class="news__small-img">
-            <picture>
-              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-003.webp">
-              <img src="/themes/custom/day_theme/assets/imgs/book-003.png" alt loading="lazy" width="244" height="180">
-            </picture>
-          </div>
-        </a>
-        <div class="news__small-content">
-          <a href="#">
-            <h3> «Ave. До 100-ліття Гетьманату Павла Скоропадського» </h3>
-          </a>
-          <strong> 250 грн </strong>
-          <button> Придбати </button>
-        </div>
-      </article>
+{#      <article class="news news__small">#}
+{#        <a href="https://day.kyiv.ua/uk/library/books/trap-or-case-without-statute-limitations">#}
+{#          <div class="news__small-img">#}
+{#            <picture>#}
+{#              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-001.webp">#}
+{#              <img src="/themes/custom/day_theme/assets/imgs/book-001.png" alt loading="lazy" width="244" height="180">#}
+{#            </picture>#}
+{#          </div>#}
+{#        </a>#}
+{#        <div class="news__small-content">#}
+{#          <a href="https://day.kyiv.ua/uk/library/books/trap-or-case-without-statute-limitations">#}
+{#            <h3> “The Trap,” or A Case without a Statute of Limitations </h3>#}
+{#          </a>#}
+{#          <strong> 100 грн </strong>#}
+{#          <a href="https://day.kyiv.ua/uk/library/books/trap-or-case-without-statute-limitations" class="btn btn--buy"> Придбати </a>#}
+{#        </div>#}
+{#      </article>#}
+{#      <article class="news news__small">#}
+{#        <a href="https://day.kyiv.ua/uk/library/books/sestra-moya-sofiya-bolgarskoyu-movoyu">#}
+{#          <div class="news__small-img">#}
+{#            <picture>#}
+{#              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-002.webp">#}
+{#              <img src="/themes/custom/day_theme/assets/imgs/book-002.png" alt loading="lazy" width="244" height="180">#}
+{#            </picture>#}
+{#          </div>#}
+{#        </a>#}
+{#        <div class="news__small-content">#}
+{#          <a href="https://day.kyiv.ua/uk/library/books/sestra-moya-sofiya-bolgarskoyu-movoyu">#}
+{#            <h3> «Сестра моя, Софія…» - болгарською мовою </h3>#}
+{#          </a>#}
+{#          <strong> 200 грн </strong>#}
+{#          <a class="btn btn--buy" href="https://day.kyiv.ua/uk/library/books/sestra-moya-sofiya-bolgarskoyu-movoyu"> Придбати </a>#}
+{#        </div>#}
+{#      </article>#}
+{#      <article class="news news__small">#}
+{#        <a href="#">#}
+{#          <div class="news__small-img">#}
+{#            <picture>#}
+{#              <source type="image/webp" srcset="/themes/custom/day_theme/assets/imgs/book-003.webp">#}
+{#              <img src="/themes/custom/day_theme/assets/imgs/book-003.png" alt loading="lazy" width="244" height="180">#}
+{#            </picture>#}
+{#          </div>#}
+{#        </a>#}
+{#        <div class="news__small-content">#}
+{#          <a href="#">#}
+{#            <h3> «Ave. До 100-ліття Гетьманату Павла Скоропадського» </h3>#}
+{#          </a>#}
+{#          <strong> 250 грн </strong>#}
+{#          <button> Придбати </button>#}
+{#        </div>#}
+{#      </article>#}
     </div>
   </div>
   <!-- This link only for mobile devices -->
   <div class="_mob-visible book__link">
-    <a href="#"> Всі книги </a>
+    <a href="https://day.kyiv.ua/{{ language }}/library" target="_blank">{{ 'All books'|t }}</a>
   </div>
 </section>

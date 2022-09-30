@@ -9,35 +9,39 @@
     <div class="archivePage__dropdown dropdown">
       <div class="select" data-select="">
         <div class="select__selected-item" data-selected="true">
-          <div class="select__selected-title" data-selected-title="" data-selected="true"> Місяць </div>
-          <svg class="select__arrow" width="25" data-arrow="" data-selected="true" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="arrow-stroke" d="M8.25 9.75L12.5 14.25L16.75 9.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <div class="select__selected-title" data-selected-title="" data-selected="true"> Місяць</div>
+          <svg class="select__arrow" width="25" data-arrow="" data-selected="true" height="24" viewBox="0 0 25 24"
+               fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="arrow-stroke" d="M8.25 9.75L12.5 14.25L16.75 9.75" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
           </svg>
         </div>
-        <div class="select__list" data-list="">
-          <div class="select__list-item" data-item="true">Січень</div>
-          <div class="select__list-item" data-item="true">Лютий</div>
-          <div class="select__list-item" data-item="true">Березень</div>
-          <div class="select__list-item" data-item="true">Квітень</div>
-          <div class="select__list-item" data-item="true">Травень</div>
-          <div class="select__list-item" data-item="true">Червень</div>
-          <div class="select__list-item" data-item="true">Липень</div>
-          <div class="select__list-item" data-item="true">Серпень</div>
-          <div class="select__list-item" data-item="true">Вересень</div>
-          <div class="select__list-item" data-item="true">Жовтень</div>
-          <div class="select__list-item" data-item="true">Листопад</div>
-          <div class="select__list-item" data-item="true">Грудень</div>
+        <div id="archiveFilterMonth" class="select__list" data-list="">
+          <div class="select__list-item" data-item="true" data-month-id="1">Січень</div>
+          <div class="select__list-item" data-item="true" data-month-id="2">Лютий</div>
+          <div class="select__list-item" data-item="true" data-month-id="3">Березень</div>
+          <div class="select__list-item" data-item="true" data-month-id="4">Квітень</div>
+          <div class="select__list-item" data-item="true" data-month-id="5">Травень</div>
+          <div class="select__list-item" data-item="true" data-month-id="6">Червень</div>
+          <div class="select__list-item" data-item="true" data-month-id="7">Липень</div>
+          <div class="select__list-item" data-item="true" data-month-id="8">Серпень</div>
+          <div class="select__list-item" data-item="true" data-month-id="9">Вересень</div>
+          <div class="select__list-item" data-item="true" data-month-id="10">Жовтень</div>
+          <div class="select__list-item" data-item="true" data-month-id="11">Листопад</div>
+          <div class="select__list-item" data-item="true" data-month-id="12">Грудень</div>
         </div>
         <input class="select__input" type="text" data-input="">
       </div>
-      <div class="select" data-select="">
+      <div class="select select-year disabled" data-select="">
         <div class="select__selected-item" data-selected="true">
-          <div class="select__selected-title" data-selected-title="" data-selected="true"> Рік </div>
-          <svg class="select__arrow" width="25" data-arrow="" data-selected="true" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="arrow-stroke" d="M8.25 9.75L12.5 14.25L16.75 9.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <div class="select__selected-title" data-selected-title="" data-selected="true"> Рік</div>
+          <svg class="select__arrow" width="25" data-arrow="" data-selected="true" height="24" viewBox="0 0 25 24"
+               fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="arrow-stroke" d="M8.25 9.75L12.5 14.25L16.75 9.75" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
           </svg>
         </div>
-        <div class="select__list" data-list="">
+        <div id="archiveFilterYear" class="select__list" data-list="">
           <div class="select__list-item" data-item="true">1996</div>
           <div class="select__list-item" data-item="true">1997</div>
           <div class="select__list-item" data-item="true">1998</div>
@@ -64,6 +68,7 @@
           <div class="select__list-item" data-item="true">2019</div>
           <div class="select__list-item" data-item="true">2020</div>
           <div class="select__list-item" data-item="true">2021</div>
+          <div class="select__list-item" data-item="true">2022</div>
         </div>
         <input class="select__input" type="text" data-input="">
       </div>
@@ -109,8 +114,11 @@
         <option value="2019">2019</option>
         <option value="2020">2020</option>
         <option value="2021">2021</option>
+        <option value="2022">2022</option>
       </select>
     </div>
-    <button class="archivePage__submit" type="submit">Вибрати</button>
+    {{ drupal_link('Selection'|t, current_path, { attributes: { 'id': 'archiveLinkFilter', 'class':  [ 'disabled', 'archivePage__submit' ], 'data-month-id': '', 'data-year': '' } }, check_access=true) }}
   </form>
 </div>
+
+{#{{ drupal_block('views_exposed_filter_block:last_newspapers_block-page_1', wrapper=false) }}#}

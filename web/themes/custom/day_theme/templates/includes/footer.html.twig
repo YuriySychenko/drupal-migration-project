@@ -1,3 +1,5 @@
+{% set language_without_uk = language != 'uk' ? '/' ~ language : '' %}
+
 <footer class="footer">
   <div class="wrapper">
     <div class="footer__box">
@@ -5,28 +7,28 @@
         <div>
           <div class="footer__logo-wrap">
             <img src="/themes/custom/day_theme/assets/imgs/logo-white.svg" alt="Газета &quot;День&quot;" width="92" height="46">
-            <a class="header__link _mob-visible" href="https://day.kyiv.ua/uk/peredplata"> Передплата </a>
+            <a class="header__link _mob-visible" href="https://day.kyiv.ua/{{ language }}/peredplata">{{ 'Subscribe'|t }}</a>
           </div>
-          <p> © 1997-2021, ТОВ «УКРАЇНСЬКА ПРЕС-ГРУПА» </p>
-          <p> Матеріали, надруковані у газеті «День», є власністю видавця, захищені міжнародним і українським законодавством і не можуть бути відтворені у будь-якій формі без письмового дозволу видавця. При використанні наших публікацій посилання на газету обов'язкове. </p>
-          <p> Всі матеріали, розміщені на цьому сайті з посиланням на агентство «Інтерфакс-Україна», не підлягають подальшому відтворенню та/чи розповсюдженню у будь-якій формі, окрім як з письмового дозволу агентства «Інтерфакс-Україна». </p>
+
+          {{ drupal_entity('block', 'footertextandcopyright', check_access=false) }}
+
         </div>
       </div>
       <div class="footer__links">
         <div class="footer__col">
-          <h2> Редакція </h2>
+          <h2>{{ 'Editorial office'|t }}</h2>
           <ul>
             <li>
-              <a href="#"> Контакти </a>
+              <a href="#">{{ 'Contacts'|t }}</a>
             </li>
             <li>
-              <a href="#"> Головний редактор </a>
+              <a href="#">{{ 'Editor in Chief'|t }}</a>
             </li>
             <li>
-              <a href="#"> Вакансії </a>
+              <a href="#">{{ 'Vacancies'|t }}</a>
             </li>
             <li>
-              <a href="#"> Реклама </a>
+              <a href="#">{{ 'Advertising'|t }}</a>
             </li>
             <li>
               <a href="#"> Проекти/ініціатива </a>
@@ -34,19 +36,19 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h2> Газета </h2>
+          <h2>{{ 'Newspaper'|t }}</h2>
           <ul>
             <li>
-              <a href="#"> Передплата </a>
+              <a href="https://day.kyiv.ua/{{ language }}/peredplata">{{ 'Subscription'|t }}</a>
             </li>
             <li>
-              <a href="#"> Статті </a>
+              <a href="{{ language_without_uk }}/newspaper">{{ 'Articles'|t }}</a>
             </li>
             <li>
-              <a href="#"> Архів </a>
+              <a href="{{ language_without_uk }}/newspapers-archive">{{ 'Archive'|t }}</a>
             </li>
             <li>
-              <a href="#"> Магазин </a>
+              <a href="#">{{ 'Shop'|t }}</a>
             </li>
             <li>
               <a href="#"> Фонд “Дня” </a>

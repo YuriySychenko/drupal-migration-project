@@ -1,25 +1,27 @@
+{% set language = language != 'uk' ? '/' ~ language : '' %}
+
 <nav class="header__nav-top">
   <ul>
     <li>
-      <a href="/news"> {{ 'News'|t }} </a>
+      <a href="{{ language }}/news"> {{ 'News'|t }} </a>
     </li>
     <li>
-      <a href="/newspaper"> {{ 'Newspaper'|t }} </a>
+      <a href="{{ language }}/newspaper"> {{ 'Newspaper'|t }} </a>
     </li>
     <li>
-      <a href="/blogs"> {{ 'Authors blogs'|t }} </a>
+      <a href="{{ language }}/blogs"> {{ 'Authors blogs'|t }} </a>
     </li>
     <li>
-      <a href="/photo-reports">{{ 'Photo'|t }}</a>
+      <a href="{{ language }}/photo-reports">{{ 'Photo'|t }}</a>
     </li>
     <li>
-      <a href="./video-page.html"> Відео </a>
+      <a href="{{ language }}/video">{{ 'Video'|t }}</a>
     </li>
     <li>
-      <a href="./arhive-page.html"> Архів </a>
+      <a href="{{ language }}/newspapers-archive">{{ 'Archive'|t }}</a>
     </li>
     <li>
-      <a href="https://day.kyiv.ua/uk/library"> Магазин </a>
+      <a href="https://day.kyiv.ua/uk/library">{{ 'Shop'|t }}</a>
     </li>
   </ul>
   <button class="header__btn burger-top" id="burgerTop">

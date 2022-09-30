@@ -25,6 +25,7 @@
       font-weight: 700;
       color: #006E97;
       transition: color $transition-fast;
+      margin-right: 7px;
 
       &:hover {
         color: darken(#006E97, 10%);

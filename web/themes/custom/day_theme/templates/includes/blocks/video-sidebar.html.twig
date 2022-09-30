@@ -1,0 +1,9 @@
+{% if drupal_view_result('video_block_in_sidebar', 'block_1') is not empty %}
+  <div class="sidebar__video _video">
+    <h2 class="sidebar__title">{{ 'Video'|t }}</h2>
+
+    <div class="sidebar__box">
+      {{ drupal_view('video_block_in_sidebar', 'block_1') }}
+    </div>
+  </div>
+{% endif %}

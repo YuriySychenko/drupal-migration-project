@@ -30,8 +30,8 @@
 *.zip
 
 # Custom
-#/.lando/
-#.lando.php.ini
+/.lando
+/web/modules/custom/day_migrate
 
 # Ignore custom theme node_modules/
 /web/themes/custom/day_theme/node_modules/

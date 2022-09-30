@@ -1,0 +1,47 @@
+<div class="popup popup__modal" data-popup-modal="search">
+  <div class="wrapper">
+    <div class="popup__inner popup__search">
+      <button class="popup__btn-close">
+        <svg class="icon icon-close">
+          <use xlink:href="/themes/custom/day_theme/assets/imgs/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      {#      <div class="_mob-hidden"> #}
+      {#        #}{# Search input block #}
+      {#        {% if search_form %} #}
+      {#          {{ search_form }} #}
+      {#        {% endif %} #}
+      {#      </div> #}
+      {#      <div class="_mob-visible"> #}
+
+      {# Search input block #}
+      {{ drupal_block('views_exposed_filter_block:search_via_search_api-page_1', wrapper=false) }}
+      {#      </div> #}
+{#      <div class="search__box">#}
+{#        <h2> Рубрики </h2>#}
+{#        <div class="search__list">#}
+{#          <ul>#}
+{#            <li>#}
+{#              <a href="#"> Політика </a>#}
+{#            </li>#}
+{#            <li>#}
+{#              <a href="#"> Економіка </a>#}
+{#            </li>#}
+{#            <li>#}
+{#              <a href="#"> Проекти/ініціатива </a>#}
+{#            </li>#}
+{#          </ul>#}
+{#          <ul>#}
+{#            <li>#}
+{#              <a href="#"> Право </a>#}
+{#            </li>#}
+{#            <li>#}
+{#              <a href="#"> Події </a>#}
+{#            </li>#}
+{#          </ul>#}
+{#        </div>#}
+{#      </div>#}
+    </div>
+  </div>
+</div>

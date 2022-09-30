@@ -224,8 +224,11 @@
 
     &:hover {
       background-color: $brand-color;
-      color: #fff;
       border-color: $brand-color;
+
+      a {
+        color: #fff;
+      }
     }
   }
 
@@ -366,6 +369,7 @@
   bottom: 64px;
   right: 17vw;
   height: 50px;
+  padding: 1px 6px;
   transform: translateY(100px);
   transition: transform $transition-standart, opacity $transition-fast;
   opacity: 0;

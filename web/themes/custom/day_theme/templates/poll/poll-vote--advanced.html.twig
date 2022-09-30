@@ -1,0 +1,15 @@
+{#
+/**
+ */
+#}
+{{ form.messages }}
+    {% if show_question %}
+      <strong>{{ question }}</strong>
+    {% endif %}
+
+    {{ form.choice }}
+    {{ form.write_in }}
+
+    {{ form.actions }}
+
+{{ form|without('actions', 'choice', 'messages', 'question', 'write_in') }}

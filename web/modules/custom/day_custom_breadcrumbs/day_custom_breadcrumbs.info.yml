@@ -1,0 +1,5 @@
+name: Day custom breadcrumbs
+description: Provide Day custom breadcrumbs
+type: module
+core_version_requirement: ^8 || ^9
+package: Other

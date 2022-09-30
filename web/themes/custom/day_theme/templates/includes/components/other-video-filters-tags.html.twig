@@ -1,0 +1,10 @@
+<div class="filter__btns">
+  <button class="active" id="all">{{ 'All videos'|t }}</button>
+
+  {% if video_tags %}
+    {% for video_tag_id, video_tag in video_tags %}
+      <button id="{{ video_tag_id }}">{{ video_tag.name }}</button>
+    {% endfor %}
+  {% endif %}
+
+</div>

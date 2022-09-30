@@ -5,10 +5,15 @@
  * Functions to support theming in the Tailwind CSS theme.
  */
 
+use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+use Drupal\Core\Form\FormState;
 use Drupal\Core\Link;
+use Drupal\Core\Url;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\file\Entity\File;
 use Drupal\node\NodeInterface;
+use Drupal\views\Views;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -35,12 +40,6 @@ function day_theme_get_active_theme() {
 
 /**
  * Implement hook_preprocess_page.
- *
- * @param $variables
- *
- * @return void
- * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
- * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
  */
 function day_theme_preprocess_page(&$variables) {
   // Get node.
@@ -51,10 +50,14 @@ function day_theme_preprocess_page(&$variables) {
   $current_path = \Drupal::service('path.current')->getPath();
   // Alias manager.
   $alias_manager = \Drupal::service('path_alias.manager');
+  // Path alias repository.
+  $path_alias_repository = \Drupal::service('path_alias.repository');
+  // Get language manager.
+  $language_manager = \Drupal::languageManager();
   // Get langcode.
-  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $langcode = $language_manager->getCurrentLanguage()->getId();
   // Format url langcode variable.
-  $url_langcode = $language == 'uk' ? '' : '/' . $language;
+  $url_langcode = $langcode == 'uk' ? '' : '/' . $langcode;
 
   /** @var Drupal\taxonomy\TermStorageInterface $taxonomy_storage */
   $taxonomy_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
@@ -71,7 +74,31 @@ function day_theme_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 
   // Add current langcode to templates.
-  $variables['language'] = $language;
+  $variables['language'] = $langcode;
+
+  // Add current language links to templates.
+  $languages = $language_manager->getLanguages();
+
+  // Delete EN language.
+  unset($languages['en']);
+
+  foreach ($languages as $language) {
+    // Get is front page boolean value.
+    $is_front = $variables['is_front'];
+
+    // Taxonomy term translation path.
+    // $current_path_args = explode('/', $current_path);
+    // if ($current_path_args[1] == 'taxonomy' && $current_path_args[2] == 'term') {
+    //   $path_alias_repository->lookupBySystemPath('/taxonomy/term/' . $current_path_args[3], $language->getId())
+    // }
+
+    // Get the current URL in each language.
+    $url = Url::fromRoute('<current>')->setOption('language', $language)->toString();
+    $alias_url = $alias_manager->getAliasByPath($url);
+    $language_code = $language->getId() != 'uk' ? $language->getId() : '';
+
+    $variables['custom_lang_switcher'][$language->getId()] = !$is_front ? $alias_url : '/' . $language_code;
+  }
 
   // Add taxonomy terms by tags vocabulary.
   $tags_terms_ids = $taxonomy_storage->getQuery()
@@ -87,7 +114,7 @@ function day_theme_preprocess_page(&$variables) {
   foreach ($tags_terms as $tags_term) {
     /** @var Drupal\taxonomy\Entity\Term $translated_tags_term */
     $translated_tags_term = \Drupal::service('entity.repository')
-      ->getTranslationFromContext($tags_term, $language);
+      ->getTranslationFromContext($tags_term, $langcode);
     $tags_term_alias = $alias_manager->getAliasByPath('/taxonomy/term/' . $translated_tags_term->id());
 
     $hot_tags[$translated_tags_term->id()]['name'] = $translated_tags_term->getName();
@@ -99,6 +126,26 @@ function day_theme_preprocess_page(&$variables) {
   }
 
   $variables['hot_tags'] = $hot_tags;
+
+  // Add taxonomy terms by video tags vocabulary.
+  $video_tags_terms_ids = $taxonomy_storage->getQuery()
+    ->condition('vid', 'video_tags')
+    ->sort('weight', 'ASC')
+    ->execute();
+
+  $video_tags_terms = $taxonomy_storage->loadMultiple($video_tags_terms_ids);
+
+  $video_tags = [];
+  /** @var Drupal\taxonomy\Entity\Term $video_tags_term */
+  foreach ($video_tags_terms as $video_tags_term) {
+    /** @var Drupal\taxonomy\Entity\Term $translated_video_tags_term */
+    $translated_video_tags_term = \Drupal::service('entity.repository')
+      ->getTranslationFromContext($video_tags_term, $langcode);
+
+    $video_tags[$translated_video_tags_term->id()]['name'] = $translated_video_tags_term->getName();
+  }
+
+  $variables['video_tags'] = $video_tags;
 
   // Formatting author info for blog post node.
   if ($node instanceof NodeInterface) {
@@ -120,6 +167,163 @@ function day_theme_preprocess_page(&$variables) {
       }
     }
   }
+
+  // Build menu news tags.
+  // News tags ids.
+  $menu_news_tags_ids = [
+    'political' => [
+      'id' => '1386',
+      'label' => 'Political'
+    ],
+    'worlds' => [
+      'id' => '1382',
+      'label' => 'Worlds'
+    ],
+    'economical' => [
+      'id' => '1396',
+      'label' => 'Economical'
+    ],
+    'cultural' => [
+      'id' => '1400',
+      'label' => 'Cultural',
+    ],
+    'social' => [
+      'uk' => [
+        'id' => '1390',
+      ],
+      'ru' => [
+        'id' => '1391',
+      ],
+      'label' => 'Social',
+    ],
+    'media' => [
+      'id' => '1436',
+      'label' => 'Media',
+    ],
+    'events' => [
+      'uk' => [
+        'id' => '1437',
+      ],
+      'ru' => [
+        'id' => '1438',
+      ],
+      'label' => 'Events',
+    ],
+  ];
+
+  // Build array with news tags.
+  $menu_news_tags = [];
+  foreach ($menu_news_tags_ids as $menu_news_tag_key => $menu_news_tag) {
+    if (isset($menu_news_tag['uk']) && isset($menu_news_tag['ru'])) {
+      if ($path_alias_repository->lookupBySystemPath('/taxonomy/term/' . $menu_news_tag[$langcode]['id'], $langcode)) {
+        $menu_news_tags[$menu_news_tag_key]['label'] = t($menu_news_tag['label']);
+        $menu_news_tags[$menu_news_tag_key]['url'] = $url_langcode . $alias_manager->getAliasByPath('/taxonomy/term/' . $menu_news_tag[$langcode]['id']);
+      }
+    }
+    else {
+      if ($path_alias_repository->lookupBySystemPath('/taxonomy/term/' . $menu_news_tag['id'], $langcode)) {
+        $menu_news_tags[$menu_news_tag_key]['label'] = t($menu_news_tag['label']);
+        $menu_news_tags[$menu_news_tag_key]['url'] = $url_langcode . $alias_manager->getAliasByPath('/taxonomy/term/' . $menu_news_tag['id']);
+      }
+    }
+  }
+
+  // Pass $menu_news_tags var to templates.
+  $variables['menu_news_tags'] = $menu_news_tags;
+
+  // Build menu newspaper tags.
+  // Newspaper tags ids.
+  $menu_newspaper_tags_ids = [
+    'day_of_ukraine' => [
+      'id' => '1445',
+      'label' => 'Day of Ukraine',
+    ],
+    'day_of_planet' => [
+      'id' => '1455',
+      'label' => 'Day of planet',
+    ],
+    'politics' => [
+      'id' => '1565',
+      'label' => 'Politics',
+    ],
+    'economics' => [
+      'id' => '1422',
+      'label' => 'Economics',
+    ],
+    'social' => [
+      'id' => '1426',
+      'label' => 'Social',
+    ],
+    'culture' => [
+      'id' => '1416',
+      'label' => 'Culture',
+    ],
+    'media' => [
+      'id' => '1419',
+      'label' => 'Media',
+    ],
+    'ukraine_incognita' => [
+      'id' => '',
+      'label' => 'Ukraine Incognita',
+    ],
+    'time_out' => [
+      'id' => '1439',
+      'label' => 'Time-out',
+    ],
+    'top_net' => [
+      'id' => '2058',
+      'label' => 'Top-Net',
+    ],
+    'travels' => [
+      'id' => '1521',
+      'label' => 'Travels',
+    ],
+    'ukrainians_read' => [
+      'id' => '1417',
+      'label' => 'Ukrainians - read!',
+    ],
+  ];
+
+  // Build array with newspaper tags.
+  $menu_newspaper_tags = [];
+  foreach ($menu_newspaper_tags_ids as $menu_newspaper_tag_key => $menu_newspaper_tag) {
+    if ($path_alias_repository->lookupBySystemPath('/taxonomy/term/' . $menu_newspaper_tag['id'], $langcode)) {
+      $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag['label']);
+      $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = $url_langcode . $alias_manager->getAliasByPath('/taxonomy/term/' . $menu_newspaper_tag['id']);
+    }
+    elseif ($menu_newspaper_tag_key == 'ukraine_incognita') {
+      $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag['label']);
+      $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = 'http://incognita.day.kyiv.ua';
+    }
+  }
+
+  // Pass $menu_newspaper_tags var to templates.
+  $variables['menu_newspaper_tags'] = $menu_newspaper_tags;
+
+  // Build
+
+  // Pass view search exposed filter form.
+  //  $view_id = 'search_via_search_api';
+  //  $view_display_id = 'page_1';
+  //
+  //  $view = Views::getView($view_id);
+  //
+  //  if ($view->id() == $view_id) {
+  //    $view->setDisplay($view_display_id);
+  //    $view->initHandlers();
+  //    $form_state = new FormState();
+  //    $form_state->setFormState([
+  //      'view' => $view,
+  //      'display' => $view->display_handler->display,
+  //      'exposed_form_plugin' => $view->display_handler->getPlugin('exposed_form'),
+  //      'method' => 'get',
+  //      'rerender' => TRUE,
+  //      'no_redirect' => TRUE,
+  //      'always_process' => TRUE, // This is important for handle the form status.
+  //    ]);
+
+  //    $variables['search_form'] = \Drupal::formBuilder()->buildForm('Drupal\views\Form\ViewsExposedForm', $form_state);
+  //  }
 }
 
 /**
@@ -135,25 +339,42 @@ function day_theme_preprocess_node(&$variables) {
   /** @var Drupal\node\NodeStorageInterface $node_storage */
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
 
-  if ($node->bundle() == 'news' || $node->bundle() == 'openpublish_article' || $node->bundle() == 'openpublish_blog_post') {
-    // Load node tags taxonomy term.
-    if ($node->hasField('field_tag_news')) {
-      $field_tag_news = $node->get('field_tag_news')->getValue();
-      if (!empty($field_tag_news)) {
-        $tag_ids = [];
-        foreach ($field_tag_news as $tag_news) {
-          $tag_ids[] = $tag_news['target_id'];
+  $content_types = [
+    'field_tag_news' => [
+      'news',
+      'openpublish_article',
+      'openpublish_blog_post'
+    ],
+    'field_video_tags' => [
+      'openpublish_video'
+    ]
+  ];
+
+  foreach ($content_types as $field => $content_type) {
+    if (in_array($node->bundle(), $content_type)) {
+
+      // Load taxonomy term node tags.
+      if ($node->hasField($field)) {
+        $field_tags = $node->get($field)->getValue();
+
+        if (!empty($field_tags)) {
+
+          $tag_ids = [];
+          foreach ($field_tags as $field_tag) {
+            $tag_ids[] = $field_tag['target_id'];
+          }
+
+          $tag_terms = $taxonomy_storage->loadMultiple($tag_ids);
+
+          $tag_term_links = [];
+          foreach ($tag_terms as $tag_news_term) {
+            $tag_term_links[] = Link::createFromRoute($tag_news_term->getName(), 'entity.taxonomy_term.canonical', ['taxonomy_term' => $tag_news_term->id()]);
+          }
+
+          // Pass tags to variables.
+          $variables['tags'] = $tag_term_links;
+
         }
-
-        $tag_news_terms = $taxonomy_storage->loadMultiple($tag_ids);
-
-        $tag_news_term_links = [];
-        foreach ($tag_news_terms as $tag_news_term) {
-          $tag_news_term_links[] = Link::createFromRoute($tag_news_term->getName(), 'entity.taxonomy_term.canonical', ['taxonomy_term' => $tag_news_term->id()]);
-        }
-
-        // Pass tags to variables.
-        $variables['tags'] = $tag_news_term_links;
       }
     }
   }
@@ -190,10 +411,6 @@ function day_theme_preprocess_node(&$variables) {
 
 /**
  * Implements hook_preprocess_views_view_grouping.
- *
- * @param $variables
- *
- * @return void
  */
 
 function day_theme_preprocess_views_view_grouping(&$variables) {
@@ -221,8 +438,28 @@ function day_theme_theme_suggestions_page_alter(array &$suggestions, array $vari
   }
 }
 
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ *
+ * @param array $suggestions
+ * @param array $variables
+ * @return void
+ */
 function day_theme_theme_suggestions_container_alter(array &$suggestions, array $variables) {
   if (isset($variables['element']['#type']) && isset($variables['element']['#name']) && isset($variables['element']['#display_id'])) {
     $suggestions[] = 'container__' . $variables['element']['#type'] . '__' . $variables['element']['#name'] . '__' . $variables['element']['#display_id'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_unformatted().
+ *
+ * @param $variables
+ * @return void
+ */
+function day_theme_preprocess_views_view_unformatted(&$variables) {
+  // Get filter query parameter.
+  if (isset($_GET['filter'])) {
+    $variables['search_filter_parameter'] = $_GET['filter'];
   }
 }

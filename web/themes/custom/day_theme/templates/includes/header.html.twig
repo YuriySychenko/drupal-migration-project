@@ -1,3 +1,5 @@
+{% set language_without_uk = language != 'uk' ? '/' ~ language : '' %}
+
 <header class="header">
   <div class="header__top">
     <div class="wrapper">
@@ -11,29 +13,29 @@
 
         <div class="header__dropdown dropdown">
 
-          {% set lang_list = {'uk': 'укр', 'ru': 'рус', 'en': 'eng'} %}
+          {% set lang_list = {'uk': 'укр', 'ru': 'рус'} %}
 
           <div class="header__dropdown-text" data-type="{{ lang_list[language] }}">{{ lang_list[language] }}</div>
           <ul class="header__dropdown-content">
-            <li><a href="{% if not is_front %} {{ base_url ~ current_path }} {% else %} / {% endif %}" data-type="укр">укр</a>
-            </li>
-            <li><a href="/ru{% if not is_front %}{{ current_path }}{% endif %}" data-type="рус">рус</a></li>
-            <li><a href="/en{% if not is_front %}{{ current_path }}{% endif %}" data-type="eng">eng</a></li>
+            {% for langcode, lang_url in custom_lang_switcher %}
+              <li><a href="{{ base_url ~ lang_url }}">{{ lang_list[langcode] }}</a></li>
+            {% endfor %}
           </ul>
         </div>
+
         <button class="header__btn search popup-trigger" data-popup-trigger="search">
           <svg class="icon icon-search">
             <use xlink:href="/themes/custom/day_theme/assets/imgs/sprite.svg#icon-search"></use>
           </svg>
         </button>
-        <a href="#" class="header__btn user">
+        <a href="{{ language_without_uk }}/user" class="header__btn user">
           <svg class="icon icon-user">
             <use xlink:href="/themes/custom/day_theme/assets/imgs/sprite.svg#icon-user"></use>
           </svg>
         </a>
         <div class="divider _mob-hidden"></div>
         <!-- Thib link dublicated on footer on mobile devices  -->
-        <a class="header__link _mob-hidden" href="https://day.kyiv.ua/uk/peredplata"> Передплата </a>
+        <a class="header__link _mob-hidden" href="https://day.kyiv.ua/uk/peredplata">{{ 'Subscription'|t }}</a>
       </div>
     </div>
   </div>
@@ -42,13 +44,17 @@
       <div class="wrapper">
         <div class="nav__box">
           <div class="nav__box-left">
-            <div class="nav__col">
-              <h2> {{ 'News'|t }} </h2>
 
-              {# Include menu news category twig template #}
-              {% include '@day_theme/includes/components/menu-news-tags.html.twig' %}
+            {% if menu_news_tags %}
+              <div class="nav__col">
+                <h2> {{ 'News'|t }} </h2>
 
-            </div>
+                {# Include menu news category twig template #}
+                {% include '@day_theme/includes/components/menu-news-tags.html.twig' %}
+
+              </div>
+            {% endif %}
+
             <div class="nav__col">
               <h2> {{ 'Newspaper'|t }} </h2>
 
@@ -59,34 +65,34 @@
             <div class="nav__col nav__col-heading">
               <ul class="nav__list">
                 <li>
-                  <a href="/blogs">
+                  <a href="{{ language_without_uk }}/blogs">
                     <h2>{{ 'Authors blogs'|t }}</h2>
                   </a>
                 </li>
                 <li>
-                  <a href="/photo-reports">
+                  <a href="{{ language_without_uk }}/photo-reports">
                     <h2>{{ 'Photo'|t }}</h2>
                   </a>
                 </li>
                 <li>
-                  <a href="./video-page.html">
-                    <h2> Відео </h2>
+                  <a href="{{ language_without_uk }}/video">
+                    <h2>{{ 'Video'|t }}</h2>
                   </a>
                 </li>
                 <li>
-                  <a href="./arhive-page.html">
-                    <h2> Архів </h2>
+                  <a href="{{ language_without_uk }}/newspapers-archive">
+                    <h2>{{ 'Archive'|t }}</h2>
                   </a>
                 </li>
               </ul>
               <div class="nav__col">
-                <h2> Магазин </h2>
+                <h2>{{ 'Shop'|t }}</h2>
                 <ul class="nav__list">
                   <li>
-                    <a href="https://day.kyiv.ua/uk/library">Де купити книги Дня</a>
+                    <a href="https://day.kyiv.ua/{{ language }}/library">{{ 'Where to buy books of the day'|t }}</a>
                   </li>
                   <li>
-                    <a href="https://day.kyiv.ua/uk/dostavka">Доставка та оплата</a>
+                    <a href="https://day.kyiv.ua/{{ language }}/dostavka">{{ 'Delivery and payment'|t }}</a>
                   </li>
                 </ul>
               </div>
@@ -94,49 +100,51 @@
           </div>
           <div class="nav__box-right">
             <div class="nav__col">
-              <h2> Редакція </h2>
+              <h2>{{ 'Editorial office'|t }}</h2>
               <ul class="nav__list">
                 <li>
-                  <a href="#">Контакти</a>
+                  <a href="#">{{ 'Contacts'|t }}</a>
                 </li>
                 <li>
-                  <a href="#">Головний редактор</a>
+                  <a href="#">{{ 'Editor in Chief'|t }}</a>
                 </li>
                 <li>
-                  <a href="#">Вакансії</a>
+                  <a href="#">{{ 'Vacancies'|t }}</a>
                 </li>
                 <li>
-                  <a href="#">Реклама</a>
+                  <a href="#">{{ 'Advertising'|t }}</a>
                 </li>
                 <li>
-                  <a href="https://day.kyiv.ua/uk/catalog/peredplatiti-gazetu">Передплата</a>
+                  <a href="https://day.kyiv.ua/{{ language }}/catalog/peredplatiti-gazetu">{{ 'Subscription'|t }}</a>
                 </li>
               </ul>
             </div>
             <div class="nav__col">
-              <h2> Проєкти дня </h2>
+              <h2>{{ 'Project of the day'|t }}</h2>
               <ul class="nav__list">
                 <li>
-                  <a href="https://day.kyiv.ua/uk/catalog/peredplatiti-gazetu">Благодійний Фонд «Дня»</a>
+                  <a
+                    href="https://day.kyiv.ua/{{ language }}/catalog/peredplatiti-gazetu">{{ 'The Day Charitable Foundation'|t }}</a>
                 </li>
                 <li>
-                  <a href="http://incognita.day.kyiv.ua/">Україна Incognita</a>
+                  <a href="http://incognita.day.kyiv.ua/">{{ 'Ukraine Incognita'|t }}</a>
                 </li>
                 <li>
-                  <a href="#">Фотовиставка</a>
+                  <a href="#">{{ 'Photo exhibition'|t }}</a>
                 </li>
                 <li>
-                  <a href="#">Фотоконкурс</a>
+                  <a href="#">{{ 'Photo contest'|t }}</a>
                 </li>
                 <li>
-                  <a href="#">Літня школа журналістики</a>
+                  <a href="#">{{ 'Summer school of journalism'|t }}</a>
                 </li>
                 <li>
-                  <a href="#">Премія імені Джеймса Мейса</a>
+                  <a href="#">{{ 'James Mace Award'|t }}</a>
                 </li>
               </ul>
               <div class="nav__logo">
-                <img src="/themes/custom/day_theme/assets/imgs/logo-nav.svg" alt="Газета &quot;День&quot;">
+                <img src="/themes/custom/day_theme/assets/imgs/logo-nav.svg"
+                     alt="{{ 'The newspaper &quot;Day&quot;'|raw|t }}">
               </div>
             </div>
           </div>

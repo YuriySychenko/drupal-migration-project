@@ -5,7 +5,6 @@ global-styling:
 
 global-scripts:
   js:
-    js/app.js: { }
     lib/lazyload.min.js: { minified: true }
     lib/svgxuse.min.js: { minified: true, attributes: { defer: true } }
     lib/ofi.min.js: { minified: true, attributes: { defer: true } }
@@ -17,9 +16,12 @@ global-scripts:
     js/objectFitImages.js: { }
     lib/infinite-scroll/infinite-scroll.pkgd.min.js: { minifiad: true }
     js/main.js: { }
+    js/app.js: { }
+    js/overrideApp.js: { }
 
   dependencies:
     - core/jquery
+    - core/jquery.once
     - core/drupal
     - core/drupalSettings
 

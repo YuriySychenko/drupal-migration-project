@@ -40,6 +40,16 @@
             }
         }
 
+      &.disabled {
+        .select__selected-item {
+          color: #a5a2a2;
+        }
+        .select__arrow {
+          path {
+            stroke: #a5a2a2;
+          }
+        }
+      }
 
         &__list {
             position: absolute;

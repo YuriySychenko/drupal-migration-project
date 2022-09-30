@@ -419,7 +419,7 @@ body::-webkit-scrollbar-thumb {
 .main {
   flex: 1 1 auto;
   min-height: 1px;
-  overflow: hidden;
+  overflow-x: clip;
 }
 .main__box {
   display: flex;
@@ -732,12 +732,6 @@ body::-webkit-scrollbar-thumb {
 ._rel-article .partners__list {
   margin-bottom: 112px;
 }
-._rel-article .load-more-news-wrapper {
-  @apply tw-flex tw-justify-center;
-}
-._rel-article .load-more-news-wrapper .load-more-news {
-  max-width: 592px;
-}
 ._rel-article .breadcrumbs,
 ._rel-article .themes {
   max-width: 800px;
@@ -950,6 +944,18 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+._rel-article-video .load-more-news-wrapper, ._rel-article .load-more-news-wrapper {
+  @apply tw-flex tw-justify-center;
+}
+._rel-article-video .load-more-news-wrapper .load-more-news, ._rel-article .load-more-news-wrapper .load-more-news {
+  display: none;
+  max-width: 592px;
+}
+
+._rel-article-video .load-more-news-wrapper .load-more-news {
+  max-width: 300px;
+}
+
 .news__section {
   padding-top: 56px;
   padding-bottom: 56px;
@@ -1078,7 +1084,7 @@ body::-webkit-scrollbar-thumb {
 .sidebar {
   max-width: 384px;
   width: 100%;
-  overflow: hidden;
+  overflow-x: clip;
   z-index: 1;
 }
 .sidebar > div {
@@ -1293,6 +1299,7 @@ body::-webkit-scrollbar-thumb {
   color: #EC2227 !important;
   font-weight: 700;
   font-size: 1rem;
+  margin-top: 20px;
   transition: color 0.15s ease-out;
 }
 .sidebar__link:hover {
@@ -1480,21 +1487,18 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.5;
   font-size: 1rem;
 }
-.sidebar__poll form div {
+.sidebar__poll form .form-item {
   display: flex;
   margin-bottom: 16px;
-}
-.sidebar__poll form div:last-of-type {
-  margin-top: 30px;
 }
 .sidebar__poll form strong {
   display: block;
   margin-bottom: 24px;
   font-weight: 700;
 }
-.sidebar__poll form input[type=submit] {
+.sidebar__poll form .button--vote {
   display: block;
-  margin: auto;
+  margin: 30px auto 16px;
   width: 100%;
   height: 40px;
   max-width: 297px;
@@ -1507,8 +1511,27 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   transition: opacity 0.15s ease-out;
 }
-.sidebar__poll form input[type=submit]:hover {
+.sidebar__poll form .button--vote:hover {
   opacity: 0.8;
+}
+.sidebar__poll form .button--result, .sidebar__poll form .button--cancel {
+  display: block;
+  background: none;
+  border: none;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  color: #006e97;
+  cursor: pointer;
+  -webkit-transition: color 0.15s ease-out;
+  -o-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+}
+.sidebar__poll form .button--result:hover, .sidebar__poll form .button--cancel:hover {
+  color: #002431;
+}
+.sidebar__poll form .total-votes {
+  margin: 25px auto;
+  text-align: center;
 }
 .sidebar__poll .poll__link {
   text-align: center;
@@ -1732,6 +1755,7 @@ body::-webkit-scrollbar-thumb {
 }
 .popup__search input[type=text] {
   min-width: 250px;
+  width: 100%;
   border: 0;
   outline: none !important;
 }
@@ -2713,8 +2737,10 @@ a {
 }
 .tags li:hover {
   background-color: #EC2227;
-  color: #fff;
   border-color: #EC2227;
+}
+.tags li:hover a {
+  color: #fff;
 }
 .tags a {
   font-size: 1rem;
@@ -2832,6 +2858,7 @@ a {
   bottom: 64px;
   right: 17vw;
   height: 50px;
+  padding: 1px 6px;
   transform: translateY(100px);
   transition: transform 0.3s ease-out, opacity 0.15s ease-out;
   opacity: 0;
@@ -3088,8 +3115,9 @@ a {
   flex-direction: column;
   height: 100%;
 }
-.book__section .news__small-content button {
-  display: block;
+.book__section .news__small-content button, .book__section .news__small-content .btn--buy {
+  @apply tw-flex tw-justify-center tw-items-center;
+  max-height: 36px;
   min-width: 180px;
   padding: 9px;
   margin: auto;
@@ -3105,11 +3133,11 @@ a {
   transition: color 0.15s ease-out, background-color 0.15s ease-out;
 }
 @media (max-width: 768px) {
-  .book__section .news__small-content button {
+  .book__section .news__small-content button, .book__section .news__small-content .btn--buy {
     min-width: 128px;
   }
 }
-.book__section .news__small-content button:hover {
+.book__section .news__small-content button:hover, .book__section .news__small-content .btn--buy:hover {
   background-color: #ca1116;
 }
 .book__section .news__small-img {
@@ -3562,6 +3590,17 @@ a {
     margin-top: 12px;
     margin-left: 8px;
   }
+  .news__list-block article > div > div p.longread-mark {
+    margin-left: 0 !important;
+    order: 0;
+    margin-top: -12px;
+  }
+  .news__list-block article > div > div .date {
+    order: 2;
+  }
+  .news__list-block article > div > div strong {
+    order: 3;
+  }
 }
 .news__list-block article strong {
   display: block;
@@ -3650,6 +3689,7 @@ a {
 @media (max-width: 1023px) {
   .category__article {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .category__article-small {
@@ -3723,6 +3763,9 @@ a {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.35px;
+}
+.category__article h3 {
+  font-weight: 700;
 }
 .category__article a {
   color: inherit;
@@ -3813,6 +3856,22 @@ a {
 .categoryArticle__box a {
   display: inline-block;
   line-height: 1.5;
+}
+.categoryArticle__box.video-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 113px;
+}
+@media (max-width: 1439px) {
+  .categoryArticle__box.video-wrapper {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 1023px) {
+  .categoryArticle__box.video-wrapper {
+    max-width: 100%;
+    padding: 0 16px;
+  }
 }
 .categoryArticle__article {
   border-bottom: 1px solid #E5E5E5;
@@ -4655,12 +4714,17 @@ video {
     margin: inherit;
   }
 }
+.videoPage__slider1 .icon img {
+  max-width: 100%;
+  height: 100%;
+}
 .videoPage__videos {
   margin-top: 112px;
   margin-bottom: 112px;
 }
 .videoPage__videos .section__title-wrap {
   flex-wrap: wrap;
+  margin-bottom: 46px;
 }
 @media (max-width: 1023px) {
   .videoPage__videos .section__title-wrap {
@@ -4676,6 +4740,8 @@ video {
 .videoPage__videos .btn__more {
   margin: 32px auto 56px auto;
   display: block;
+  max-width: 181px;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .videoPage__videos .wrapper {
@@ -4686,7 +4752,7 @@ video {
 .videoPage__box {
   display: flex;
   flex-wrap: wrap;
-  margin: 46px -56px 0 -56px;
+  margin: 0 -56px 0 -56px;
 }
 @media (max-width: 1366px) {
   .videoPage__box {
@@ -4795,6 +4861,7 @@ video {
 }
 
 .videoArticle .video {
+  @apply tw-flex tw-justify-center;
   position: relative;
   margin-bottom: 80px;
   filter: drop-shadow(0px 16px 32px rgba(35, 23, 5, 0.26));
@@ -5013,6 +5080,7 @@ video {
   fill: #E92D22;
 }
 .archivePage__submit {
+  @apply tw-text-center;
   display: block;
   max-width: 280px;
   width: 100%;
@@ -5132,6 +5200,7 @@ video {
   font-weight: 700;
   color: #006E97;
   transition: color 0.15s ease-out;
+  margin-right: 7px;
 }
 .post-info__row a:hover {
   color: #004964;
@@ -5605,6 +5674,9 @@ video {
     margin-top: 32px;
     margin-bottom: 56px;
   }
+  .news__pagination > ul {
+    max-height: 39.2px;
+  }
 }
 
 .pager {
@@ -5770,6 +5842,12 @@ video {
 .dropdown .select__arrow .arrow-stroke {
   stroke: #E92D22;
   transition: stroke 0.15s ease-out;
+}
+.dropdown .select.disabled .select__selected-item {
+  color: #a5a2a2;
+}
+.dropdown .select.disabled .select__arrow path {
+  stroke: #a5a2a2;
 }
 .dropdown .select__list {
   position: absolute;
@@ -5968,7 +6046,7 @@ video {
       order: 2;
       margin-bottom: 56px !important;
     }
-    ._rel-category ._list-articles {
+    ._rel-category .content-block {
       order: 3;
     }
     ._rel-category ._ads-2 {
@@ -6032,7 +6110,7 @@ video {
     }
     ._blog .sidebar__photo {
       display: block !important;
-      order: 3;
+      order: 99;
     }
     ._blog ._video {
       margin-top: 0;
@@ -6299,8 +6377,9 @@ video {
     .archiveNewspaper .branding-box-center iframe {
       margin-bottom: 56px;
     }
-    .archiveNewspaper .section-list-news {
+    .archiveNewspaper .section-list-news, .archiveNewspaper .content-block {
       order: 6 !important;
+      margin-top: 55px;
     }
     .archiveNewspaper .sidebar__newspaper {
       order: 7 !important;
@@ -6682,6 +6761,11 @@ video {
     background-repeat: no-repeat;
   }
 
+  .disabled {
+    pointer-events: none;
+    color: #a5a2a2;
+  }
+
   .sticky {
     @apply tw-sticky;
     position: -webkit-sticky;
@@ -6725,6 +6809,7 @@ video {
   padding-top: 2px;
 }
 .news__list-block .article-item p.longread-mark {
+  @apply tw-text-center;
   margin-left: 15px;
   color: #fff;
   background: #e32020;
