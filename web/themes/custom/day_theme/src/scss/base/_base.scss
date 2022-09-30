@@ -63,6 +63,12 @@ article blockquote {
   }
 }
 
+// Disabled
+.disabled {
+  pointer-events: none;
+  color: #a5a2a2;
+}
+
 // Sticky block
 .sticky {
   @apply tw-sticky;

@@ -3,6 +3,7 @@
 namespace Drupal\day_infinite_scroll_next_node\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -37,14 +38,14 @@ class LoadNextNodeController extends ControllerBase {
    * Constructs a new UserMultipleCancelConfirm.
    *
    * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
-   *
+   * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function __construct(EntityRepositoryInterface $entity_repository) {
+  public function __construct(EntityRepositoryInterface $entity_repository, LanguageManagerInterface $language_manager) {
     $this->nodeStorage = $this->entityTypeManager()->getStorage('node');
-    $this->languageManager = $this->languageManager();
     $this->entityRepository = $entity_repository;
+    $this->languageManager = $language_manager;
   }
 
   /**
@@ -52,7 +53,8 @@ class LoadNextNodeController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('entity.repository')
+      $container->get('entity.repository'),
+      $container->get('language_manager'),
     );
   }
 
@@ -66,7 +68,7 @@ class LoadNextNodeController extends ControllerBase {
    *   Ajax response.
    */
   public function loadNextNodeUrl(string $nid): JsonResponse {
-    $langcode = $this->languageManager()->getCurrentLanguage()->getId();
+    $langcode = $this->languageManager->getCurrentLanguage()->getId();
 
     // Get NID render.
     if ($nid !== 'undefined') {

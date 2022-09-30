@@ -1,0 +1,8 @@
+{% if drupal_view_result('taxonomy_terms_news_and_articles', 'block_1') is not empty %}
+
+  <div class="category__article">
+    {{ drupal_view('taxonomy_terms_news_and_articles', 'block_1') }}
+    {{ drupal_view('taxonomy_terms_news_and_articles', 'block_2') }}
+  </div>
+
+{% endif %}

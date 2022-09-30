@@ -6,6 +6,10 @@
         justify-content: center;
         margin-top: 32px;
         margin-bottom: 56px;
+
+      & > ul {
+        max-height: 39.2px;
+      }
     }
 }
 

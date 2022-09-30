@@ -1,0 +1,12 @@
+{% if drupal_view_result('video_block_in_homepage', 'block_1') is not empty %}
+  <section class="photo__section dark _video">
+    <div class="section__title-wrap">
+      <h2>{{ 'Video'|t }}</h2>
+      <a href="/video">{{ 'All videos'|t }}</a>
+    </div>
+
+    <div class="grid-row">
+      {{ drupal_view('video_block_in_homepage', 'block_1') }}
+    </div>
+  </section>
+{% endif %}

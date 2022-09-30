@@ -1,0 +1,62 @@
+<div class="sidebar__tab-wrapper _tab-{{ format }}">
+
+  <ul class="sidebar__tab">
+    <li class="selected" data-id="actual" data-clicksvg="svg-actual">{{ 'Actual'|t }}</li>
+    <li data-id="important" data-clicksvg="svg-important">{{ 'Important'|t }}</li>
+    <li data-id="popular" data-clicksvg="svg-popular">{{ 'Popular'|t }}</li>
+  </ul>
+
+  <div class="sidebar__tabs">
+    <div class="sidebar__tabs-panel" id="actual">
+      {% for date, items in actual %}
+
+        <div class="sidebar__date">
+          <p>{{ date }}</p>
+        </div>
+
+        {% for nid, item in items %}
+          <div {{ item.hot ? 'class="hot-new"' : '' }}>
+            <p>{{ item.created_time }}</p>
+            <a href="{{ path('entity.node.canonical', {'node': nid}) }}">{{ item.title }}</a>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="sidebar__tabs-panel hidden" id="important">
+      {% for date, items in important %}
+
+        <div class="sidebar__date">
+          <p>{{ date }}</p>
+        </div>
+
+        {% for  nid, item in items %}
+          <div {{ item.hot ? 'class="hot-new"' : '' }}>
+            <p>{{ item.created_time }}</p>
+            <a href="{{ path('entity.node.canonical', {'node': nid}) }}">{{ item.title }}</a>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="sidebar__tabs-panel hidden" id="popular">
+      {% for date, items in popular %}
+
+        <div class="sidebar__date">
+          <p>{{ date }}</p>
+        </div>
+
+        {% for nid, item in items %}
+          <div {{ item.hot ? 'class="hot-new"': '' }}>
+            <p>{{ item.created_time }}</p>
+            <a href="{{ path('entity.node.canonical', {'node': nid}) }}">{{ item.title }}</a>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    {% if is_not_news %}
+      <a class="sidebar__link"
+         href="/{% if language != 'uk' %}{{ language ~ '/' }}{% endif %}news">{{ 'All news'|t }}</a>
+    {% endif %}
+
+  </div>
+</div>

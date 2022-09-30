@@ -138,6 +138,8 @@
   }
 
   &__submit {
+    @apply tw-text-center;
+
     display: block;
     max-width: 280px;
     width: 100%;
