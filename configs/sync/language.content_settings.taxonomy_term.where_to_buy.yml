@@ -1,0 +1,18 @@
+uuid: 17efdd4e-0704-4acf-8e4d-5c3817e1785c
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.where_to_buy
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.where_to_buy
+target_entity_type_id: taxonomy_term
+target_bundle: where_to_buy
+default_langcode: site_default
+language_alterable: true

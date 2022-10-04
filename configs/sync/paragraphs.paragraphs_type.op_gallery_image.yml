@@ -1,0 +1,10 @@
+uuid: 7d994441-ae24-47f8-a52e-d5464ced5fb7
+langcode: uk
+status: true
+dependencies: {  }
+id: op_gallery_image
+label: 'Op gallery image'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_op_gallery_image'
+behavior_plugins: {  }

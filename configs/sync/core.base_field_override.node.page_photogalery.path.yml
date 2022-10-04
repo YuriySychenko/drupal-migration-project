@@ -1,0 +1,20 @@
+uuid: 783372da-f299-4383-97c3-355bbd6dbbef
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page_photogalery
+  module:
+    - path
+id: node.page_photogalery.path
+field_name: path
+entity_type: node
+bundle: page_photogalery
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

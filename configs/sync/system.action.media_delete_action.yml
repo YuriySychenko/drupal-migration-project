@@ -1,0 +1,13 @@
+uuid: 2823f3d2-6f12-4a12-a58c-9b2bb84c5b31
+langcode: uk
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: FrZy1tmuXJcOxhXlBoI1Hsnen5TT-9OCC1iolWH84go
+id: media_delete_action
+label: 'Видалити медіа'
+type: media
+plugin: 'entity:delete_action:media'
+configuration: {  }

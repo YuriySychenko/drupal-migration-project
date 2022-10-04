@@ -1,0 +1,20 @@
+uuid: e4d5e879-23de-4e18-8e27-7f708f4bef81
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.section_front
+id: node.section_front.uid
+field_name: uid
+entity_type: node
+bundle: section_front
+label: Автор
+description: 'Ім''я користувача автора матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

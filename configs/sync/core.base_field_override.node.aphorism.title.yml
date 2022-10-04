@@ -1,0 +1,18 @@
+uuid: 53cbcbeb-bd76-4d83-a5d5-f1ae519af809
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.aphorism
+id: node.aphorism.title
+field_name: title
+entity_type: node
+bundle: aphorism
+label: 'Текст афоризму'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

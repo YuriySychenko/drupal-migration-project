@@ -1,0 +1,20 @@
+uuid: 5bff060e-88b3-4c91-837a-95f7e314b5d6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.name
+field_name: name
+entity_type: media
+bundle: audio
+label: 'Назва (ім''я)'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

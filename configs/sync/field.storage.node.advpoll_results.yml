@@ -1,0 +1,30 @@
+uuid: 30c13a69-dbcf-4665-8f0f-8f13a0d54d84
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.advpoll_results
+field_name: advpoll_results
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: aftervote
+      label: 'After voting'
+    -
+      value: afterclose
+      label: 'After poll is closed'
+    -
+      value: never
+      label: Ніколи
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

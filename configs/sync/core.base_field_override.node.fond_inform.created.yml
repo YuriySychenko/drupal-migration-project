@@ -1,0 +1,18 @@
+uuid: 30a44a76-49f8-4226-8db4-21c0a6e5e9a6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_inform
+id: node.fond_inform.created
+field_name: created
+entity_type: node
+bundle: fond_inform
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

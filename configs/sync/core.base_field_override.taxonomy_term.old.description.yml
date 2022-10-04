@@ -1,0 +1,20 @@
+uuid: 51124cb6-cf93-44f6-a50f-41c766c0a65e
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.old
+  module:
+    - text
+id: taxonomy_term.old.description
+field_name: description
+entity_type: taxonomy_term
+bundle: old
+label: Опис
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

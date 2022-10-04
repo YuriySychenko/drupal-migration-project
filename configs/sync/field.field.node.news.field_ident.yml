@@ -1,0 +1,19 @@
+uuid: 358343db-581a-4ba9-90fc-da122452f17e
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ident
+    - node.type.news
+id: node.news.field_ident
+field_name: field_ident
+entity_type: node
+bundle: news
+label: ident
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

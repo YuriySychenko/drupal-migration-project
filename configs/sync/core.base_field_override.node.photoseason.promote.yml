@@ -1,0 +1,22 @@
+uuid: a3ec973a-f193-483f-8f0a-625d8e34c155
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photoseason
+id: node.photoseason.promote
+field_name: promote
+entity_type: node
+bundle: photoseason
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

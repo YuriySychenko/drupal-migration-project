@@ -1,0 +1,14 @@
+uuid: f8800a0d-6df8-4e48-a42f-7274bc4111e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.marketolog
+  module:
+    - user
+id: user_add_role_action.marketolog
+label: 'Add the маркетолог role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: marketolog

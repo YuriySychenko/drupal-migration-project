@@ -1,0 +1,22 @@
+uuid: 98fa49bd-06dd-47ce-8260-9347bb5a0d1d
+langcode: uk
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: news_category
+label: 'Taxonomy term - Рубрики новин'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'news/[term:name]'
+selection_criteria:
+  c72c23a9-798b-4bf6-bdfe-9043b96bbf80:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: c72c23a9-798b-4bf6-bdfe-9043b96bbf80
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      news_category: news_category
+selection_logic: and
+weight: -5
+relationships: {  }

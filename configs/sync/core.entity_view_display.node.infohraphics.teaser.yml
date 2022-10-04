@@ -1,0 +1,37 @@
+uuid: ac4bc5f7-0c21-4a98-9958-672ca85a9ad8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.infohraphics.body
+    - field.field.node.infohraphics.field_infolink
+    - field.field.node.infohraphics.field_main_image_big
+    - field.field.node.infohraphics.field_op_main_image
+    - node.type.infohraphics
+  module:
+    - text
+    - user
+id: node.infohraphics.teaser
+targetEntityType: node
+bundle: infohraphics
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_infolink: true
+  field_main_image_big: true
+  field_op_main_image: true
+  langcode: true

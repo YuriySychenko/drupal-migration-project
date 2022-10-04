@@ -1,0 +1,18 @@
+uuid: b0f65669-3a36-4d1a-b1ba-f28a0c1a6e76
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads
+id: node.simpleads.changed
+field_name: changed
+entity_type: node
+bundle: simpleads
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,22 @@
+uuid: 541bf8a8-f9e4-4002-a4d9-181e25ac6197
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.poll
+id: node.poll.status
+field_name: status
+entity_type: node
+bundle: poll
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

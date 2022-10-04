@@ -1,0 +1,21 @@
+uuid: a643488a-41f2-4455-9e3d-75e95d9752c9
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_section_front
+label: 'Content - Section Front'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      section_front: section_front
+selection_logic: and
+weight: 0
+relationships: {  }

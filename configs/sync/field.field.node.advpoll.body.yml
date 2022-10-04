@@ -1,0 +1,23 @@
+uuid: 26c8593c-574a-4820-b9b0-04f261530f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.advpoll
+  module:
+    - text
+id: node.advpoll.body
+field_name: body
+entity_type: node
+bundle: advpoll
+label: Опис
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

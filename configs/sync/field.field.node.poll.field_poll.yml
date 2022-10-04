@@ -1,0 +1,21 @@
+uuid: 36ec4d82-100f-4877-9305-b3f6d9841bfe
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poll
+    - node.type.poll
+id: node.poll.field_poll
+field_name: field_poll
+entity_type: node
+bundle: poll
+label: poll
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:poll'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,15 @@
+uuid: a6a2df13-9d8e-426c-9f03-83be8c9d80ec
+langcode: uk
+status: true
+dependencies: {  }
+name: 512x384
+label: 512x384
+effects:
+  515b4d1d-e9b8-46df-88ab-35e8e06c7e26:
+    id: image_scale_and_crop
+    data:
+      width: 512
+      height: 384
+      anchor: center-center
+    weight: 1
+    uuid: 515b4d1d-e9b8-46df-88ab-35e8e06c7e26

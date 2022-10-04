@@ -1,0 +1,21 @@
+uuid: 9c7866d0-12b9-4dc7-9f5e-44f9c404828f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_profile
+label: 'Content - Профіль'
+type: 'canonical_entities:node'
+pattern: 'profile/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      profile: profile
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,18 @@
+uuid: 1b23ffdc-fabc-4be3-9aa5-80f6ff6ef04b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_blog_post
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.openpublish_blog_post
+target_entity_type_id: node
+target_bundle: openpublish_blog_post
+default_langcode: site_default
+language_alterable: true

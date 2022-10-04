@@ -1,0 +1,54 @@
+uuid: a471d9ef-d00e-4dd3-acaf-01314f387c81
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_425256
+title: '123'
+description: null
+category: null
+elements: |
+  chi_cikavites_religiynim_zhittyam_ukrayini_1:
+    '#type': radios
+    '#options':
+      "safe_key: 'Так'
+      safe_key: 'Ні"'
+    '#title': 'Чи цікавитесь релігійним життям України?' 
+    '#description': ""
+    '#required': true
+  yakshcho_tak_to_yakim_media_nadaiete_perevagu:
+    '#type': radios
+    '#options':
+      "safe_key: 'Спеціалізовані релігійні сайти'
+      safe_key: 'Світські сайти, які пишуть про релігію"'
+    '#title': 'Якщо так, то яким медіа надаєте перевагу' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

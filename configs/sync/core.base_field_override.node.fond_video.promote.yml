@@ -1,0 +1,22 @@
+uuid: 8247cbf6-6f21-42e3-b315-16cfd6c1734d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+id: node.fond_video.promote
+field_name: promote
+entity_type: node
+bundle: fond_video
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

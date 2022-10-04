@@ -1,0 +1,23 @@
+uuid: ecc7a689-a9f5-4331-bb6f-4fc9f2ea9a5b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_year
+    - node.type.product
+id: node.product.field_product_year
+field_name: field_product_year
+entity_type: node
+bundle: product
+label: 'Рік видання'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,22 @@
+uuid: dee400d8-7c51-40bd-8671-4056c56519d5
+langcode: uk
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - day_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: day_theme_help
+theme: day_theme
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Довідка
+  label_display: '0'
+  provider: help
+visibility: {  }

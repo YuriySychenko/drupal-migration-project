@@ -1,0 +1,18 @@
+uuid: 95a9b1dd-ae62-45a8-b6a1-02746895a6e5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.infohraphics
+id: node.infohraphics.changed
+field_name: changed
+entity_type: node
+bundle: infohraphics
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

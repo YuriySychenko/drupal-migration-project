@@ -1,0 +1,23 @@
+uuid: 5d33df04-6d7b-4c26-b44a-1fc5fd717ef6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editors_choice
+    - node.type.openpublish_blog_post
+id: node.openpublish_blog_post.field_editors_choice
+field_name: field_editors_choice
+entity_type: node
+bundle: openpublish_blog_post
+label: 'Вибір редакції'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

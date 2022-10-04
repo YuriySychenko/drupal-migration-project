@@ -1,0 +1,24 @@
+uuid: a29a93cf-3e3c-4cd3-871d-aac31c4acef4
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Yr2l9kFlT4Sa8875bhBZ0jy7QkYNxCKbx60FqGxELAg
+id: admin
+label: 'Адміністраторський профіль'
+description: 'Конфігурація для адміністраторів сайту'
+conf:
+  extensions: '*'
+  maxsize: !!float 0
+  quota: !!float 0
+  maxwidth: 0
+  maxheight: 0
+  replace: 0
+  thumbnail_style: ''
+  thumbnail_grid_style: false
+  ignore_usage: false
+  folders:
+    -
+      path: .
+      permissions:
+        all: true

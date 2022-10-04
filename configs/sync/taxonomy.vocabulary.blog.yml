@@ -1,0 +1,8 @@
+uuid: 8c224b2b-d24c-4dd2-a403-fb151d1b49a0
+langcode: uk
+status: true
+dependencies: {  }
+name: Blog
+vid: blog
+description: 'Organizational vocabulary for blog contributors or sections'
+weight: 0

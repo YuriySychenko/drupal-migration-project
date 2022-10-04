@@ -1,0 +1,18 @@
+uuid: 06eff6a9-547b-478e-a83c-48acc5509d33
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_work_for_you
+field_name: field_work_for_you
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

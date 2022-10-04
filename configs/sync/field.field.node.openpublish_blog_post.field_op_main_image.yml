@@ -1,0 +1,45 @@
+uuid: 79654d4a-8708-4e49-b30a-40db961652eb
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_main_image
+    - node.type.openpublish_blog_post
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: node.openpublish_blog_post.field_op_main_image
+field_name: field_op_main_image
+entity_type: node
+bundle: openpublish_blog_post
+label: 'Main Image'
+description: 'Select a Main Image for your Blog Post, which will appear on the Blog Post''s node page and will also represent the Blog Post in lists.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: main/blogposts
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: 6246dc58-f2cb-40fa-b37e-90fb121cf0d8
+    alt: ''
+    title: ''
+    width: 800
+    height: 600
+field_type: image

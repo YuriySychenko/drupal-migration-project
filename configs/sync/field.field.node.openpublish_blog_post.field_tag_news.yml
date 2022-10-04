@@ -1,0 +1,25 @@
+uuid: 1e48e26c-af86-41ee-bce1-29aee1e06e2d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tag_news
+    - node.type.openpublish_blog_post
+id: node.openpublish_blog_post.field_tag_news
+field_name: field_tag_news
+entity_type: node
+bundle: openpublish_blog_post
+label: 'Tag news'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: entity_reference_taxonomy_vocabularies
+      display_name: entity_reference_3
+      arguments: {  }
+field_type: entity_reference

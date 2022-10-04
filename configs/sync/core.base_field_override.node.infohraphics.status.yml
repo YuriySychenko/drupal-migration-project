@@ -1,0 +1,22 @@
+uuid: 5b78d16d-d3eb-418a-863c-fdd447272101
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.infohraphics
+id: node.infohraphics.status
+field_name: status
+entity_type: node
+bundle: infohraphics
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

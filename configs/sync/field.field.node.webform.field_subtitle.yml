@@ -1,0 +1,19 @@
+uuid: acfdd774-8dde-45ca-803d-d4570e942c45
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.webform
+id: node.webform.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: webform
+label: Підзаголовок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

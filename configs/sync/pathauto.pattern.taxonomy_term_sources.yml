@@ -1,0 +1,22 @@
+uuid: e9c68c44-00d6-4f54-b9b5-7c93cab480d2
+langcode: uk
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_term_sources
+label: 'Taxonomy term - Джерела'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'sources/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      sources: sources
+selection_logic: and
+weight: 0
+relationships: {  }

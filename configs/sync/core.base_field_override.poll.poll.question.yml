@@ -1,0 +1,18 @@
+uuid: d5c10b6e-6663-46b0-9687-23d9fcfbe8c5
+langcode: uk
+status: true
+dependencies:
+  module:
+    - poll
+id: poll.poll.question
+field_name: question
+entity_type: poll
+bundle: poll
+label: Питання
+description: 'The poll question.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

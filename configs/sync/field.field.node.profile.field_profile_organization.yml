@@ -1,0 +1,19 @@
+uuid: ae6d9a1e-6f77-4f41-b8b9-a14fe9ce6aa5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_organization
+    - node.type.profile
+id: node.profile.field_profile_organization
+field_name: field_profile_organization
+entity_type: node
+bundle: profile
+label: Organization
+description: 'If this profile is an organization or company, enter the name of that organization here. This can take the place of First and Last names to serve as the full name of this profile.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

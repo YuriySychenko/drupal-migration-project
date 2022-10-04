@@ -1,0 +1,18 @@
+uuid: 25fdcba8-64ce-4cd8-b9cf-83cfa1d51af8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Фонд Подарунок'
+type: fond_gift
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

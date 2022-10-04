@@ -1,0 +1,19 @@
+uuid: ead249c1-7ed6-486d-a447-c3ca7fc574f9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_first_name
+    - node.type.fond_comment
+id: node.fond_comment.field_profile_first_name
+field_name: field_profile_first_name
+entity_type: node
+bundle: fond_comment
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: e391ddbf-fe38-4a3b-99ae-fd706bd118b9
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_photogalery
+label: 'Content - Фотогалерея'
+type: 'canonical_entities:node'
+pattern: 'photo/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      photogalery: photogalery
+selection_logic: and
+weight: 0
+relationships: {  }

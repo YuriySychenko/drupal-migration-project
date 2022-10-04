@@ -1,0 +1,22 @@
+uuid: d61e2aaa-777c-46e5-a791-dcc66730ad4c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.news
+id: node.news.promote
+field_name: promote
+entity_type: node
+bundle: news
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

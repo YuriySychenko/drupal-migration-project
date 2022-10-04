@@ -1,0 +1,20 @@
+uuid: 481dc7bd-f2ea-4a1a-921e-844f6cd955df
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.report
+  module:
+    - path
+id: node.report.path
+field_name: path
+entity_type: node
+bundle: report
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

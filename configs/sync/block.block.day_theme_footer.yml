@@ -1,0 +1,27 @@
+uuid: c7d4b42a-1f83-4543-a8ce-2bc3ffab8c31
+langcode: uk
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - day_theme
+_core:
+  default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
+id: day_theme_footer
+theme: day_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Меню нижнього колонтитулу'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

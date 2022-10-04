@@ -1,0 +1,45 @@
+uuid: 057a7397-8ddd-460f-b816-1b2b1d2f97be
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_image_big
+    - node.type.news
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: node.news.field_main_image_big
+field_name: field_main_image_big
+entity_type: node
+bundle: news
+label: 'Main Image Big'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'news/[current-date:custom:dmY]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 460x250
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: 0cd3fa16-95dd-4875-bb41-3c9b9880ec2c
+    alt: ''
+    title: ''
+    width: 800
+    height: 600
+field_type: image

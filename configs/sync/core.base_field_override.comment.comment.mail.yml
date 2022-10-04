@@ -1,0 +1,18 @@
+uuid: 9be9ef5d-d025-4c71-a0e5-ff6755103e31
+langcode: uk
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.mail
+field_name: mail
+entity_type: comment
+bundle: comment
+label: 'Електронна пошта'
+description: 'Електронна адреса автора коментаря.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

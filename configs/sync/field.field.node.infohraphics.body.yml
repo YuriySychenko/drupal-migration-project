@@ -1,0 +1,23 @@
+uuid: 751fb557-6d70-4624-95d4-c210194d3090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.infohraphics
+  module:
+    - text
+id: node.infohraphics.body
+field_name: body
+entity_type: node
+bundle: infohraphics
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

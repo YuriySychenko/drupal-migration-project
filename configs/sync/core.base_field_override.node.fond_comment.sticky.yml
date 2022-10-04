@@ -1,0 +1,22 @@
+uuid: 25c4a694-9777-479d-8213-7f777dd1d0a4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_comment
+id: node.fond_comment.sticky
+field_name: sticky
+entity_type: node
+bundle: fond_comment
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

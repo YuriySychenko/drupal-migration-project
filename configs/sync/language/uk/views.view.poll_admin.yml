@@ -1,0 +1,53 @@
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      pager:
+        options:
+          tags:
+            previous: '‹ попередня'
+            next: 'наступна ›'
+            first: '« перша'
+            last: 'остання »'
+          expose:
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
+      fields:
+        question:
+          label: Питання
+          separator: ', '
+        status_with_runtime:
+          label: Активно
+        anonymous_vote_allow:
+          separator: ', '
+        created:
+          label: Створено
+        votes:
+          label: 'Всього голосів'
+        operations:
+          label: 'Операційні посилання'
+      filters:
+        question:
+          expose:
+            label: Питання
+        status:
+          expose:
+            label: Істина
+          group_info:
+            label: Активно
+            group_items:
+              1:
+                title: Так
+              2:
+                title: Ні
+      title: Опитування
+  page_1:
+    display_title: Сторінка

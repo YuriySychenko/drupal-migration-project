@@ -1,0 +1,18 @@
+uuid: c818b88d-2c75-47ee-9857-f37377f6d9e3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photogalery
+id: node.photogalery.created
+field_name: created
+entity_type: node
+bundle: photogalery
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,18 @@
+uuid: 66ccc6b1-0120-4f93-8d11-077a5544a8bc
+langcode: uk
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_hot_theme
+field_name: field_hot_theme
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

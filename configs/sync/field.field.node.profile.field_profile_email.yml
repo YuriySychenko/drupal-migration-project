@@ -1,0 +1,19 @@
+uuid: b95911ad-bb48-4e91-a336-6e75d73157ec
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_email
+    - node.type.profile
+id: node.profile.field_profile_email
+field_name: field_profile_email
+entity_type: node
+bundle: profile
+label: 'Email Address'
+description: 'Enter an Email Address for this Profile.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

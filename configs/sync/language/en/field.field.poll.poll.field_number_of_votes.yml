@@ -1,0 +1,2 @@
+label: 'Number of Votes'
+description: 'Only applies to vote choices which allow more than one vote at a time. Should not exceed number of available vote choices and should be less that total choices.'

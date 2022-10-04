@@ -1,0 +1,21 @@
+uuid: ce9e6711-1cc7-42cc-877b-84f18434f50b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_related_nref
+    - node.type.openpublish_article
+id: node.openpublish_article.field_op_related_nref
+field_name: field_op_related_nref
+entity_type: node
+bundle: openpublish_article
+label: 'Related Content'
+description: 'Enter the title(s) of other Articles, Blog Posts, Galleries, or Videos that you wish to explicitly relate to this Article.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

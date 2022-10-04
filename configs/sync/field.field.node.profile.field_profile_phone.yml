@@ -1,0 +1,19 @@
+uuid: b8de90c4-8548-41ab-99e1-74c9401e7bfd
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_phone
+    - node.type.profile
+id: node.profile.field_profile_phone
+field_name: field_profile_phone
+entity_type: node
+bundle: profile
+label: 'Phone Number'
+description: 'Enter a Phone Number for this Profile.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

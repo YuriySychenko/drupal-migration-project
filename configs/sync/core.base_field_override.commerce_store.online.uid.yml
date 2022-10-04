@@ -1,0 +1,20 @@
+uuid: 6b8ca567-a5d8-43fc-9bb9-f11e322a1dd6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+id: commerce_store.online.uid
+field_name: uid
+entity_type: commerce_store
+bundle: online
+label: Власник
+description: 'The store owner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\commerce_store\Entity\Store::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

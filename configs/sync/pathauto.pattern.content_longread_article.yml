@@ -1,0 +1,22 @@
+uuid: a4eac8ac-cf7b-4d31-a78a-50b44f3efc24
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: content_longread_article
+label: 'Content - Longread стаття'
+type: 'canonical_entities:node'
+pattern: 'article/[node:title]'
+selection_criteria:
+  dbffabaf-9523-4907-b576-0735ea349374:
+    id: node_type
+    negate: false
+    uuid: dbffabaf-9523-4907-b576-0735ea349374
+    context_mapping:
+      node: node
+    bundles:
+      longread_article: longread_article
+selection_logic: and
+weight: -5
+relationships: {  }

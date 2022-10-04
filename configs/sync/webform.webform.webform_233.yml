@@ -1,0 +1,137 @@
+uuid: b6268bdd-c3cf-49a1-870e-2401997a1e97
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_233
+title: 'Надішліть фото'
+description: null
+category: null
+elements: |
+  vashe_imya:
+    '#type': textfield
+    '#size': 
+    '#title': 'Ваше ім"я' 
+    '#description': ""
+    '#required': true
+  vash_e_mail:
+    '#type': textfield
+    '#size': 
+    '#title': 'Ваш e-mail' 
+    '#description': ""
+    '#required': true
+  foto:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Фото' 
+    '#description': ""
+    '#required': true
+  tekstivka_do_foto:
+    '#type': textfield
+    '#size': 
+    '#title': 'Текстівка до фото' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо, Ваше фото надіслано до редакції &quot;Дня&quot;.</p>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: Надіслати
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: www1@day.kiev.ua
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Фото. Життєві мотивації'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: thedaynewspaper@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Життєві мотивації. Нове фото'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

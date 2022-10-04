@@ -1,0 +1,21 @@
+uuid: 930332e7-bd34-4891-b6a9-ed15d22cd57b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_related_nref
+    - node.type.photogalery
+id: node.photogalery.field_op_related_nref
+field_name: field_op_related_nref
+entity_type: node
+bundle: photogalery
+label: 'Related Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

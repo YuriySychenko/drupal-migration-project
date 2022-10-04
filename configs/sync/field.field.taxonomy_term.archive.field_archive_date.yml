@@ -1,0 +1,21 @@
+uuid: 3e195a6d-c97e-4c0d-ad85-e041ab6ed21c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_archive_date
+    - taxonomy.vocabulary.archive
+  module:
+    - datetime
+id: taxonomy_term.archive.field_archive_date
+field_name: field_archive_date
+entity_type: taxonomy_term
+bundle: archive
+label: archive_date
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

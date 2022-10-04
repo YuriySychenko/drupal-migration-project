@@ -1,0 +1,35 @@
+uuid: d0174bdb-329c-46a2-820c-ae38e8d7ab2f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tags.field_hot_theme
+    - field.field.taxonomy_term.tags.field_main_tag
+    - taxonomy.vocabulary.tags
+  module:
+    - text
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_main_tag:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_hot_theme: true
+  langcode: true

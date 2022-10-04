@@ -1,0 +1,26 @@
+uuid: 9be562fb-82e1-499e-ab27-40b12859826b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.poll.field_writein
+  module:
+    - poll
+_core:
+  default_config_hash: TcoLGXnX-QGM_xlKCNz8TQsGy4MPmpbhZdr3A0QTCOA
+id: poll.poll.field_writein
+field_name: field_writein
+entity_type: poll
+bundle: poll
+label: 'Allow Write-in'
+description: 'Allow users with permitted roles to write in a choice.  This setting will be ignored for ranked choice.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Так
+  off_label: Ні
+field_type: boolean

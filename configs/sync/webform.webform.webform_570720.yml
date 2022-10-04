@@ -1,0 +1,53 @@
+uuid: 76722ad7-557d-4b23-b405-940645dfed0c
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 32526
+template: false
+archive: false
+id: webform_570720
+title: 'ОБРАЩЕНИЕ участников круглого стола в редакции газеты «День» и единомышленников, объединившихся в инициативу «Украинская журналистская платформа»'
+description: null
+category: null
+elements: |
+  familiya_imya:
+    '#type': textfield
+    '#title': 'Фамилия, имя' 
+    '#description': ""
+    '#required': true
+  kontaktnye_dannye:
+    '#type': textarea
+    '#title': 'Контактные данные' 
+    '#description': ""
+    '#required': true
+  sfera_deyatelnosti_dolzhnost:
+    '#type': textarea
+    '#title': 'Сфера деятельности, должность' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p><span class="short_text" id="result_box" lang="ru"><span>Спасибо</span><span>,</span> <span>мы</span> <span>получили</span> <span>Ваше</span> <span>подтверждение</span></span></p>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: Поддержать
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

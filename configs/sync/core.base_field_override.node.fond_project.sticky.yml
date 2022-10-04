@@ -1,0 +1,22 @@
+uuid: 10f510d8-b89c-43ee-91a9-d1d63dd2616b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_project
+id: node.fond_project.sticky
+field_name: sticky
+entity_type: node
+bundle: fond_project
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

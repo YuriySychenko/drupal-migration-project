@@ -1,0 +1,35 @@
+uuid: 29948dad-5d46-40fa-b657-5d325675fc61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fond_gift.body
+    - field.field.node.fond_gift.field_fond_project
+    - field.field.node.fond_gift.field_op_main_image
+    - field.field.node.fond_gift.field_order_number
+    - node.type.fond_gift
+  module:
+    - text
+    - user
+id: node.fond_gift.default
+targetEntityType: node
+bundle: fond_gift
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_fond_project: true
+  field_op_main_image: true
+  field_order_number: true
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: 45b0fffc-66f4-453f-839e-e30e90106713
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_project
+id: node.fond_project.title
+field_name: title
+entity_type: node
+bundle: fond_project
+label: Заголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

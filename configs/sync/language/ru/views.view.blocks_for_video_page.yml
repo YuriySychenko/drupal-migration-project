@@ -1,0 +1,7 @@
+display:
+  block_3:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Загрузить ещё'

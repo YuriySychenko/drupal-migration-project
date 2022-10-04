@@ -1,0 +1,19 @@
+uuid: 0a58a988-052b-497a-81d0-a3ad8e3ac4fe
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_address
+    - node.type.profile
+id: node.profile.field_profile_address
+field_name: field_profile_address
+entity_type: node
+bundle: profile
+label: Address
+description: 'Enter the full address for this person or organization.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

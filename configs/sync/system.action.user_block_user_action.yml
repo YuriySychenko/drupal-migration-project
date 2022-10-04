@@ -1,0 +1,13 @@
+uuid: 694e9753-cb8b-40a3-a253-381fb262969a
+langcode: uk
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: DyypzTfThX10FFQw-399qPfEbLLyrhXgQrKPVsmAoJ4
+id: user_block_user_action
+label: 'Заблокувати вибраних користувачів'
+type: user
+plugin: user_block_user_action
+configuration: {  }

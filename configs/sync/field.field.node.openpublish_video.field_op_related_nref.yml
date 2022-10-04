@@ -1,0 +1,35 @@
+uuid: 75e0ee6e-8e1b-495c-b748-266e7fbfe2c0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_related_nref
+    - node.type.news
+    - node.type.openpublish_article
+    - node.type.openpublish_blog_post
+    - node.type.openpublish_video
+    - node.type.photogalery
+id: node.openpublish_video.field_op_related_nref
+field_name: field_op_related_nref
+entity_type: node
+bundle: openpublish_video
+label: 'Related Content'
+description: 'Enter the title(s) of other Articles, Blog Posts, Galleries, or Videos that you wish to explicitly relate to this Video.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      openpublish_article: openpublish_article
+      openpublish_blog_post: openpublish_blog_post
+      openpublish_video: openpublish_video
+      news: news
+      photogalery: photogalery
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: openpublish_article
+field_type: entity_reference

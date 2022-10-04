@@ -1,0 +1,19 @@
+uuid: 9950d5ac-a48d-4124-ac45-a3223347526c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aphorism_author
+    - node.type.aphorism
+id: node.aphorism.field_aphorism_author
+field_name: field_aphorism_author
+entity_type: node
+bundle: aphorism
+label: 'Автор афоризму'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

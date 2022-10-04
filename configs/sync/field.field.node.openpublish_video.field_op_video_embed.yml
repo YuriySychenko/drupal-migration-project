@@ -1,0 +1,25 @@
+uuid: 58c5e0da-9fb1-48ca-9c99-283fc586b2a9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_video_embed
+    - node.type.openpublish_video
+  module:
+    - video_embed_field
+id: node.openpublish_video.field_op_video_embed
+field_name: field_op_video_embed
+entity_type: node
+bundle: openpublish_video
+label: 'Embedded Video'
+description: 'Provide the URL of the Video you''d like to embed from a supported provider (i.e. Vimeo or YouTube).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    vimeo: vimeo
+    youtube_playlist: '0'
+field_type: video_embed_field

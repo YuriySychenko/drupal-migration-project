@@ -1,0 +1,20 @@
+uuid: 1f1203ec-aba3-42ec-8e8b-72e9fe91a436
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - path
+id: media.image.path
+field_name: path
+entity_type: media
+bundle: image
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

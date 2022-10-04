@@ -1,0 +1,18 @@
+uuid: 17f52b1d-3f8e-41e1-bdbc-a902d495a116
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.poll
+id: node.poll.created
+field_name: created
+entity_type: node
+bundle: poll
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,60 @@
+uuid: 4e36505a-9aee-4019-96ad-0635af1683e3
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_484594
+title: Інтернет-маркетолог
+description: null
+category: null
+elements: |
+  vashe_imya_ta_prizvyshche:
+    '#type': textfield
+    '#title': 'Ваше ім"я та прізвище' 
+    '#description': ""
+    '#required': true
+  chomu_vy_hochete_pracyuvaty_v_dni:
+    '#type': textarea
+    '#title': 'Чому ви хочете працювати в "Дні"' 
+    '#description': ""
+    '#required': true
+  rezyume:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'pdf doc'
+    '#title': 'Резюме' 
+    '#description': ""
+    '#required': true
+  e_mail:
+    '#type': textfield
+    '#title': 'E-mail ' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

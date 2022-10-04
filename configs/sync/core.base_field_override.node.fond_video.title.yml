@@ -1,0 +1,18 @@
+uuid: 9d097df3-4436-418c-a58e-7ddeb66f003d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+id: node.fond_video.title
+field_name: title
+entity_type: node
+bundle: fond_video
+label: Заголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

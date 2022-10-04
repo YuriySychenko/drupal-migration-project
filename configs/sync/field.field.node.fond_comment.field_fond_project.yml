@@ -1,0 +1,27 @@
+uuid: 1cc11708-f4a2-42dd-85c8-44d06886533b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fond_project
+    - node.type.fond_comment
+    - node.type.fond_project
+id: node.fond_comment.field_fond_project
+field_name: field_fond_project
+entity_type: node
+bundle: fond_comment
+label: 'Фонд Проект'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fond_project: fond_project
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

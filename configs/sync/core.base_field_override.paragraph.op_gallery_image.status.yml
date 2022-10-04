@@ -1,0 +1,22 @@
+uuid: c47a9d7c-41e1-45a1-ba3d-c8628829d952
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.op_gallery_image
+id: paragraph.op_gallery_image.status
+field_name: status
+entity_type: paragraph
+bundle: op_gallery_image
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

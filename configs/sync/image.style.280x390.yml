@@ -1,0 +1,15 @@
+uuid: acf7d1bb-1289-4172-bccf-e042e30eb3ce
+langcode: uk
+status: true
+dependencies: {  }
+name: 280x390
+label: 280x390
+effects:
+  6be237ea-78b3-4b6b-a1cb-d074c5c0e2b9:
+    id: image_scale_and_crop
+    data:
+      width: 280
+      height: 390
+      anchor: center-center
+    weight: 1
+    uuid: 6be237ea-78b3-4b6b-a1cb-d074c5c0e2b9

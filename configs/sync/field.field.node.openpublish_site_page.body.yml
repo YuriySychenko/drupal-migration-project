@@ -1,0 +1,23 @@
+uuid: e464a983-c018-4425-abd2-a02718f65f09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.openpublish_site_page
+  module:
+    - text
+id: node.openpublish_site_page.body
+field_name: body
+entity_type: node
+bundle: openpublish_site_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

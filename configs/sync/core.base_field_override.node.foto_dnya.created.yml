@@ -1,0 +1,18 @@
+uuid: ed80f5ee-73c3-42a3-8f2d-876b6bf83ce8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.foto_dnya
+id: node.foto_dnya.created
+field_name: created
+entity_type: node
+bundle: foto_dnya
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

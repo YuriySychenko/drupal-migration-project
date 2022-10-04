@@ -1,0 +1,119 @@
+uuid: 7ca000db-e2bc-4df4-a87b-5a32ad4451a5
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_394655
+title: 'Новорічна анкета «День»-2013 (заповніть онлайн)'
+description: null
+category: null
+elements: |
+  yaki_podiyi_2013_roku_na_vashu_dumku_zminili_svit_i_ukrayinu_yaki_z_nih____na_krashche_yaki____navpaki:
+    '#type': textarea
+    '#title': 'Які події 2013 року, на вашу думку, змінили світ і Україну? Які з них — на краще, які — навпаки?' 
+    '#description': ""
+    '#required': true
+  yaka_podiya_v_zhitti_krayini_za_rik_shcho_minaie_stala_nayvazhlivishoyu_osobisto_dlya_vas:
+    '#type': textarea
+    '#title': 'Яка подія в житті країни за рік, що минає, стала найважливішою особисто для вас?' 
+    '#description': ""
+    '#required': true
+  podilitsya_prikladami_situaciy_abo_lyudey_yaki_dodayut_vam_sil_ta_optimizmu:
+    '#type': textarea
+    '#title': 'Поділіться прикладами ситуацій або людей, які додають вам сил та оптимізму.' 
+    '#description': ""
+    '#required': true
+  avtori_statti_proekti_gazeti_den_yaki_viriznyalisya_v_2013_roci:
+    '#type': textarea
+    '#title': 'Автори, статті, проекти газети "День", які вирізнялися в 2013 році?' 
+    '#description': ""
+    '#required': true
+  vashe_imya_prizvishche_ta_posada:
+    '#type': textfield
+    '#title': 'Ваше ім"я, прізвище та посада' 
+    '#description': ""
+    '#required': true
+  elektronna_adresa:
+    '#type': textfield
+    '#title': 'Електронна адреса' 
+    '#description': ""
+    '#required': true
+  foto:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Фото' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо за те, що заповнили анкету.</p>'
+  limit_total: null
+  limit_user: 3
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: day.webeditor@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |-
+        Дата [webform_submission:date:long]
+        Юзер: [current-user:name]
+        Деталі:
+        [webform_submission:values]
+
+        Результати під посиланням:
+        [webform_submission:url]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

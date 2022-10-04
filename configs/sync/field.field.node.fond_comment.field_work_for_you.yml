@@ -1,0 +1,23 @@
+uuid: 69246dde-a850-4603-91b8-8d443d976d23
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_for_you
+    - node.type.fond_comment
+id: node.fond_comment.field_work_for_you
+field_name: field_work_for_you
+entity_type: node
+bundle: fond_comment
+label: 'Додати в блок для вас працюють '
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

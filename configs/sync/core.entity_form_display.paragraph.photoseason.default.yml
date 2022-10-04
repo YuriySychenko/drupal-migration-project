@@ -1,0 +1,28 @@
+uuid: 91978f67-4cd6-4978-a71f-e9f31fbdefc8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photoseason.field_seasonimg
+    - field.field.paragraph.photoseason.field_seasonvote
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.photoseason
+  module:
+    - image
+id: paragraph.photoseason.default
+targetEntityType: paragraph
+bundle: photoseason
+mode: default
+content:
+  field_seasonimg:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_seasonvote: true
+  status: true

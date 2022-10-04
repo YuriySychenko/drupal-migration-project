@@ -1,0 +1,20 @@
+uuid: a91cc220-f977-4257-9fd4-f2b76f478fa6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.uid
+field_name: uid
+entity_type: media
+bundle: video
+label: Автор
+description: 'Ідентифікатор користувача, що є автором.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

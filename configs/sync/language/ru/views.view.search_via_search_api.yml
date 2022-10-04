@@ -1,0 +1,20 @@
+label: 'Поиск на сайте'
+display:
+  default:
+    display_options:
+      title: Поиск
+      exposed_form:
+        options:
+          submit_button: Искать
+          reset_button_label: Сбросить
+      empty:
+        area:
+          content:
+            value: "<p>На жаль, за Вашим запитом нічого не знайдено</p>\r\n"
+            format: full_html
+      filters:
+        search_api_fulltext:
+          expose:
+            placeholder: 'Введите слово поиска'
+  page_1:
+    display_title: 'Страница поиска'

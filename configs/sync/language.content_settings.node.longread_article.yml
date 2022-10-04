@@ -1,0 +1,18 @@
+uuid: ac4818d0-5cf5-48ee-91d9-af929fbe123e
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.longread_article
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.longread_article
+target_entity_type_id: node
+target_bundle: longread_article
+default_langcode: site_default
+language_alterable: true

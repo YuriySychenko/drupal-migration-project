@@ -1,0 +1,5 @@
+label: 'Is write-in'
+description: 'It is a write in choice.'
+settings:
+  on_label: 'Yes'
+  off_label: 'No'

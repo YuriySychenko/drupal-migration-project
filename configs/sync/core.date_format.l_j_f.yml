@@ -1,0 +1,8 @@
+uuid: 0c17e36b-16e3-4c09-bc46-372e677b17cd
+langcode: uk
+status: true
+dependencies: {  }
+id: l_j_f
+label: 'l, j F'
+locked: false
+pattern: 'l, j F'

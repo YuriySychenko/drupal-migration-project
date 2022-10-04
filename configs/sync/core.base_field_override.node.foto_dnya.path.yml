@@ -1,0 +1,20 @@
+uuid: 076b2436-d2ac-497d-bd00-eaeb1ab16536
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.foto_dnya
+  module:
+    - path
+id: node.foto_dnya.path
+field_name: path
+entity_type: node
+bundle: foto_dnya
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

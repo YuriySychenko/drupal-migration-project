@@ -1,0 +1,5 @@
+label: 'Allow multiple write-in'
+description: 'Allow users to add multiple write-in options.'
+settings:
+  on_label: 'Yes'
+  off_label: 'No'

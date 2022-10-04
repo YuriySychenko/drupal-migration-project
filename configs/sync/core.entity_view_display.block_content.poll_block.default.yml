@@ -1,0 +1,23 @@
+uuid: b6c0adf5-d288-446a-8de6-35ec8f5c07c2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - block_content.type.poll_block
+    - field.field.block_content.poll_block.body
+  module:
+    - text
+id: block_content.poll_block.default
+targetEntityType: block_content
+bundle: poll_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

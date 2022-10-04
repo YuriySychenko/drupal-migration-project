@@ -1,0 +1,20 @@
+uuid: b0daffdb-e239-43e2-8847-3a5c6bf41650
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_inform
+  module:
+    - path
+id: node.fond_inform.path
+field_name: path
+entity_type: node
+bundle: fond_inform
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

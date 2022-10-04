@@ -1,0 +1,21 @@
+uuid: 4f9a0f21-ff65-4701-ac6d-efc16c38a4e6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_part
+    - node.type.news
+  module:
+    - text
+id: node.news.field_body_part
+field_name: field_body_part
+entity_type: node
+bundle: news
+label: 'Опис статті + блок "Читайте також"'
+description: '<em>Це поле для розділення опису на частини, між якими буде розміщено блок "Читайте також"</em>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

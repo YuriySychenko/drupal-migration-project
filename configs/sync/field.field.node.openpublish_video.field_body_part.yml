@@ -1,0 +1,21 @@
+uuid: c52fb9fa-02a7-41eb-a91c-e2163dade0ed
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_part
+    - node.type.openpublish_video
+  module:
+    - text
+id: node.openpublish_video.field_body_part
+field_name: field_body_part
+entity_type: node
+bundle: openpublish_video
+label: 'Опис статт + блок "Читайте також"  + рекламні банери '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

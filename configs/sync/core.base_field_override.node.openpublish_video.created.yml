@@ -1,0 +1,18 @@
+uuid: 6798a53d-e32c-4511-ba65-9124ba3e7022
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_video
+id: node.openpublish_video.created
+field_name: created
+entity_type: node
+bundle: openpublish_video
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

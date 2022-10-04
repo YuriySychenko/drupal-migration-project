@@ -1,0 +1,18 @@
+uuid: 18399528-3273-4010-a4d4-114a86c2d38c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_blog_post
+id: node.openpublish_blog_post.created
+field_name: created
+entity_type: node
+bundle: openpublish_blog_post
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

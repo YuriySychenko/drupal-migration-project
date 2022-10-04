@@ -1,0 +1,20 @@
+uuid: b52fed6b-35d4-4067-9df3-ef5df05cd9f7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_comment
+id: node.fond_comment.menu_link
+field_name: menu_link
+entity_type: node
+bundle: fond_comment
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: 511687c2-9668-4739-95fc-e7bc8ebabfeb
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.poll.field_writein_multiple
+  module:
+    - poll
+_core:
+  default_config_hash: IOv-P6rYIzRQW4LTBiHI3hhg44RR5MO88ZZf6k-w7pc
+id: poll.poll.field_writein_multiple
+field_name: field_writein_multiple
+entity_type: poll
+bundle: poll
+label: 'Allow multiple write-in'
+description: 'Allow users to add multiple write-in options.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Так
+  off_label: Ні
+field_type: boolean

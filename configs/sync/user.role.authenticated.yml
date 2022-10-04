@@ -1,0 +1,38 @@
+uuid: 5c5191dd-6588-4ded-91ff-876b311427d8
+langcode: uk
+status: true
+dependencies:
+  module:
+    - captcha
+    - comment
+    - commerce_checkout
+    - commerce_order
+    - commerce_payment
+    - commerce_product
+    - fivestar
+    - google_analytics
+    - media
+    - poll
+    - system
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Авторизований користувач'
+weight: 1
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'cancel account'
+  - 'cancel own vote'
+  - 'change own username'
+  - 'manage own commerce_payment_method'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'rate content'
+  - 'skip CAPTCHA'
+  - 'skip comment approval'
+  - 'view commerce_product'
+  - 'view media'
+  - 'view own commerce_order'

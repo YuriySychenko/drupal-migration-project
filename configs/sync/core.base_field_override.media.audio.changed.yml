@@ -1,0 +1,18 @@
+uuid: 3793ff83-944a-45c4-88de-8043a9c3aaf7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.changed
+field_name: changed
+entity_type: media
+bundle: audio
+label: Змінено
+description: 'Час останнього редагування медіа-об''єкта.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

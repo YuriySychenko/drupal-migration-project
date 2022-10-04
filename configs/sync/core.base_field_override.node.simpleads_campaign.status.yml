@@ -1,0 +1,22 @@
+uuid: 0da19b8e-f746-4103-bd43-b2c1ab248d0b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads_campaign
+id: node.simpleads_campaign.status
+field_name: status
+entity_type: node
+bundle: simpleads_campaign
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

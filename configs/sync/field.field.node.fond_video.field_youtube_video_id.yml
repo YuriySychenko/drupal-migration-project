@@ -1,0 +1,19 @@
+uuid: 7d6e3ef9-b7f3-421a-ba59-7073e9dc57a9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube_video_id
+    - node.type.fond_video
+id: node.fond_video.field_youtube_video_id
+field_name: field_youtube_video_id
+entity_type: node
+bundle: fond_video
+label: 'Youtube video ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

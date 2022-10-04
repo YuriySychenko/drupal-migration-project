@@ -1,0 +1,23 @@
+uuid: dad9077f-cf4b-44de-8af7-1814540bb236
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_page
+    - node.type.fond_comment
+id: node.fond_comment.field_main_page
+field_name: field_main_page
+entity_type: node
+bundle: fond_comment
+label: 'На головну в коментарі'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

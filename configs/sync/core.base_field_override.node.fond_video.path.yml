@@ -1,0 +1,20 @@
+uuid: d595f6b3-2cda-4e9c-924f-e5e51fddddd2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+  module:
+    - path
+id: node.fond_video.path
+field_name: path
+entity_type: node
+bundle: fond_video
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

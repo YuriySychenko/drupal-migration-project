@@ -1,0 +1,23 @@
+uuid: 6518d8f6-920b-42ee-aa6f-3db82257f8ab
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pages_number
+    - node.type.product
+id: node.product.field_pages_number
+field_name: field_pages_number
+entity_type: node
+bundle: product
+label: 'Кількість сторінок'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

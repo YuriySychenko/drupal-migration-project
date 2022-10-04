@@ -1,0 +1,13 @@
+uuid: 070fca51-3cd6-40c5-acb0-e1f15512bb28
+langcode: uk
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: VVyUA6PIaVeGtcIbgEWqJ6SYDiJdReBeojFswURFpKs
+id: media_save_action
+label: 'Зберегти медіа'
+type: media
+plugin: 'entity:save_action:media'
+configuration: {  }

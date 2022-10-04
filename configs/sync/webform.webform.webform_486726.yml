@@ -1,0 +1,74 @@
+uuid: 4372023e-9064-4364-88c1-07034fd915ce
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 52
+template: false
+archive: false
+id: webform_486726
+title: Блог
+description: null
+category: null
+elements: |
+  tt:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'pdf doc docx'
+    '#title': 'Докласти текст' 
+    '#description': ""
+    '#required': true
+  data:
+    '#type': date
+    '#title': 'Дата' 
+    '#description': ""
+    '#required': true
+  foto:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'jpg'
+    '#title': 'Фото' 
+    '#description': ""
+    '#required': true
+  foto_avtora:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Фото автора' 
+    '#description': ""
+    '#required': true
+  kontaktnyy_telefon:
+    '#type': textfield
+    '#title': 'Контактний телефон' 
+    '#description': ""
+    '#required': true
+  elektronna_adresa:
+    '#type': textfield
+    '#title': 'Електронна адреса' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

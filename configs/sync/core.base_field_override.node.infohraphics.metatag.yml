@@ -1,0 +1,18 @@
+uuid: d87b803c-1ea0-4562-95bb-7dbb12198e66
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.infohraphics
+id: node.infohraphics.metatag
+field_name: metatag
+entity_type: node
+bundle: infohraphics
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

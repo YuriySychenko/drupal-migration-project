@@ -1,0 +1,22 @@
+uuid: ae520bb7-4c9c-4807-bff1-2b1ac616c7d8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_site_page
+id: node.openpublish_site_page.status
+field_name: status
+entity_type: node
+bundle: openpublish_site_page
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

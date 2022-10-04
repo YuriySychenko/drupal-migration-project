@@ -1,0 +1,18 @@
+uuid: a1805fb6-4afa-408c-b9fa-4708d20efd40
+langcode: uk
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+id: commerce_store.online.changed
+field_name: changed
+entity_type: commerce_store
+bundle: online
+label: Змінено
+description: 'The time when the store was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

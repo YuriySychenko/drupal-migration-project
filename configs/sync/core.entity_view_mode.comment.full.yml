@@ -1,0 +1,12 @@
+uuid: 64f7e8fe-5aa0-4233-baad-ba6abf8c72b1
+langcode: uk
+status: false
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: K7eNlfU7NEUajz01wItywZklr2oaPgL6s1_97fmDXLA
+id: comment.full
+label: 'Повний коментар'
+targetEntityType: comment
+cache: true

@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Загрузить ещё'
+  page_1:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Загрузить ещё'

@@ -1,0 +1,20 @@
+uuid: 26ca866a-cf52-4224-95ee-a6a02dad6bd0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads
+  module:
+    - path
+id: node.simpleads.path
+field_name: path
+entity_type: node
+bundle: simpleads
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,25 @@
+uuid: b624f47e-355a-473a-b539-d01e40f99604
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_section_term
+    - node.type.openpublish_video
+id: node.openpublish_video.field_op_section_term
+field_name: field_op_section_term
+entity_type: node
+bundle: openpublish_video
+label: Section
+description: 'Assign your Video to a <a href="/admin/structure/taxonomy/manage/sections/overview" target=_blank>Section</a>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: entity_reference_taxonomy_vocabularies
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

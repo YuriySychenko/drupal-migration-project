@@ -1,0 +1,22 @@
+uuid: 3cfc5dc2-859d-45e2-bc2a-361cd748cb61
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photoseason
+id: node.photoseason.status
+field_name: status
+entity_type: node
+bundle: photoseason
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

@@ -1,0 +1,51 @@
+uuid: b081178c-9386-4de9-904b-43d26383e08c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.quote_of_the_day
+  module:
+    - block_title_link
+    - context
+    - views
+  theme:
+    - day_theme
+third_party_settings:
+  block_title_link:
+    title_link_url: ''
+    link_title: ''
+    title_link_target: ''
+    title_link_enable: 0
+id: views_block__quote_of_the_day_block_1
+theme: day_theme
+region: phantom
+weight: -4
+provider: null
+plugin: 'views_block:quote_of_the_day-block_1'
+settings:
+  id: 'views_block:quote_of_the_day-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  context:
+    id: context
+    negate: null
+    values: ''
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid

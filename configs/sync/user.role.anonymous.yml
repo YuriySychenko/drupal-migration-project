@@ -1,0 +1,28 @@
+uuid: fd9c7b21-7c51-402e-86c0-dd18ab69083a
+langcode: uk
+status: true
+dependencies:
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_product
+    - fivestar
+    - media
+    - poll
+    - system
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Анонімний користувач'
+weight: 0
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'cancel own vote'
+  - 'post comments'
+  - 'rate content'
+  - 'skip comment approval'
+  - 'view commerce_product'
+  - 'view media'

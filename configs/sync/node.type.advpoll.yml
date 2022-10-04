@@ -1,0 +1,11 @@
+uuid: 1081afac-132f-41f1-a80d-da47de7fdc5e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Advanced poll'
+type: advpoll
+description: 'Advanced poll adds additional poll functionality, cookie voting, write-ins and voting modes.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

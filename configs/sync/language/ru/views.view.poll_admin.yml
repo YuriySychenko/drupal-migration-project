@@ -1,0 +1,54 @@
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      pager:
+        options:
+          tags:
+            previous: '‹ предыдущая'
+            next: 'следующая ›'
+            first: '« первая'
+            last: 'последняя »'
+          expose:
+            items_per_page_label: 'Элементов на страницу'
+            items_per_page_options_all_label: '- Все -'
+            offset_label: Пропустить
+      fields:
+        question:
+          label: Вопрос
+          separator: ', '
+        status_with_runtime:
+          label: Активно
+        anonymous_vote_allow:
+          label: 'Позволить голосовать анонимным пользователям'
+          separator: ', '
+        created:
+          label: Создано
+        votes:
+          label: 'Общее количество голосов'
+        operations:
+          label: 'Ссылки операций'
+      filters:
+        question:
+          expose:
+            label: Вопрос
+        status:
+          expose:
+            label: Истина
+          group_info:
+            label: Активно
+            group_items:
+              1:
+                title: Да
+              2:
+                title: Нет
+      title: Опрос
+  page_1:
+    display_title: Страница

@@ -1,0 +1,18 @@
+uuid: 3da379a2-f98b-4344-b7cd-3dbaf9310c31
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_project
+id: node.fond_project.changed
+field_name: changed
+entity_type: node
+bundle: fond_project
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

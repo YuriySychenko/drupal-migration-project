@@ -1,0 +1,22 @@
+uuid: 6df55fff-14f9-4931-9998-c80aa8fb4da1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_video
+id: node.openpublish_video.sticky
+field_name: sticky
+entity_type: node
+bundle: openpublish_video
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

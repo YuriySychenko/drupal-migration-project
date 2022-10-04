@@ -1,0 +1,8 @@
+uuid: 1e6d4df5-9e99-44b9-9d0d-84b644b29cd3
+langcode: uk
+status: true
+dependencies: {  }
+id: poll_block
+label: 'Блок опитування'
+revision: 0
+description: ''

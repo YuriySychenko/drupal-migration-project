@@ -1,0 +1,53 @@
+uuid: d685c295-05cb-4091-8e46-1f81e78f6969
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 32526
+template: false
+archive: false
+id: webform_570614
+title: 'ЗВЕРНЕННЯ учасників круглого столу в редакції газети «День» разом з однодумцями, які об’єдналися в ініціативу «Українська журналістська платформа»'
+description: null
+category: null
+elements: |
+  prizvyshche_imya:
+    '#type': textfield
+    '#title': 'Прізвище, ім’я ' 
+    '#description': ""
+    '#required': true
+  kontakti_dani:
+    '#type': textarea
+    '#title': 'Контакті дані' 
+    '#description': ""
+    '#required': true
+  sfera_diyalnosti_posada:
+    '#type': textarea
+    '#title': 'Сфера діяльності, посада' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо, ми отримали Ваше підтвердження</p>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: Підтримати
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

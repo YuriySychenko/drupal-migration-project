@@ -1,0 +1,8 @@
+uuid: 6910d11a-3a15-4e16-9743-4aa9df1ec372
+langcode: uk
+status: true
+dependencies: {  }
+name: Sections
+vid: sections
+description: 'Base vocabulary for placing content within sections'
+weight: 0

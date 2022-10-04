@@ -1,0 +1,27 @@
+uuid: f715c923-95cd-4888-a9cf-d390b80e1ccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.openpublish_blog_post
+  module:
+    - filter
+    - node
+    - path
+    - system
+    - toolbar
+id: bloger
+label: Bloger
+weight: 6
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access toolbar'
+  - 'administer url aliases'
+  - 'create openpublish_blog_post content'
+  - 'delete own openpublish_blog_post content'
+  - 'edit own openpublish_blog_post content'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

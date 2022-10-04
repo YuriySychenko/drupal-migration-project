@@ -1,0 +1,18 @@
+uuid: 2c486d27-c523-4464-9bf1-7872b72b3d61
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Longread стаття'
+type: longread_article
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

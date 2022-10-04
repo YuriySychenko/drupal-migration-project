@@ -1,0 +1,22 @@
+uuid: 36038619-e94b-4294-bee5-409c431007e7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page_photogalery
+id: node.page_photogalery.sticky
+field_name: sticky
+entity_type: node
+bundle: page_photogalery
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

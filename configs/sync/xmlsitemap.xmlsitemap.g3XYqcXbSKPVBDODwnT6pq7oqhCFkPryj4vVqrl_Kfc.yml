@@ -1,0 +1,8 @@
+uuid: 182a5b5c-d92c-4ea9-b921-cd02c5e76b38
+langcode: en
+status: true
+dependencies: {  }
+id: g3XYqcXbSKPVBDODwnT6pq7oqhCFkPryj4vVqrl_Kfc
+label: 'http://day.kyiv-d9.lndo.site'
+context:
+  language: en

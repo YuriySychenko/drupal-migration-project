@@ -1,0 +1,15 @@
+uuid: faa9ba9a-3a9f-4fb0-aeb0-e6963da45dd8
+langcode: uk
+status: true
+dependencies: {  }
+name: 244x180
+label: 244x180
+effects:
+  87577b8e-736d-4aa7-9edc-fe40b816065f:
+    id: image_scale_and_crop
+    data:
+      width: 244
+      height: 180
+      anchor: center-center
+    weight: 1
+    uuid: 87577b8e-736d-4aa7-9edc-fe40b816065f

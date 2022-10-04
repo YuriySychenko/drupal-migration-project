@@ -1,0 +1,22 @@
+uuid: 6af28e66-383d-420e-8e16-cdd5c4397351
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_site_page
+id: node.openpublish_site_page.sticky
+field_name: sticky
+entity_type: node
+bundle: openpublish_site_page
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

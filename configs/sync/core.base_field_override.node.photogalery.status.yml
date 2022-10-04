@@ -1,0 +1,22 @@
+uuid: 7e88c796-8a91-486d-a2c3-522945d2af64
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photogalery
+id: node.photogalery.status
+field_name: status
+entity_type: node
+bundle: photogalery
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

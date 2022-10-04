@@ -1,0 +1,16 @@
+uuid: 97b6ba21-f45e-4387-9fb4-781885aab838
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hzgvcRgZHltqWf8hBmttoWh95tCJoPL25lPq9YSIRsY
+id: video
+label: Відео
+description: 'Локально розміщуваний відеофайл.'
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_video_file
+field_map:
+  name: name

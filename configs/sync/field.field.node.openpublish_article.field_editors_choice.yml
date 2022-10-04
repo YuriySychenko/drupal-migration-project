@@ -1,0 +1,23 @@
+uuid: de831394-f1d3-4fba-8216-f6f4f98ff804
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editors_choice
+    - node.type.openpublish_article
+id: node.openpublish_article.field_editors_choice
+field_name: field_editors_choice
+entity_type: node
+bundle: openpublish_article
+label: 'Вибір редакції'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

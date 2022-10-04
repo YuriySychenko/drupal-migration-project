@@ -1,0 +1,46 @@
+uuid: 5c86e44b-bb4e-4b8f-a78a-da63fa844948
+langcode: uk
+status: true
+dependencies:
+  module:
+    - block_title_link
+    - context
+  theme:
+    - day_theme
+third_party_settings:
+  block_title_link:
+    title_link_url: ''
+    link_title: ''
+    title_link_target: ''
+    title_link_enable: 0
+id: daytabsnews
+theme: day_theme
+region: phantom
+weight: -9
+provider: null
+plugin: day_tabs_news_block
+settings:
+  id: day_tabs_news_block
+  label: 'Day tabs news'
+  label_display: '0'
+  provider: day_tabs_news_block
+visibility:
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid

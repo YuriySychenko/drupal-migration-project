@@ -1,0 +1,65 @@
+uuid: 139077b1-b031-446d-b18e-7f2d9f263397
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.body
+    - field.field.node.product.field_aktsiya
+    - field.field.node.product.field_available
+    - field.field.node.product.field_hit
+    - field.field.node.product.field_new
+    - field.field.node.product.field_old_price
+    - field.field.node.product.field_op_main_image
+    - field.field.node.product.field_pages_number
+    - field.field.node.product.field_popular
+    - field.field.node.product.field_product_cover
+    - field.field.node.product.field_product_format
+    - field.field.node.product.field_product_language
+    - field.field.node.product.field_product_tiraj
+    - field.field.node.product.field_product_weight
+    - field.field.node.product.field_product_year
+    - field.field.node.product.field_recomended
+    - field.field.node.product.field_skidka
+    - field.field.node.product.taxonomy_catalog
+    - field.field.node.product.uc_product_image
+    - node.type.product
+  module:
+    - text
+    - user
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_aktsiya: true
+  field_available: true
+  field_hit: true
+  field_new: true
+  field_old_price: true
+  field_op_main_image: true
+  field_pages_number: true
+  field_popular: true
+  field_product_cover: true
+  field_product_format: true
+  field_product_language: true
+  field_product_tiraj: true
+  field_product_weight: true
+  field_product_year: true
+  field_recomended: true
+  field_skidka: true
+  langcode: true
+  taxonomy_catalog: true
+  uc_product_image: true

@@ -1,0 +1,55 @@
+uuid: 5abf6bfc-85d9-4e02-9bc9-3836240278ce
+langcode: uk
+status: true
+dependencies:
+  module:
+    - block_title_link
+    - context
+    - system
+  theme:
+    - day_theme
+third_party_settings:
+  block_title_link:
+    title_link_url: ''
+    link_title: ''
+    title_link_target: ''
+    title_link_enable: 0
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: day_theme_local_tasks
+theme: day_theme
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Вкладки
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  context:
+    id: context
+    negate: null
+    values: ''
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/taxonomy/term/*"

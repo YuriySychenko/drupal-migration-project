@@ -1,0 +1,21 @@
+uuid: c8b2cf39-2f4c-46f7-b0a7-67b4509edee7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_author
+    - node.type.openpublish_article
+id: node.openpublish_article.field_op_author
+field_name: field_op_author
+entity_type: node
+bundle: openpublish_article
+label: Author(s)
+description: 'Create and/or reference one or more Profile nodes that represent the Author(s) of this Article.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: c372d14d-bc50-4e56-b155-4253d4e25232
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.section_front
+id: node.section_front.menu_link
+field_name: menu_link
+entity_type: node
+bundle: section_front
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

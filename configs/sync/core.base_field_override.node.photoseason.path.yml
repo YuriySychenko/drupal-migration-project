@@ -1,0 +1,20 @@
+uuid: 7c0d259c-492d-41a8-8293-f17ca8146593
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photoseason
+  module:
+    - path
+id: node.photoseason.path
+field_name: path
+entity_type: node
+bundle: photoseason
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

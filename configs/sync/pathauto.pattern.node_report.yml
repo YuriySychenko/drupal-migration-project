@@ -1,0 +1,21 @@
+uuid: 260b8b17-fb3e-407e-ad18-117e2efd2357
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_report
+label: 'Content - Репортаж'
+type: 'canonical_entities:node'
+pattern: 'report/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      report: report
+selection_logic: and
+weight: 0
+relationships: {  }

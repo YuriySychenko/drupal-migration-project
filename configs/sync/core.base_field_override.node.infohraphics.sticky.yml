@@ -1,0 +1,22 @@
+uuid: 049e0573-086b-4e56-b1a4-2eafd7c277e2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.infohraphics
+id: node.infohraphics.sticky
+field_name: sticky
+entity_type: node
+bundle: infohraphics
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

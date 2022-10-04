@@ -1,0 +1,12 @@
+uuid: f64aca17-95ec-49ca-b8ac-96c71fc63dd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - toolbar
+id: amir
+label: Amir
+weight: 5
+is_admin: null
+permissions:
+  - 'access toolbar'

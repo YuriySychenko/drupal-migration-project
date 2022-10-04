@@ -1,0 +1,20 @@
+uuid: c161fbf6-82de-4bae-b062-25e9c0e5c1a7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_blog_post
+id: node.openpublish_blog_post.menu_link
+field_name: menu_link
+entity_type: node
+bundle: openpublish_blog_post
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

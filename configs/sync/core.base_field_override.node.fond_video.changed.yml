@@ -1,0 +1,18 @@
+uuid: 248ad270-5b2d-49e4-bb41-9666f6cfef11
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+id: node.fond_video.changed
+field_name: changed
+entity_type: node
+bundle: fond_video
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

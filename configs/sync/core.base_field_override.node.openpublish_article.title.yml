@@ -1,0 +1,18 @@
+uuid: d16c87b6-ad27-4a37-9d65-9a7b1139346d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_article
+id: node.openpublish_article.title
+field_name: title
+entity_type: node
+bundle: openpublish_article
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

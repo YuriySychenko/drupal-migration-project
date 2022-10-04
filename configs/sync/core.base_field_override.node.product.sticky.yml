@@ -1,0 +1,22 @@
+uuid: 848c36c1-ef8f-41fa-b0aa-b9fed55574a3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.product
+id: node.product.sticky
+field_name: sticky
+entity_type: node
+bundle: product
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

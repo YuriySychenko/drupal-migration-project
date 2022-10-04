@@ -1,0 +1,18 @@
+uuid: d556a161-8eed-40c3-8f48-e195061ff122
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.profile
+id: node.profile.title
+field_name: title
+entity_type: node
+bundle: profile
+label: 'Повне ім''я'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

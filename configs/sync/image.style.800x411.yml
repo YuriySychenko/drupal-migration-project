@@ -1,0 +1,15 @@
+uuid: e462cdff-bd34-4b73-898a-3ce1abafe89e
+langcode: uk
+status: true
+dependencies: {  }
+name: 800x411
+label: 800x411
+effects:
+  7cd3d0bc-d30c-49e0-bad9-13e1ed53555e:
+    id: image_scale_and_crop
+    data:
+      width: 800
+      height: 411
+      anchor: center-center
+    weight: 1
+    uuid: 7cd3d0bc-d30c-49e0-bad9-13e1ed53555e

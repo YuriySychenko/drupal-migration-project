@@ -1,0 +1,18 @@
+uuid: 5ed84e27-fe6c-40ce-a1fa-3a90ad5e6ba0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_project
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.fond_project
+target_entity_type_id: node
+target_bundle: fond_project
+default_langcode: site_default
+language_alterable: false

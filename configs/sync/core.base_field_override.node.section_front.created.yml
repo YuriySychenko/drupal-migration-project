@@ -1,0 +1,18 @@
+uuid: 4c9ddda4-cc86-483c-bc64-f136d8a547c4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.section_front
+id: node.section_front.created
+field_name: created
+entity_type: node
+bundle: section_front
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

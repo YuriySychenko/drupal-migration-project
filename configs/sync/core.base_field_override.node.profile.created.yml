@@ -1,0 +1,18 @@
+uuid: c20866dd-9ace-447c-ac23-6257028f7f70
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.profile
+id: node.profile.created
+field_name: created
+entity_type: node
+bundle: profile
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

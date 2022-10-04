@@ -1,0 +1,22 @@
+uuid: dd939d9f-5c91-4066-9f23-21afe696d6c6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.advpoll
+id: node.advpoll.status
+field_name: status
+entity_type: node
+bundle: advpoll
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

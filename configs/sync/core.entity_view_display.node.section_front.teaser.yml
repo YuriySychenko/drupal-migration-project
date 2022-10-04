@@ -1,0 +1,37 @@
+uuid: 209cea6a-e903-4a9c-8942-560db8577a86
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.section_front.body
+    - field.field.node.section_front.field_op_main_image
+    - field.field.node.section_front.field_op_section_term
+    - field.field.node.section_front.field_video_tags
+    - node.type.section_front
+  module:
+    - text
+    - user
+id: node.section_front.teaser
+targetEntityType: node
+bundle: section_front
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_op_main_image: true
+  field_op_section_term: true
+  field_video_tags: true
+  langcode: true

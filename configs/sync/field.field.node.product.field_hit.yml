@@ -1,0 +1,23 @@
+uuid: 2d8f75cd-cfe2-4db2-9cd4-aafea4131611
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hit
+    - node.type.product
+id: node.product.field_hit
+field_name: field_hit
+entity_type: node
+bundle: product
+label: Хіт
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

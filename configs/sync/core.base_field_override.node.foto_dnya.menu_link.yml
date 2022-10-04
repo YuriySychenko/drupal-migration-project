@@ -1,0 +1,20 @@
+uuid: 45925d6b-cbda-4aac-8d96-398bff3b376d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.foto_dnya
+id: node.foto_dnya.menu_link
+field_name: menu_link
+entity_type: node
+bundle: foto_dnya
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

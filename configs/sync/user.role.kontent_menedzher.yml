@@ -1,0 +1,153 @@
+uuid: 4b976dec-d3fd-493b-99e5-3b620b879d18
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.aphorism
+    - node.type.infohraphics
+    - node.type.news
+    - node.type.openpublish_article
+    - node.type.openpublish_blog_post
+    - node.type.openpublish_site_page
+    - node.type.openpublish_video
+    - node.type.page_photogalery
+    - node.type.photogalery
+    - node.type.photoseason
+    - node.type.poll
+    - node.type.product
+    - node.type.profile
+    - node.type.report
+    - node.type.simpleads
+    - node.type.simpleads_campaign
+  module:
+    - block
+    - captcha
+    - comment
+    - contextual
+    - filter
+    - image
+    - language
+    - locale
+    - node
+    - path
+    - pathauto
+    - poll
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+id: kontent_menedzher
+label: контент-менеджер
+weight: 3
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'administer blocks'
+  - 'administer comments'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer languages'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer shortcuts'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'cancel own vote'
+  - 'create aphorism content'
+  - 'create infohraphics content'
+  - 'create news content'
+  - 'create openpublish_article content'
+  - 'create openpublish_blog_post content'
+  - 'create openpublish_site_page content'
+  - 'create openpublish_video content'
+  - 'create page_photogalery content'
+  - 'create photogalery content'
+  - 'create photoseason content'
+  - 'create poll content'
+  - 'create product content'
+  - 'create profile content'
+  - 'create report content'
+  - 'create simpleads content'
+  - 'create simpleads_campaign content'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete any aphorism content'
+  - 'delete any infohraphics content'
+  - 'delete any news content'
+  - 'delete any openpublish_article content'
+  - 'delete any openpublish_blog_post content'
+  - 'delete any openpublish_site_page content'
+  - 'delete any openpublish_video content'
+  - 'delete any page_photogalery content'
+  - 'delete any photogalery content'
+  - 'delete any photoseason content'
+  - 'delete any poll content'
+  - 'delete any product content'
+  - 'delete any profile content'
+  - 'delete any report content'
+  - 'delete any simpleads content'
+  - 'delete any simpleads_campaign content'
+  - 'delete own aphorism content'
+  - 'delete own infohraphics content'
+  - 'delete own news content'
+  - 'delete own openpublish_article content'
+  - 'delete own openpublish_blog_post content'
+  - 'delete own openpublish_site_page content'
+  - 'delete own openpublish_video content'
+  - 'delete own page_photogalery content'
+  - 'delete own photogalery content'
+  - 'delete own photoseason content'
+  - 'delete own poll content'
+  - 'delete own product content'
+  - 'delete own profile content'
+  - 'delete own report content'
+  - 'delete own simpleads content'
+  - 'delete own simpleads_campaign content'
+  - 'edit any aphorism content'
+  - 'edit any infohraphics content'
+  - 'edit any news content'
+  - 'edit any openpublish_article content'
+  - 'edit any openpublish_blog_post content'
+  - 'edit any openpublish_site_page content'
+  - 'edit any openpublish_video content'
+  - 'edit any page_photogalery content'
+  - 'edit any photogalery content'
+  - 'edit any photoseason content'
+  - 'edit any poll content'
+  - 'edit any product content'
+  - 'edit any profile content'
+  - 'edit any report content'
+  - 'edit any simpleads content'
+  - 'edit any simpleads_campaign content'
+  - 'edit own aphorism content'
+  - 'edit own comments'
+  - 'edit own infohraphics content'
+  - 'edit own news content'
+  - 'edit own openpublish_article content'
+  - 'edit own openpublish_blog_post content'
+  - 'edit own openpublish_site_page content'
+  - 'edit own openpublish_video content'
+  - 'edit own page_photogalery content'
+  - 'edit own photogalery content'
+  - 'edit own photoseason content'
+  - 'edit own poll content'
+  - 'edit own product content'
+  - 'edit own profile content'
+  - 'edit own report content'
+  - 'edit own simpleads content'
+  - 'edit own simpleads_campaign content'
+  - 'notify of path changes'
+  - 'post comments'
+  - 'skip CAPTCHA'
+  - 'skip comment approval'
+  - 'switch shortcut sets'
+  - 'translate interface'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

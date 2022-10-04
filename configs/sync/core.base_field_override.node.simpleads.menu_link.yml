@@ -1,0 +1,20 @@
+uuid: 19f8dc8e-5455-4ee3-bfb9-4f19f3d734c4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads
+id: node.simpleads.menu_link
+field_name: menu_link
+entity_type: node
+bundle: simpleads
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

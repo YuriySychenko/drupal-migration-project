@@ -1,0 +1,20 @@
+uuid: 42a5ee9c-c2a6-442d-84ff-42912df08841
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_article
+id: node.openpublish_article.menu_link
+field_name: menu_link
+entity_type: node
+bundle: openpublish_article
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

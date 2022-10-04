@@ -1,0 +1,20 @@
+uuid: 8946eb71-ec52-4834-a884-553caa1f8227
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_gift
+  module:
+    - path
+id: node.fond_gift.path
+field_name: path
+entity_type: node
+bundle: fond_gift
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

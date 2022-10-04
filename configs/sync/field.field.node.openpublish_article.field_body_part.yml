@@ -1,0 +1,21 @@
+uuid: 88530e75-a7f8-4021-ab9f-c7cc10c9a3e6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_part
+    - node.type.openpublish_article
+  module:
+    - text
+id: node.openpublish_article.field_body_part
+field_name: field_body_part
+entity_type: node
+bundle: openpublish_article
+label: 'Опис статті + блок "Читайте також"'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

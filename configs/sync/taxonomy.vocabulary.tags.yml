@@ -1,0 +1,10 @@
+uuid: 7a5d5ccb-aee1-44f3-8b66-f0d2312c78d5
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: Теги
+vid: tags
+description: ''
+weight: 0

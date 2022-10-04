@@ -1,0 +1,21 @@
+uuid: 9037a0d8-12ef-4ef0-8861-62c3b818cf09
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_part
+    - node.type.photogalery
+  module:
+    - text
+id: node.photogalery.field_body_part
+field_name: field_body_part
+entity_type: node
+bundle: photogalery
+label: 'Опис статті + рекламні банери + блок "Читайте також"'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

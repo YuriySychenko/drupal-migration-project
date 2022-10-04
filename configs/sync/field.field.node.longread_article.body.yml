@@ -1,0 +1,23 @@
+uuid: 6e078ebd-0f75-4ee8-8f07-9ec0daa1209a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.longread_article
+  module:
+    - text
+id: node.longread_article.body
+field_name: body
+entity_type: node
+bundle: longread_article
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

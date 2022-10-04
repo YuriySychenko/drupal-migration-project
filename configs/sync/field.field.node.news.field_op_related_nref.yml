@@ -1,0 +1,21 @@
+uuid: cd83e76d-f520-4a43-9883-107a7a59a0af
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_related_nref
+    - node.type.news
+id: node.news.field_op_related_nref
+field_name: field_op_related_nref
+entity_type: node
+bundle: news
+label: 'Related Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

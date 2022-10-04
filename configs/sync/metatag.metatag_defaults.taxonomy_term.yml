@@ -1,0 +1,12 @@
+uuid: 91d68a9a-0ee0-475e-9b00-dd859da03a87
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 92bXZdyYJ5xqukdfmGRr_CYcwm1vfuS8b8aJ7X_G7E0
+id: taxonomy_term
+label: 'Термін таксономії'
+tags:
+  canonical_url: '[term:url]'
+  description: '[term:description]'
+  title: '[term:name] | [site:name]'

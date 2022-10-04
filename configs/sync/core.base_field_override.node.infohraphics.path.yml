@@ -1,0 +1,20 @@
+uuid: 2e389370-bce0-414b-a81d-7c71120ce781
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.infohraphics
+  module:
+    - path
+id: node.infohraphics.path
+field_name: path
+entity_type: node
+bundle: infohraphics
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

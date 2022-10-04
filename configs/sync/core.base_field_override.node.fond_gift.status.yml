@@ -1,0 +1,22 @@
+uuid: 18432b2e-b967-4356-8afc-7e01b19ead72
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_gift
+id: node.fond_gift.status
+field_name: status
+entity_type: node
+bundle: fond_gift
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

@@ -1,0 +1,10 @@
+uuid: 19bb482b-1b82-4c7a-9dbf-54e9fa409e86
+langcode: uk
+status: true
+dependencies: {  }
+id: photoseason
+label: Photoseason
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_photoseason'
+behavior_plugins: {  }

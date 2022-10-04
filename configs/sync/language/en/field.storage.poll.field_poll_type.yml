@@ -1,0 +1,12 @@
+settings:
+  allowed_values:
+    -
+      label: Approval
+    -
+      label: 'Borda Count'
+    -
+      label: 'Instant Runoff'
+    -
+      label: Pooled
+    -
+      label: 'Ranked Choice'

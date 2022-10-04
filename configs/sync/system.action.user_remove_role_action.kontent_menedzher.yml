@@ -1,0 +1,14 @@
+uuid: eb436952-1912-43df-8399-aa9d41217156
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.kontent_menedzher
+  module:
+    - user
+id: user_remove_role_action.kontent_menedzher
+label: 'Remove the контент-менеджер role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: kontent_menedzher

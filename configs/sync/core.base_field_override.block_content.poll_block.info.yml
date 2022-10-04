@@ -1,0 +1,18 @@
+uuid: c56dbd82-abbe-4345-8a9a-4e8247c57762
+langcode: uk
+status: true
+dependencies:
+  config:
+    - block_content.type.poll_block
+id: block_content.poll_block.info
+field_name: info
+entity_type: block_content
+bundle: poll_block
+label: 'Опис блоку'
+description: 'Короткий опис вашого блоку.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

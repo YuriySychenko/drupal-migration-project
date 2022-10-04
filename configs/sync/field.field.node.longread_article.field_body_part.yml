@@ -1,0 +1,21 @@
+uuid: 690e96c8-ab25-4d9f-a03e-99187b9cbcdc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_part
+    - node.type.longread_article
+  module:
+    - text
+id: node.longread_article.field_body_part
+field_name: field_body_part
+entity_type: node
+bundle: longread_article
+label: 'Опис статті + рекламні банери + блок "Читайте також"'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

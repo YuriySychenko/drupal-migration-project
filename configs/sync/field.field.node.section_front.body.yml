@@ -1,0 +1,23 @@
+uuid: c576d8f5-6312-401f-9125-e6896f393bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.section_front
+  module:
+    - text
+id: node.section_front.body
+field_name: body
+entity_type: node
+bundle: section_front
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

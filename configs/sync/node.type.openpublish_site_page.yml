@@ -1,0 +1,17 @@
+uuid: f8162973-a8e4-41dd-92d7-349013c0dc8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Site Page'
+type: openpublish_site_page
+description: 'A page is a simple method for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a page entry does not allow visitor comments and is not featured on the site''s initial home page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,47 @@
+uuid: 85671c29-79a1-466c-9d2f-5518344755b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fond_comment.body
+    - field.field.node.fond_comment.field_fond_project
+    - field.field.node.fond_comment.field_main_page
+    - field.field.node.fond_comment.field_order_number
+    - field.field.node.fond_comment.field_posada
+    - field.field.node.fond_comment.field_profile_first_name
+    - field.field.node.fond_comment.field_profile_last_name
+    - field.field.node.fond_comment.field_profile_photo
+    - field.field.node.fond_comment.field_work_for_you
+    - node.type.fond_comment
+  module:
+    - text
+    - user
+id: node.fond_comment.teaser
+targetEntityType: node
+bundle: fond_comment
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_fond_project: true
+  field_main_page: true
+  field_order_number: true
+  field_posada: true
+  field_profile_first_name: true
+  field_profile_last_name: true
+  field_profile_photo: true
+  field_work_for_you: true
+  langcode: true

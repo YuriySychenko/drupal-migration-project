@@ -1,0 +1,47 @@
+uuid: bea1cc6c-62e7-45f6-9146-88d6c4bce879
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.advpoll.advpoll_behavior
+    - field.field.node.advpoll.advpoll_closed
+    - field.field.node.advpoll.advpoll_cookie_duration
+    - field.field.node.advpoll.advpoll_dates
+    - field.field.node.advpoll.advpoll_max_choices
+    - field.field.node.advpoll.advpoll_mode
+    - field.field.node.advpoll.advpoll_options
+    - field.field.node.advpoll.advpoll_results
+    - field.field.node.advpoll.body
+    - node.type.advpoll
+  module:
+    - text
+    - user
+id: node.advpoll.teaser
+targetEntityType: node
+bundle: advpoll
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  advpoll_behavior: true
+  advpoll_closed: true
+  advpoll_cookie_duration: true
+  advpoll_dates: true
+  advpoll_max_choices: true
+  advpoll_mode: true
+  advpoll_options: true
+  advpoll_results: true
+  langcode: true

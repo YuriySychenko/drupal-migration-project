@@ -1,0 +1,18 @@
+uuid: d1c59aeb-589a-42fc-876b-2d883f8cb870
+langcode: uk
+status: true
+dependencies:
+  module:
+    - poll
+id: poll_choice.poll_choice.choice
+field_name: choice
+entity_type: poll_choice
+bundle: poll_choice
+label: Вибір
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

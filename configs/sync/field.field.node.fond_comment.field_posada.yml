@@ -1,0 +1,19 @@
+uuid: e562c3b5-a6a5-4ff9-b0c5-ac3fce13058c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_posada
+    - node.type.fond_comment
+id: node.fond_comment.field_posada
+field_name: field_posada
+entity_type: node
+bundle: fond_comment
+label: Посада
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

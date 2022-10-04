@@ -1,0 +1,18 @@
+uuid: 4d36fdde-50c6-412d-aef5-06d86f22840f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Фонд Коментар'
+type: fond_comment
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

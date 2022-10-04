@@ -1,0 +1,29 @@
+uuid: 04c4c1e6-8b06-4270-b045-3e5f8b68d440
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.aphorism.field_aphorism_author
+    - node.type.aphorism
+  module:
+    - user
+id: node.aphorism.default
+targetEntityType: node
+bundle: aphorism
+mode: default
+content:
+  field_aphorism_author:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

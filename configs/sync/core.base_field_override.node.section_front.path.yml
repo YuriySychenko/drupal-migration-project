@@ -1,0 +1,20 @@
+uuid: a0576992-d61b-40fe-a725-96433993d366
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.section_front
+  module:
+    - path
+id: node.section_front.path
+field_name: path
+entity_type: node
+bundle: section_front
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

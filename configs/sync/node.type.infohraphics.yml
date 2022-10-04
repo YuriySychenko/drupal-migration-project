@@ -1,0 +1,17 @@
+uuid: 34a35527-a056-4634-bcfe-376b6baf90d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Інфографіка
+type: infohraphics
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: 69a716bd-5543-4ba7-96b1-8c2ebb047537
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+_core:
+  default_config_hash: WWu2OQswgCztl9OeXjD1stexIEMZsSgPMYIdC-JHx9c
+id: seven_breadcrumbs
+theme: seven
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Рядки навіґації'
+  label_display: '0'
+  provider: system
+visibility: {  }

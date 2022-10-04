@@ -1,0 +1,18 @@
+uuid: 2af58d0d-5319-4fd8-b448-1395ed08785a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+id: commerce_product.default.metatag
+field_name: metatag
+entity_type: commerce_product
+bundle: default
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
