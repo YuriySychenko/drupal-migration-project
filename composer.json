@@ -25,6 +25,7 @@
         "drupal/captcha": "^1.2",
         "drupal/ckeditor_config": "^3.1",
         "drupal/colorbox": "^1.7",
+        "drupal/commerce": "^2.31",
         "drupal/context": "^4.1",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9.0.0",
@@ -36,6 +37,7 @@
         "drupal/google_analytics": "^3.1",
         "drupal/image_url_formatter": "^1.0",
         "drupal/imce": "^2.4",
+        "drupal/inline_entity_form": "^1.0@RC",
         "drupal/juicebox": "3.0-alpha2",
         "drupal/libraries": "3.0-beta1",
         "drupal/metatag": "^1.16",
@@ -84,7 +86,12 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-project-message": true
+        }
     },
     "extra": {
         "enable-patching": true,
