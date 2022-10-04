@@ -1,0 +1,19 @@
+uuid: a9444ee7-9d8c-4c43-aeed-dac4407689d3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.openpublish_video
+id: node.openpublish_video.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: openpublish_video
+label: Підзаголовок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

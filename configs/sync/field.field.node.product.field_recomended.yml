@@ -1,0 +1,23 @@
+uuid: cdb147d3-3554-4443-92d2-fe41e8f30d29
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recomended
+    - node.type.product
+id: node.product.field_recomended
+field_name: field_recomended
+entity_type: node
+bundle: product
+label: Рекомендовано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Рекомендовано
+  off_label: ''
+field_type: boolean

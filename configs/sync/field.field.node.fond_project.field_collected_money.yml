@@ -1,0 +1,25 @@
+uuid: f95a797e-68f8-4026-b022-1640c3f3778f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collected_money
+    - node.type.fond_project
+id: node.fond_project.field_collected_money
+field_name: field_collected_money
+entity_type: node
+bundle: fond_project
+label: 'Зібрана сума'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

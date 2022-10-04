@@ -1,0 +1,27 @@
+uuid: 68dee3c5-0159-4e1f-ba60-309b1a03d877
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.openpublish_video
+  module:
+    - file
+id: node.openpublish_video.field_video
+field_name: field_video
+entity_type: node
+bundle: openpublish_video
+label: Video
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'video/[current-date:custom:dmY]'
+  file_extensions: 'mp4 flv'
+  max_filesize: ''
+  description_field: false
+field_type: file

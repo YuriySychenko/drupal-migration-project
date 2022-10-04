@@ -1,0 +1,23 @@
+uuid: a239fb93-a668-42c0-ac10-2444bfa57187
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.advpoll_mode
+    - node.type.advpoll
+  module:
+    - options
+id: node.advpoll.advpoll_mode
+field_name: advpoll_mode
+entity_type: node
+bundle: advpoll
+label: 'Vote storage mode'
+description: 'Warning, changing this setting after votes have already been recorded for this poll will cause existing votes to be flushed.'
+required: true
+translatable: false
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

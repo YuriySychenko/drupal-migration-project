@@ -1,0 +1,18 @@
+uuid: e1e6f0dc-9d08-47fc-8f22-fc849b5e6b67
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_video
+id: node.openpublish_video.metatag
+field_name: metatag
+entity_type: node
+bundle: openpublish_video
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

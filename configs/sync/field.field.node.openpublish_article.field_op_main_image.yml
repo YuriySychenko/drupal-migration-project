@@ -1,0 +1,45 @@
+uuid: 3205b3d4-d3a1-45ac-a875-20996a76550a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_main_image
+    - node.type.openpublish_article
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: node.openpublish_article.field_op_main_image
+field_name: field_op_main_image
+entity_type: node
+bundle: openpublish_article
+label: 'Main Image'
+description: 'Select a Main Image for your Article, which will appear on the Article''s node page and will also represent the Article in lists.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'main/articles/[current-date:custom:dmY]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: 5c0e15b5-12e8-4b51-acc4-c240f777c1ae
+    alt: ''
+    title: ''
+    width: 800
+    height: 600
+field_type: image

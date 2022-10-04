@@ -1,0 +1,22 @@
+uuid: f0a1d211-78d5-4482-8b87-2ba229aa5509
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_article
+id: node.openpublish_article.promote
+field_name: promote
+entity_type: node
+bundle: openpublish_article
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

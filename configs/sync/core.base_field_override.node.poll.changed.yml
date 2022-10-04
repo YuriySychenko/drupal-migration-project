@@ -1,0 +1,18 @@
+uuid: e8da16a8-866a-4f54-9ac8-c4a4387557a1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.poll
+id: node.poll.changed
+field_name: changed
+entity_type: node
+bundle: poll
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

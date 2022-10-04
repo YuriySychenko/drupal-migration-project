@@ -1,0 +1,23 @@
+uuid: ad79e0ea-a63d-44ac-b08d-8643b4429163
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autocreate_share_image
+    - node.type.news
+id: node.news.field_autocreate_share_image
+field_name: field_autocreate_share_image
+entity_type: node
+bundle: news
+label: 'Автоматично створити Share Image'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

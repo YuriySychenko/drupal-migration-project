@@ -1,0 +1,18 @@
+uuid: ffe00235-f484-44b0-b4e4-d07e75472fd1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_gift
+id: node.fond_gift.title
+field_name: title
+entity_type: node
+bundle: fond_gift
+label: Заголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

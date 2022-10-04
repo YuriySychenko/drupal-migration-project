@@ -1,0 +1,18 @@
+uuid: 605491e5-0424-4212-850a-b3425d81b458
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.created
+field_name: created
+entity_type: media
+bundle: audio
+label: Створено
+description: 'Час створення медіа-об''єкта.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

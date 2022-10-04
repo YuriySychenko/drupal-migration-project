@@ -1,0 +1,18 @@
+uuid: 32500b47-1104-46d3-b1a2-db3316afe47d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_comment
+id: node.fond_comment.changed
+field_name: changed
+entity_type: node
+bundle: fond_comment
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

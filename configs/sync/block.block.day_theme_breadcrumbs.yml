@@ -1,0 +1,22 @@
+uuid: 1c46dd88-6df8-4916-be1e-708f91118f27
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - day_theme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: day_theme_breadcrumbs
+theme: day_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Рядки навіґації'
+  label_display: '0'
+  provider: system
+visibility: {  }

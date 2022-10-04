@@ -1,0 +1,80 @@
+uuid: 1b5b363b-146f-4bf6-86ba-200091e9ff8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.openpublish_blog_post.body
+    - field.field.node.openpublish_blog_post.field_archive_section
+    - field.field.node.openpublish_blog_post.field_body_part
+    - field.field.node.openpublish_blog_post.field_editors_choice
+    - field.field.node.openpublish_blog_post.field_op_author
+    - field.field.node.openpublish_blog_post.field_op_blogpost_blog
+    - field.field.node.openpublish_blog_post.field_op_caption
+    - field.field.node.openpublish_blog_post.field_op_main_image
+    - field.field.node.openpublish_blog_post.field_op_related_nref
+    - field.field.node.openpublish_blog_post.field_op_section_term
+    - field.field.node.openpublish_blog_post.field_subtitle
+    - field.field.node.openpublish_blog_post.field_tag_news
+    - node.type.openpublish_blog_post
+  module:
+    - text
+    - user
+id: node.openpublish_blog_post.default
+targetEntityType: node
+bundle: openpublish_blog_post
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_body_part:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_editors_choice:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_op_author:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_op_related_nref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_archive_section: true
+  field_op_blogpost_blog: true
+  field_op_caption: true
+  field_op_main_image: true
+  field_op_section_term: true
+  field_subtitle: true
+  field_tag_news: true
+  langcode: true

@@ -1,0 +1,14 @@
+uuid: 9496800e-fd47-449d-99a6-d934722d422a
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Зворотний зв''язок вебсайту'
+recipients:
+  - harryexsive@gmail.com
+reply: ''
+weight: 0
+message: 'Ваше повідомлення було надіслано.'
+redirect: ''

@@ -1,0 +1,11 @@
+uuid: 06fff310-176a-4161-870f-12d98b48793c
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FGYrs0ZrjxSzRQMODyYqquV1UW5MN7S5wUG0Dp_OxWU
+id: online
+label: Online
+traits: {  }
+locked: false
+description: ''

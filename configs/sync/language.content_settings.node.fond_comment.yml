@@ -1,0 +1,18 @@
+uuid: fa67f4d3-20eb-46ac-8ad8-d58301ce9fb1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_comment
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.fond_comment
+target_entity_type_id: node
+target_bundle: fond_comment
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: cd01ecf5-c6d6-419c-87d9-a88be692cbef
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_openpublish_blog_post
+label: 'Content - Blog Post'
+type: 'canonical_entities:node'
+pattern: 'blog/[node:field_op_blogpost_blog]/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      openpublish_blog_post: openpublish_blog_post
+selection_logic: and
+weight: 0
+relationships: {  }

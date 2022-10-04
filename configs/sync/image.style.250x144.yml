@@ -1,0 +1,15 @@
+uuid: 77d05a0c-2776-4855-9ed5-13e44a33806b
+langcode: uk
+status: true
+dependencies: {  }
+name: 250x144
+label: 250x144
+effects:
+  95ee117c-cf80-4d67-9021-0d1d712b4828:
+    id: image_scale_and_crop
+    data:
+      width: 250
+      height: 144
+      anchor: center-center
+    weight: 1
+    uuid: 95ee117c-cf80-4d67-9021-0d1d712b4828

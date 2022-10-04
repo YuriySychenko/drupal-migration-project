@@ -1,0 +1,206 @@
+uuid: 6ae00298-a558-4920-a6c0-2acebd461826
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_364651
+title: 'Літня школа журналістики-2013'
+description: null
+category: null
+elements: |
+  1rozkazhit_korotko_pro_sebe_zvidki_vi_vashi_cili_u_zhurnalistici:
+    '#type': textarea
+    '#title': '1.	Розкажіть коротко про себе, звідки ви, ваші цілі у журналістиці' 
+    '#description': ""
+    '#required': true
+  2vashi_zahoplennya_muzika_kino_mistectvo_literatura:
+    '#type': textarea
+    '#title': '2.	Ваші захоплення: музика, кіно, мистецтво, література. Якщо можете, кілька слів напишіть про свої вподобання і смаки у цих сферах' 
+    '#description': ""
+    '#required': true
+  3top_10_ulyublenih_knizhok_prochitanih_protyagom_ostannogo_navchalnogo_roku:
+    '#type': textarea
+    '#title': '3.	Топ-10 улюблених книжок, прочитаних протягом останнього навчального року' 
+    '#description': ""
+    '#required': true
+  4vasha_gromadska_poziciya_hto_dlya_vas_iz_ukrayinskih_chi_zarubizhnih_gromadskih:
+    '#type': textarea
+    '#title': '4.	Ваша громадська позиція. Хто для вас із українських чи зарубіжних громадських, культурних, політичних діячів є взірцем? Чому?' 
+    '#description': ""
+    '#required': true
+  5yak_dovgo_chitaiete_den_chi_znayomi_z_iniciativami_gazeti_vashi_ulyubleni_proekti_gazeti_chomu:
+    '#type': textarea
+    '#title': '5.	Як довго читаєте «День»? Чи знайомі з ініціативами газети? Ваші улюблені проекти газети. Чому?' 
+    '#description': ""
+    '#required': true
+  6vash_dosvid_u_zhurnalistici_yakshcho_pracyuvali_chi_stazhuvalisya_u_zmi:
+    '#type': textarea
+    '#title': '6. Ваш досвід у журналістиці. Якщо працювали чи стажувалися у ЗМІ — у яких саме? Основна тематика ваших публікацій, відео- чи аудіоматеріалів' 
+    '#description': ""
+    '#required': true
+  7vasha_ulyublena_rubrika_gazeti_den_u_yakiy_vi_hotili_b_prohoditi_stazhuvannya:
+    '#type': textarea
+    '#title': '7.	Ваша улюблена рубрика газети «День», у якій ви хотіли б проходити стажування' 
+    '#description': ""
+    '#required': true
+  8napishit_pro_svoyu_motivaciyu_vstupu_do_litnoyi_shkoli_dnya:
+    '#type': textarea
+    '#title': '8.	Напишіть про свою мотивацію вступу до Літньої школи «Дня» (до 10 речень): ваші очікування перед вступом, як прагнете себе реалізувати протягом практики, чи маєте вже на думці теми, які б хотіли дослідити і опублікувати в газеті?' 
+    '#description': ""
+    '#required': true
+  prikripit_ese_na_odnu_iz_zaproponovanih_vishche_tem_lishe_fayl_formatu_doc:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'doc'
+    '#title': 'Прикрипіть есе на одну із запропонованих вище тем (лише файл формату .doc)' 
+    '#description': ""
+    '#required': true
+  vashe_imya_ta_prizvishche:
+    '#type': textfield
+    '#size': 
+    '#title': 'Ваше ім"я та прізвище' 
+    '#description': ""
+    '#required': true
+  vashe_foto:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'jpg'
+    '#title': 'Ваше фото' 
+    '#description': ""
+    '#required': true
+  vasha_elektronna_adresa:
+    '#type': textfield
+    '#size': 
+    '#title': 'Ваша електронна адреса' 
+    '#description': ""
+    '#required': true
+  vash_kontaktniy_nomer_telefonu:
+    '#type': textfield
+    '#size': 
+    '#default_value': '+38' 
+    '#title': 'Ваш контактний номер телефону' 
+    '#description': ""
+    '#required': true
+  kvitanciya_pro_peredplatu_dnya_format_jpg:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'jpg'
+    '#title': 'Квитанція про передплату «Дня» (формат .jpg)' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо, ми отримали Вашу анкету! Листа з результатом відбору Ви отримаєте згодом!</p>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: Надіслати
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: school@day.kiev.ua
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: 'Hello from The Day newspaper website'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |-
+        Заповнено [webform_submission:date:long]
+        Юзер: [current-user:name]
+        Деталі:
+        [webform_submission:values]
+
+        Результати можна переглянути за посиланням:
+        [webform_submission:url]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: thedaynewspaper@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: 'Hello from The Day newspaper website'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |-
+        Заповнено [webform_submission:date:long]
+        Юзер: [current-user:name]
+        Деталі:
+        [webform_submission:values]
+
+        Результати можна переглянути за посиланням:
+        [webform_submission:url]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

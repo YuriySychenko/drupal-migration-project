@@ -1,0 +1,22 @@
+uuid: 0d0ccc63-c7f2-4c8c-9cd5-fb064d10807c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.advpoll
+id: node.advpoll.sticky
+field_name: sticky
+entity_type: node
+bundle: advpoll
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

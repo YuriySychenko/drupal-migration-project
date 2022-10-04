@@ -1,0 +1,15 @@
+uuid: 8b4440cd-72fb-4ac9-b69e-cf50e2dbc765
+langcode: ru
+status: true
+dependencies: {  }
+name: 100x70
+label: 100x70
+effects:
+  dd1ced90-7a97-47b4-ba14-2df118b93b76:
+    id: image_scale_and_crop
+    data:
+      width: 100
+      height: 70
+      anchor: center-center
+    weight: 1
+    uuid: dd1ced90-7a97-47b4-ba14-2df118b93b76

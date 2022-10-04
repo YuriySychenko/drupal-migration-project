@@ -1,0 +1,19 @@
+uuid: 997fea83-6127-4802-a59d-1d8fe4dc6160
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_format
+    - node.type.product
+id: node.product.field_product_format
+field_name: field_product_format
+entity_type: node
+bundle: product
+label: Формат
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

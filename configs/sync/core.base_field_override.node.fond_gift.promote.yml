@@ -1,0 +1,22 @@
+uuid: 0fa07285-f1d6-4322-b85f-1b1705726ffd
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_gift
+id: node.fond_gift.promote
+field_name: promote
+entity_type: node
+bundle: fond_gift
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

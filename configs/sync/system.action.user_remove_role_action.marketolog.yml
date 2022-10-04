@@ -1,0 +1,14 @@
+uuid: 3445bda9-5927-4b4f-9d00-09b9ab6892d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.marketolog
+  module:
+    - user
+id: user_remove_role_action.marketolog
+label: 'Remove the маркетолог role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: marketolog

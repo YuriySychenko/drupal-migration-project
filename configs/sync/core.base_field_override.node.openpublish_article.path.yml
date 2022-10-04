@@ -1,0 +1,20 @@
+uuid: 13834f53-5247-4288-8459-b92bef4755ac
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_article
+  module:
+    - path
+id: node.openpublish_article.path
+field_name: path
+entity_type: node
+bundle: openpublish_article
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

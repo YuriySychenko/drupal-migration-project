@@ -1,0 +1,22 @@
+uuid: be61f315-c597-47a7-8252-bd9f90a0bd75
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.old
+id: taxonomy_term.old.status
+field_name: status
+entity_type: taxonomy_term
+bundle: old
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

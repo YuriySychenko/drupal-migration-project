@@ -1,0 +1,18 @@
+uuid: 1438c448-254a-4b28-a3bc-a559bedee79c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page_photogalery
+id: node.page_photogalery.title
+field_name: title
+entity_type: node
+bundle: page_photogalery
+label: Заголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

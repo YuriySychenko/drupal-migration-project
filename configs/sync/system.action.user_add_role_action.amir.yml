@@ -1,0 +1,14 @@
+uuid: 6750b65b-6111-4ac2-9596-940e555ca53c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.amir
+  module:
+    - user
+id: user_add_role_action.amir
+label: 'Add the Amir role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: amir

@@ -1,0 +1,23 @@
+uuid: 4d453d2e-9aae-4ec9-bb9d-ccf20ea6b72c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.taxonomy_catalog
+    - node.type.product
+id: node.product.taxonomy_catalog
+field_name: taxonomy_catalog
+entity_type: node
+bundle: product
+label: Каталог
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

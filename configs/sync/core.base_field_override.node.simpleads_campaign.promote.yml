@@ -1,0 +1,22 @@
+uuid: c057a058-6dbf-4844-8c56-41e92433a3c5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads_campaign
+id: node.simpleads_campaign.promote
+field_name: promote
+entity_type: node
+bundle: simpleads_campaign
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

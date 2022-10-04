@@ -1,0 +1,20 @@
+uuid: c11b76c1-d50d-4925-a6bf-6feb19aaedb9
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_pages_taxonomy
+field_name: field_pages_taxonomy
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

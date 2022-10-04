@@ -1,0 +1,20 @@
+uuid: 06ef582b-335c-4cb1-9a44-5fdc22ef9ba5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.news
+id: node.news.menu_link
+field_name: menu_link
+entity_type: node
+bundle: news
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

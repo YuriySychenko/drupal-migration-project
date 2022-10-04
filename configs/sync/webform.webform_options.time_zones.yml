@@ -1,0 +1,14 @@
+uuid: c36fc62b-077e-4342-9361-33d383e4fb61
+langcode: uk
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+id: time_zones
+label: 'Часові пояси'
+category: 'Дата та час'
+likert: false
+options: ''

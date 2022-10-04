@@ -1,0 +1,22 @@
+uuid: 839fa8bb-eb8a-4807-b446-66298fadad36
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.foto_dnya
+id: node.foto_dnya.status
+field_name: status
+entity_type: node
+bundle: foto_dnya
+label: Опубліковано
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

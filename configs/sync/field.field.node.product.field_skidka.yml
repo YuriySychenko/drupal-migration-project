@@ -1,0 +1,23 @@
+uuid: 8879089f-a88a-48b0-9ba8-487f4a182f79
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skidka
+    - node.type.product
+id: node.product.field_skidka
+field_name: field_skidka
+entity_type: node
+bundle: product
+label: Знижка
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

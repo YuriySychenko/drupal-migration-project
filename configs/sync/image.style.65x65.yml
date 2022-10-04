@@ -1,0 +1,15 @@
+uuid: 907fe443-14ea-4798-9ffb-76d1e5926f6e
+langcode: uk
+status: true
+dependencies: {  }
+name: 65x65
+label: 65x65
+effects:
+  cc9f106c-11d5-47a5-bd7a-39f79273ae34:
+    id: image_scale_and_crop
+    data:
+      width: 65
+      height: 65
+      anchor: center-center
+    weight: 1
+    uuid: cc9f106c-11d5-47a5-bd7a-39f79273ae34

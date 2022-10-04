@@ -1,0 +1,8 @@
+uuid: cc2c38fe-4c76-4926-8a56-a5f9625de1a9
+langcode: zxx
+status: true
+dependencies: {  }
+id: day_custom_date_format_h_i
+label: 'H:i'
+locked: false
+pattern: 'H:i'

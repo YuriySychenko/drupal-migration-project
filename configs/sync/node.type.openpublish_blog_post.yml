@@ -1,0 +1,17 @@
+uuid: e346add6-b348-4929-a7f7-69cfc1113abf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Blog Post'
+type: openpublish_blog_post
+description: 'Used to create a single post to a column or blog.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

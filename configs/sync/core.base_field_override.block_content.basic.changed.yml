@@ -1,0 +1,18 @@
+uuid: 556d3253-5673-41bf-a50f-51a7aa9465d1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: block_content.basic.changed
+field_name: changed
+entity_type: block_content
+bundle: basic
+label: Змінено
+description: 'Час, коли власний блок востаннє редагувався.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

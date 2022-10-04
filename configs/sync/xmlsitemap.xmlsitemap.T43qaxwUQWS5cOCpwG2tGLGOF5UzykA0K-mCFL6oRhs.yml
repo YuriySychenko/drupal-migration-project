@@ -1,0 +1,8 @@
+uuid: 6d813b74-09d8-4d27-886f-0e8404f1ae29
+langcode: uk
+status: true
+dependencies: {  }
+id: T43qaxwUQWS5cOCpwG2tGLGOF5UzykA0K-mCFL6oRhs
+label: 'Day UA'
+context:
+  language: uk

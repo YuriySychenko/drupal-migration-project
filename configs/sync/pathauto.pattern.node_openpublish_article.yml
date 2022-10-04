@@ -1,0 +1,21 @@
+uuid: 44cddc68-90cb-47a3-8718-fa442e1140c2
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_openpublish_article
+label: 'Content - Article'
+type: 'canonical_entities:node'
+pattern: 'article/[node:field_op_section_term]/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      openpublish_article: openpublish_article
+selection_logic: and
+weight: 0
+relationships: {  }

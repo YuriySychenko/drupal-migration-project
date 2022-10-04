@@ -1,0 +1,199 @@
+uuid: 2ca9b7eb-dd19-45c8-bc3b-e61779b35ce3
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_480405
+title: 'Анкета для кандидатів на участь у Літній школі журналістики «Дня»-2019'
+description: null
+category: null
+elements: |
+  imya_prizvyshche:
+    '#type': textfield
+    '#title': 'Ім"я та прізвище' 
+    '#description': ""
+  rozkazhit_korotko_pro_sebe:
+    '#type': textarea
+    '#title': 'Розкажіть коротко про себе: ваша дата народження, який представляєте університет; чи мали практику в ЗМІ; досвід у інших школах журналістики або ж програмах стажування.' 
+    '#description': ""
+  vasha_storinka_u_facebook:
+    '#type': textfield
+    '#title': 'Ваша сторінка у Facebook' 
+    '#description': ""
+  vashe_volodinnya_inozemnymy_movamy_yakymy_i_na_yakomu_rivni:
+    '#type': textarea
+    '#title': 'Ваше володіння іноземними мовами (якими і на якому рівні)' 
+    '#description': ""
+  napyshit_pro_vpodobannya_i_smaky_u_sferah_vashyh_zahoplen:
+    '#type': textarea
+    '#title': 'Напишіть про ваші хобі і захоплення' 
+    '#description': ""
+  top_10_knyzhok_yaki_na_vashu_dumku_potribno_prochytaty_kozhnomu_ukrayincevi_korotko_argumentuyte:
+    '#type': textarea
+    '#title': 'Топ-10 книжок, які, на вашу думку, потрібно прочитати кожному українцеві. Коротко аргументуйте' 
+    '#description': ""
+  hto_dlya_vas_iz_ukrayinskyh_chy_zarubizhnyh_gromadskyh_kulturnyh_politychnyh_diyachiv_ye_vzircem_chomu:
+    '#type': textarea
+    '#title': 'Хто для вас із українських чи зарубіжних громадських, культурних, політичних діячів є взірцем? Чому?' 
+    '#description': ""
+  iz_kym_iz_vidomyh_diyachiv_vy_hotily_b_zustritysya_v_ramkah_litnoyi_shkoly:
+    '#type': textarea
+    '#title': 'Із ким із діячів ви хотіли б зустрітися в рамках Літньої школи?' 
+    '#description': ""
+  u_ramkah_intelektualnogo_marshrutu_dnya_v_yakomu_istoryko_kulturnomu_misci_ukrayiny_hotily_b_pobuvaty_i_chomu:
+    '#type': textarea
+    '#title': 'У рамках інтелектуального маршруту «Дня», в якому історико-культурному місці України хотіли б побувати і чому?' 
+    '#description': ""
+  yaku_versiyu_gazety___elektronnu_chy_drukovanu___vy_chytayete_chy_ye_peredplatnykom_dnya:
+    '#type': textarea
+    '#title': 'Яку версію газети – електронну чи друковану – ви читаєте? Яким рубрикам чи авторам надаєте перевагу?' 
+    '#description': ""
+  chy_znayomi_z_iniciatyvamy_gazety_vashi_ulyubleni_proekty_i_chomu:
+    '#type': textarea
+    '#title': 'З якими ініціативами газети ви знайомі? Які проекти «Дня» ваші улюблені? Як можете їх підтримати?' 
+    '#description': ""
+  u_yakomu_viddili_redakciyi_hotily_b_pracyuvaty_chomu:
+    '#type': textarea
+    '#title': 'У якому відділі редакції хотіли б працювати? Чому?' 
+    '#description': ""
+  napyshit_pro_svoyu_motyvaciyu_vstupu_do_litnoyi_shkoly_dnya:
+    '#type': textarea
+    '#title': 'Напишіть про свою мотивацію вступу до Літньої школи «Дня» (до 10 речень): як прагнете себе реалізувати протягом практики; чи маєте вже на думці теми, які б хотіли дослідити й опублікувати в газеті?' 
+    '#description': ""
+  vash_e_mail:
+    '#type': textfield
+    '#title': 'Ваш e-mail' 
+    '#description': ""
+  vash_kontaktnyy_nomer_telefonu:
+    '#type': textfield
+    '#title': 'Ваш контактний номер телефону' 
+    '#description': ""
+  vashe_foto:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'jpg'
+    '#title': 'Ваше фото' 
+    '#description': ""
+    '#required': true
+  videorezyume:
+    '#type': textfield
+    '#title': 'Відеорезюме' 
+    '#description': "Лінк на відео в Youtube"
+  vidguk_pro_derevo_piznannya_gazety_den:
+    '#type': textarea
+    '#title': 'Познайомтеся із Деревом пізнання газети «День» і напишіть есе на тему «День» як якісна альтернатива. Що це?»' 
+    '#description': ""
+  skanovana_kopiya_kvytanciyi_pro_peredplatu_drukovanoyi_versiyi_dnya:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Сканована копія квитанції про передплату друкованої версії «Дня»' 
+    '#description': ""
+  chek_shcho_pidtverdzhuye_prydbannya_seriyi_knyzhok:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Чек, що підтверджує придбання серії книжок' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо, ми отримали Вашого листа. Очікуйте результати відбору незабаром.</p>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: thedaynewspaper@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: chedit@day.kiev.ua
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: '[webform_submission:values:imya_prizvyshche:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: pjournalist@ukr.net
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: chedit@day.kiev.ua
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: '[webform_submission:values:imya_prizvyshche:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

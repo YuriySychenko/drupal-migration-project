@@ -1,0 +1,18 @@
+uuid: a5415880-788f-44af-b2c9-2d91efd8cc1b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.advpoll
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.advpoll
+target_entity_type_id: node
+target_bundle: advpoll
+default_langcode: site_default
+language_alterable: false

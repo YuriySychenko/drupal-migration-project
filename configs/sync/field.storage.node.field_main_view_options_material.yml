@@ -1,0 +1,24 @@
+uuid: a1dc5da9-0b78-430a-a2a9-01648fbaa3cf
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_main_view_options_material
+field_name: field_main_view_options_material
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Головний матеріал рубрики (категорії)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

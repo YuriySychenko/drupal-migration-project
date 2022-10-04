@@ -1,0 +1,104 @@
+uuid: c1c9b1fd-3929-4a00-9e1c-0dc64b0bcbb0
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_401677
+title: 'Написати в редакцію'
+description: null
+category: null
+elements: |
+  vashe_imya_ta_prizvishche:
+    '#type': textfield
+    '#title': 'Ваше ім"я та прізвище' 
+    '#description': ""
+    '#required': true
+  telefon_ta_elektronna_adresa_dlya_kontaktu:
+    '#type': textfield
+    '#title': 'Телефон та електронна адреса для контакту' 
+    '#description': ""
+    '#required': true
+  tema_lista:
+    '#type': textarea
+    '#title': 'Тема листа' 
+    '#description': ""
+    '#required': true
+  fayl:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png txt rtf doc docx'
+    '#title': 'Файл' 
+    '#description': "Ви можете причепити до листа файли форматів .gif, .jpg, .png, .txt, .rtf, .doc, .docx, розмір кожного з яких не повинен перевищувати 2 MB."
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо, ми отримали Вашого листа</p>'
+  limit_total: null
+  limit_user: 5
+  form_submit_label: Надіслати
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: chedit@day.kiev.ua
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: '[webform_submission:values:vashe_imya_ta_prizvishche:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: |-
+        Заповнено [webform_submission:date:long]
+        <br>Користувач: [current-user:name]
+        <br>Про що писали:
+        <br>[webform_submission:values]
+
+        Результати можна побачити за посиланням:
+        [webform_submission:url]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

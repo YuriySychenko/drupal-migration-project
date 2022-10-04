@@ -1,0 +1,18 @@
+uuid: 62c08205-aa08-42a5-8ddc-e46cdb8f9d5a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.advpoll
+id: node.advpoll.changed
+field_name: changed
+entity_type: node
+bundle: advpoll
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,8 @@
+uuid: 774ca8b6-14cc-4ce8-bb9b-4cb43e31c7fd
+langcode: uk
+status: true
+dependencies: {  }
+id: news-category
+label: 'Рубрики новин'
+description: ''
+locked: false

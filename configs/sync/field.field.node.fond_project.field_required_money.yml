@@ -1,0 +1,25 @@
+uuid: 7ab0642b-2491-47d9-ba93-c5e01195bbbc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_required_money
+    - node.type.fond_project
+id: node.fond_project.field_required_money
+field_name: field_required_money
+entity_type: node
+bundle: fond_project
+label: 'Необхідна сума'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

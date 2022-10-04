@@ -1,0 +1,7 @@
+tips:
+  search-api-index-fields-label:
+    label: Метка
+  search-api-index-fields-machine-name:
+    label: 'Машинное имя'
+  search-api-index-fields-type:
+    label: Тип

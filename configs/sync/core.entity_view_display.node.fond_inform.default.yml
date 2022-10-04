@@ -1,0 +1,35 @@
+uuid: 7cd1b4ed-b152-477f-ab30-0aea6e3c1a4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fond_inform.body
+    - field.field.node.fond_inform.field_fond_project
+    - field.field.node.fond_inform.field_op_main_image
+    - field.field.node.fond_inform.field_order_number
+    - node.type.fond_inform
+  module:
+    - text
+    - user
+id: node.fond_inform.default
+targetEntityType: node
+bundle: fond_inform
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_fond_project: true
+  field_op_main_image: true
+  field_order_number: true
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: f35c4d7a-f6a0-41ae-a559-fe13cb799424
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.longread_article
+id: node.longread_article.promote
+field_name: promote
+entity_type: node
+bundle: longread_article
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,13 @@
+uuid: e7591de5-376f-42a1-9977-5545b981210e
+langcode: uk
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: nh83qNNrmWE-CDdHz2MdFOAk60T9mzv3R-MaKfZR2jw
+id: media_publish_action
+label: 'Опублікувати медіа'
+type: media
+plugin: 'entity:publish_action:media'
+configuration: {  }

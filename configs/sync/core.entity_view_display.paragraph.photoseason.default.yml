@@ -1,0 +1,36 @@
+uuid: aed12c4a-4803-44c3-aa61-b54613b19f74
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photoseason.field_seasonimg
+    - field.field.paragraph.photoseason.field_seasonvote
+    - paragraphs.paragraphs_type.photoseason
+  module:
+    - fivestar
+    - image
+id: paragraph.photoseason.default
+targetEntityType: paragraph
+bundle: photoseason
+mode: default
+content:
+  field_seasonimg:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_seasonvote:
+    type: fivestar_stars
+    label: above
+    settings:
+      text_format: average
+      display_format: average
+      fivestar_widget: basic
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

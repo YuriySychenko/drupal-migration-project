@@ -1,0 +1,20 @@
+uuid: fb00f0d0-0a2f-4056-932c-6bf3bce66dac
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.name
+field_name: name
+entity_type: media
+bundle: video
+label: 'Назва (ім''я)'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

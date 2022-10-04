@@ -1,0 +1,20 @@
+uuid: b1bf7466-84e1-4159-9807-f46162c9339f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photogalery
+id: node.photogalery.menu_link
+field_name: menu_link
+entity_type: node
+bundle: photogalery
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

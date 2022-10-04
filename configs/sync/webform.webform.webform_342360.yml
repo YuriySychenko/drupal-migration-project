@@ -1,0 +1,56 @@
+uuid: c136a4da-f9a3-45cd-b80a-62df55183174
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_342360
+title: 'Прислать свое фото'
+description: null
+category: null
+elements: |
+  imya:
+    '#type': textfield
+    '#title': 'Имя автора' 
+    '#description': ""
+    '#required': true
+  tekstovka_k_foto:
+    '#type': textfield
+    '#title': 'Текстовка к фото' 
+    '#description': ""
+    '#required': true
+  fotografiya:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title_display': invisible
+    '#title': 'Фотография' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

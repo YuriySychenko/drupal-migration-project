@@ -1,0 +1,18 @@
+uuid: f640240b-b256-4673-9667-ad68236801a6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.old
+id: taxonomy_term.old.name
+field_name: name
+entity_type: taxonomy_term
+bundle: old
+label: 'Назва (ім''я)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

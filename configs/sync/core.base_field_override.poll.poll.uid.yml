@@ -1,0 +1,20 @@
+uuid: 0cc8abe6-4000-46fd-9e3a-c89fe9030432
+langcode: uk
+status: true
+dependencies:
+  module:
+    - poll
+id: poll.poll.uid
+field_name: uid
+entity_type: poll
+bundle: poll
+label: Автор
+description: 'The poll author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\poll\Entity\Poll::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

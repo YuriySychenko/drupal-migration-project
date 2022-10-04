@@ -1,0 +1,18 @@
+uuid: 7932b3c6-67af-4135-a3cb-a6e88bd61daa
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_site_page
+id: node.openpublish_site_page.created
+field_name: created
+entity_type: node
+bundle: openpublish_site_page
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

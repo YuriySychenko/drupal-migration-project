@@ -1,0 +1,192 @@
+uuid: 2e4f8f9f-e900-44b0-8c13-fb03aeb4a3cc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_body_part
+    - field.storage.node.field_main_image_big
+    - field.storage.node.field_op_author
+    - field.storage.node.field_op_main_image
+    - search_api.server.search_server
+    - core.entity_view_mode.node.search_index
+  module:
+    - node
+    - search_api
+id: search_index
+name: 'Search index'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  created:
+    label: Створено
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_body_part:
+    label: 'Опис статті + рекламні банери + блок "Читайте також"'
+    datasource_id: 'entity:node'
+    property_path: field_body_part
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_body_part
+  field_main_image_big:
+    label: 'Main Image Big'
+    datasource_id: 'entity:node'
+    property_path: field_main_image_big
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_main_image_big
+  field_op_author:
+    label: Author(s)
+    datasource_id: 'entity:node'
+    property_path: field_op_author
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_op_author
+  field_op_main_image:
+    label: 'Основне фото'
+    datasource_id: 'entity:node'
+    property_path: field_op_main_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_op_main_image
+  promote:
+    label: 'Promoted to front page'
+    datasource_id: 'entity:node'
+    property_path: promote
+    type: boolean
+    dependencies:
+      module:
+        - node
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          longread_article: search_index
+          news: search_index
+          openpublish_article: search_index
+          openpublish_blog_post: search_index
+          openpublish_video: search_index
+          photogalery: search_index
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Тип матеріалів'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: Автор
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - longread_article
+        - news
+        - openpublish_article
+        - openpublish_blog_post
+        - openpublish_video
+        - photogalery
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_type: {  }
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: false
+    excerpt_length: 256
+    exclude_fields: {  }
+    highlight: always
+    highlight_partial: true
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+    fields:
+      - body
+      - field_body_part
+      - rendered_item
+      - title
+      - type
+  language_with_fallback: {  }
+  rendered_item: {  }
+  tokenizer:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    all_fields: false
+    fields:
+      - body
+      - field_body_part
+      - rendered_item
+    spaces: ''
+    ignored: ._-
+    overlap_cjk: 1
+    minimum_word_size: '3'
+  type_boost:
+    weights:
+      preprocess_index: 0
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: search_server

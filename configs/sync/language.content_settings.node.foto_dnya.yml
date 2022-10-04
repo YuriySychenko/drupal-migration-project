@@ -1,0 +1,18 @@
+uuid: 10c4233f-2641-4eb6-ae41-51327e7507ca
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.foto_dnya
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.foto_dnya
+target_entity_type_id: node
+target_bundle: foto_dnya
+default_langcode: site_default
+language_alterable: true

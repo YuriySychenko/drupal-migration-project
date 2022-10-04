@@ -1,0 +1,60 @@
+uuid: aaf9af51-4c06-4fe5-b718-876cbe05c427
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_126
+title: 'Повідомте про новину'
+description: null
+category: null
+elements: |
+  tekst:
+    '#type': textarea
+    '#title': 'Текст' 
+    '#description': ""
+    '#required': true
+  dzherelo:
+    '#type': textfield
+    '#size': 
+    '#title': 'Джерело' 
+    '#description': ""
+  ilyustraciya:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Ілюстрація' 
+    '#description': ""
+  vash_e_mail:
+    '#type': textfield
+    '#size': 
+    '#title': 'Ваш e-mail' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

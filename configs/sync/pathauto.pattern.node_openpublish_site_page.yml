@@ -1,0 +1,21 @@
+uuid: 97fc26a6-ec05-4c93-8e1e-1f13f8f20b81
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_openpublish_site_page
+label: 'Content - Site Page'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      openpublish_site_page: openpublish_site_page
+selection_logic: and
+weight: 0
+relationships: {  }

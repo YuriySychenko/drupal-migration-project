@@ -1,0 +1,25 @@
+uuid: 707b088d-5af0-4927-b64f-0f0cb74e9a79
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donations_number
+    - node.type.fond_project
+id: node.fond_project.field_donations_number
+field_name: field_donations_number
+entity_type: node
+bundle: fond_project
+label: 'Кількість благодійників'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: a109e1fa-fba6-4c93-8058-c27183245d9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.foto_dnya
+  module:
+    - text
+id: node.foto_dnya.body
+field_name: body
+entity_type: node
+bundle: foto_dnya
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,59 @@
+uuid: ecb4da2d-3c5c-41b2-85a9-63da56e9af00
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.openpublish_article.body
+    - field.field.node.openpublish_article.field_archive_section
+    - field.field.node.openpublish_article.field_author
+    - field.field.node.openpublish_article.field_body_part
+    - field.field.node.openpublish_article.field_editors_choice
+    - field.field.node.openpublish_article.field_ident
+    - field.field.node.openpublish_article.field_main_image_big
+    - field.field.node.openpublish_article.field_main_view_options_material
+    - field.field.node.openpublish_article.field_op_author
+    - field.field.node.openpublish_article.field_op_main_image
+    - field.field.node.openpublish_article.field_op_related_nref
+    - field.field.node.openpublish_article.field_op_section_term
+    - field.field.node.openpublish_article.field_quot_image
+    - field.field.node.openpublish_article.field_subtitle
+    - field.field.node.openpublish_article.field_tag_news
+    - node.type.openpublish_article
+  module:
+    - text
+    - user
+id: node.openpublish_article.teaser
+targetEntityType: node
+bundle: openpublish_article
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_archive_section: true
+  field_author: true
+  field_body_part: true
+  field_editors_choice: true
+  field_ident: true
+  field_main_image_big: true
+  field_main_view_options_material: true
+  field_op_author: true
+  field_op_main_image: true
+  field_op_related_nref: true
+  field_op_section_term: true
+  field_quot_image: true
+  field_subtitle: true
+  field_tag_news: true
+  langcode: true

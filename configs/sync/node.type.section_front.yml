@@ -1,0 +1,17 @@
+uuid: cfad132a-7e29-448f-ad51-6617ad026846
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Section Front'
+type: section_front
+description: 'Default section front content type.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

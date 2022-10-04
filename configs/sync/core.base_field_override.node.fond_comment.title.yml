@@ -1,0 +1,18 @@
+uuid: e1d21eb0-4bf8-4b9d-a1dc-be81abf400cf
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_comment
+id: node.fond_comment.title
+field_name: title
+entity_type: node
+bundle: fond_comment
+label: Заголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

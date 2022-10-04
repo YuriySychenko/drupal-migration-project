@@ -1,0 +1,22 @@
+uuid: 823ec250-59a4-4893-8612-716bd29c2f72
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photogalery
+id: node.photogalery.promote
+field_name: promote
+entity_type: node
+bundle: photogalery
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

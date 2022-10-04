@@ -1,0 +1,22 @@
+uuid: 58b0be0e-b0d5-4f4e-85cb-49780d1c7ffc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - block_content.type.poll_block
+id: block_content.poll_block.status
+field_name: status
+entity_type: block_content
+bundle: poll_block
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

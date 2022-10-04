@@ -1,0 +1,38 @@
+uuid: 3ca2379f-bc9a-472e-87a3-270ec3797292
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_main_image
+    - node.type.page_photogalery
+  module:
+    - image
+id: node.page_photogalery.field_op_main_image
+field_name: field_op_main_image
+entity_type: node
+bundle: page_photogalery
+label: 'Main Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

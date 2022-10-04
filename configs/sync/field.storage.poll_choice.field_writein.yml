@@ -1,0 +1,20 @@
+uuid: a5a676e6-a3d0-45e8-83cb-2d27965d57e1
+langcode: uk
+status: true
+dependencies:
+  module:
+    - poll
+_core:
+  default_config_hash: EUU9tUjBds2Qxm5ogHZkgCIi_jLsVpzT9G1hqOTzeQ8
+id: poll_choice.field_writein
+field_name: field_writein
+entity_type: poll_choice
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

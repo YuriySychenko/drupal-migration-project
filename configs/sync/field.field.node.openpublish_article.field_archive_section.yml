@@ -1,0 +1,25 @@
+uuid: e518beb8-2951-4900-a7ce-b0f4c17e4814
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archive_section
+    - node.type.openpublish_article
+id: node.openpublish_article.field_archive_section
+field_name: field_archive_section
+entity_type: node
+bundle: openpublish_article
+label: Газета
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: entity_reference_taxonomy_vocabularies
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

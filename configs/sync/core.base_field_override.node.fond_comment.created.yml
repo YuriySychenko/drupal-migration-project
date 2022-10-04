@@ -1,0 +1,18 @@
+uuid: 26c66ddc-b551-4299-ade1-fc446c12b2d8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_comment
+id: node.fond_comment.created
+field_name: created
+entity_type: node
+bundle: fond_comment
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

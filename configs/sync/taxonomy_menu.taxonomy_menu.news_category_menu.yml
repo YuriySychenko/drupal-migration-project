@@ -1,0 +1,16 @@
+uuid: 8b663aed-9c22-4185-a995-baec0d2ed711
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.news-category
+    - taxonomy.vocabulary.news_category
+id: news_category_menu
+label: 'Меню рубрик новин'
+vocabulary: news_category
+menu: news-category
+expanded: false
+depth: 0
+menu_parent: 'news-category:'
+description_field_name: ''
+use_term_weight_order: true

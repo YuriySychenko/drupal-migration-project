@@ -1,0 +1,33 @@
+uuid: 3a3f7cf3-39ea-435f-87f7-a150f55e2b38
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_available
+field_name: field_available
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Немає в наявності'
+    -
+      value: '2'
+      label: 'Є в наявності'
+    -
+      value: '3'
+      label: Закінчується
+    -
+      value: '4'
+      label: Очікується
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

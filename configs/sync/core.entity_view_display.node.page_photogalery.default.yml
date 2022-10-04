@@ -1,0 +1,33 @@
+uuid: 1135d25a-701c-431c-8b97-9e122b1d14da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page_photogalery.body
+    - field.field.node.page_photogalery.field_images_gallery
+    - field.field.node.page_photogalery.field_op_main_image
+    - node.type.page_photogalery
+  module:
+    - text
+    - user
+id: node.page_photogalery.default
+targetEntityType: node
+bundle: page_photogalery
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_images_gallery: true
+  field_op_main_image: true
+  langcode: true

@@ -1,0 +1,18 @@
+uuid: 9eb866f4-f5fb-42bb-ab35-8c4c9c749228
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads
+id: node.simpleads.title
+field_name: title
+entity_type: node
+bundle: simpleads
+label: Заголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

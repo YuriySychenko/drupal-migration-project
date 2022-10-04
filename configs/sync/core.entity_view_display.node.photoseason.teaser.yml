@@ -1,0 +1,39 @@
+uuid: d6c9d1b4-cce5-4763-acaa-46d90da94027
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.photoseason.body
+    - field.field.node.photoseason.field_block_title
+    - field.field.node.photoseason.field_op_main_image
+    - field.field.node.photoseason.field_photoseason
+    - field.field.node.photoseason.field_subtitle
+    - node.type.photoseason
+  module:
+    - text
+    - user
+id: node.photoseason.teaser
+targetEntityType: node
+bundle: photoseason
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_block_title: true
+  field_op_main_image: true
+  field_photoseason: true
+  field_subtitle: true
+  langcode: true

@@ -1,0 +1,27 @@
+uuid: eafc4ea2-20dc-4d5b-a599-1b4b702ce8a6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fond_project
+    - node.type.fond_project
+    - node.type.fond_video
+id: node.fond_video.field_fond_project
+field_name: field_fond_project
+entity_type: node
+bundle: fond_video
+label: 'Фонд Проект'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fond_project: fond_project
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

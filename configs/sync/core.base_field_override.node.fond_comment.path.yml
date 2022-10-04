@@ -1,0 +1,20 @@
+uuid: 4b45a851-576b-4b5d-b49b-d814b1cd4c58
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_comment
+  module:
+    - path
+id: node.fond_comment.path
+field_name: path
+entity_type: node
+bundle: fond_comment
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

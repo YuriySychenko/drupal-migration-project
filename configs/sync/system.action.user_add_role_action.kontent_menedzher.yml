@@ -1,0 +1,14 @@
+uuid: fe3721bf-83b1-421f-8c94-6272619b8e3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.kontent_menedzher
+  module:
+    - user
+id: user_add_role_action.kontent_menedzher
+label: 'Add the контент-менеджер role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: kontent_menedzher

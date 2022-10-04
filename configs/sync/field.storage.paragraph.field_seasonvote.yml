@@ -1,0 +1,20 @@
+uuid: 8db2ae36-a981-47b9-a9b0-08709b85b30d
+langcode: uk
+status: true
+dependencies:
+  module:
+    - fivestar
+    - paragraphs
+id: paragraph.field_seasonvote
+field_name: field_seasonvote
+entity_type: paragraph
+type: fivestar
+settings:
+  vote_type: vote
+module: fivestar
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

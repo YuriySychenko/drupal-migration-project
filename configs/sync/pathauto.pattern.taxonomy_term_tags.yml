@@ -1,0 +1,22 @@
+uuid: 868cd412-7527-4466-b936-a94e37a93fd9
+langcode: uk
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_term_tags
+label: 'Taxonomy term - Теґи'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'news/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      tags: tags
+selection_logic: and
+weight: 0
+relationships: {  }

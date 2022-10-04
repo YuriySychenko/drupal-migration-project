@@ -1,0 +1,183 @@
+uuid: d9094b81-45fc-47a5-a579-f0f89d54fd5c
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_416344
+title: 'Триває набір до Літньої школи журналістики-2014'
+description: null
+category: null
+elements: |
+  korotko_pro_sebe:
+    '#type': textarea
+    '#title': 'Розкажіть коротко про себе (який університет представляєте; чи мали практику роботи у ЗМІ; чи маєте досвід стажуваннях в інших журналістських школах)' 
+    '#description': ""
+    '#required': true
+  vashi_zahoplennya_yakshcho_mozhete_napishit_kilka_sliv_pro_svoyi_vpodobannya_i_smaki_u_cih_sferah:
+    '#type': textarea
+    '#title': 'Ваші захоплення. Якщо можете, напишіть кілька слів про свої вподобання і смаки у цих сферах' 
+    '#description': ""
+    '#required': true
+  top_10_knizhok_yaki_na_vashu_dumku_potribno_prochitati_kozhnomu_ukrayincyu:
+    '#type': textarea
+    '#title': 'Топ-10 книжок, які, на вашу думку, потрібно прочитати кожному українцю' 
+    '#description': ""
+    '#required': true
+  z_kim_iz_vidomih_diyachiv_pismennikiv_mitciv_hotili_b_zustritisya_u_ramkah_litnoyi_shkoli_zhurnalistiki:
+    '#type': textarea
+    '#title': 'З ким із відомих діячів, письменників, митців хотіли б зустрітися у рамках Літньої школи журналістики?' 
+    '#description': ""
+    '#required': true
+  yaku_versiyu_gazeti_chitaiete____elektronnu_chi_drukovanu_chi_ie_peredplatnikami_gazeti:
+    '#type': textarea
+    '#title': 'Яку версію газети читаєте — електронну чи друковану? Чи є передплатниками газети?' 
+    '#description': ""
+    '#required': true
+  vasha_ulyublena_rubrika_gazeti_den_viddil_u_yakomu_vi_hotili_b_stazhuvatisya_chomu:
+    '#type': textarea
+    '#title': 'Ваша улюблена рубрика газети «День» (відділ), у якому ви хотіли б стажуватися? Чому? ' 
+    '#description': ""
+    '#required': true
+  napishit_pro_svoyu_motivaciyu:
+    '#type': textarea
+    '#title': 'Напишіть про свою мотивацію вступу до Літньої школи «Дня»: ваші очікування перед вступом, як прагнете себе реалізувати протягом практики, чи маєте вже на думці теми, які б хотіли дослідити й опублікувати в газеті?' 
+    '#description': ""
+    '#required': true
+  dodayte_ese:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'rtf doc docx'
+    '#title': 'Додайте есе на одну із запропонованих вище тем' 
+    '#description': "Дозволені формати: .doc, .docx, .rtf"
+    '#required': true
+  vashe_imya_ta_prizvishche:
+    '#type': textfield
+    '#title': 'Ваше ім"я та прізвище' 
+    '#description': ""
+    '#required': true
+  dodayte_svoie_foto:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'jpg'
+    '#title': 'Додайте своє фото' 
+    '#description': "У форматі .jpg"
+    '#required': true
+  elektronna_adresa_dlya_kontaktu:
+    '#type': email
+    '#size': 20
+    '#title': 'Електронна адреса для контакту' 
+    '#description': ""
+    '#required': true
+  telefon_dlya_kontaktu:
+    '#type': textfield
+    '#title': 'Телефон для контакту' 
+    '#description': ""
+    '#required': true
+  vi_vzyali_uchast_v_akciyi_podarunok_ridniy_shkoli:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Ви взяли участь в акції «Подарунок рідній школі»?' 
+    '#description': "Необов'язково. Додайте сюди скановану копію квитанції (формат .jpg, .png) про оплату книжок. Для того, щоб взяти участь у акції, потрібно придбати одну із серій книжок із «Бібліотеки «Дня» («Екстракт», «Бронебійна публіцистика», «Підривна література»...). "
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо, ми отримали Вашу заповнену анкету. Результати відбору будуть опубліковані на сайті згодом</p>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: Надіслати
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: school@day.kiev.ua
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: pjournalist@ukr.net
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

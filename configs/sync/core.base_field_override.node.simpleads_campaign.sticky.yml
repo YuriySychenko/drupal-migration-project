@@ -1,0 +1,22 @@
+uuid: cdf6c19e-2a9e-424b-8d58-a59ea32055d8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads_campaign
+id: node.simpleads_campaign.sticky
+field_name: sticky
+entity_type: node
+bundle: simpleads_campaign
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

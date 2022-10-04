@@ -1,0 +1,28 @@
+uuid: 6e22593e-180f-4bee-b3f4-be5806cf904d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_blogpost_blog
+    - node.type.openpublish_blog_post
+    - taxonomy.vocabulary.blog
+id: node.openpublish_blog_post.field_op_blogpost_blog
+field_name: field_op_blogpost_blog
+entity_type: node
+bundle: openpublish_blog_post
+label: Blog
+description: 'Assign your Blog Post to a <a href="/admin/structure/taxonomy/manage/blog/overview" target=_blank>Blog</a>.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      blog: blog
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

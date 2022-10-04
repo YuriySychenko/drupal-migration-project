@@ -1,0 +1,20 @@
+uuid: 03615756-58c5-4606-8dae-716849e324de
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_pages_number
+field_name: field_pages_number
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: f3ba075b-a59e-43f3-9154-3fa9cdb9f204
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.poll
+  module:
+    - text
+id: node.poll.body
+field_name: body
+entity_type: node
+bundle: poll
+label: Опис
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

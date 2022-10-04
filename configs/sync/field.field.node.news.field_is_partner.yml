@@ -1,0 +1,23 @@
+uuid: 8cfa0103-ab87-4b07-b73c-7be1dfe40e06
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_partner
+    - node.type.news
+id: node.news.field_is_partner
+field_name: field_is_partner
+entity_type: node
+bundle: news
+label: 'Новина партнерів'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

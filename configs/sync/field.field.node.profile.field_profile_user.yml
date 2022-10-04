@@ -1,0 +1,21 @@
+uuid: 09321415-5d9d-4490-ba5a-f7fa316c9221
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_user
+    - node.type.profile
+id: node.profile.field_profile_user
+field_name: field_profile_user
+entity_type: node
+bundle: profile
+label: 'Associated User'
+description: 'Associate this Profile with a Drupal user account.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

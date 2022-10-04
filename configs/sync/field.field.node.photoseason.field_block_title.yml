@@ -1,0 +1,19 @@
+uuid: deadd027-3764-45bb-8562-01d0bd7dad48
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_title
+    - node.type.photoseason
+id: node.photoseason.field_block_title
+field_name: field_block_title
+entity_type: node
+bundle: photoseason
+label: 'Заголовок для блока'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

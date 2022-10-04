@@ -1,0 +1,18 @@
+uuid: dd9e5354-d291-4215-b40d-88eeb35921e9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+id: node.fond_video.created
+field_name: created
+entity_type: node
+bundle: fond_video
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,18 @@
+uuid: 82f07016-590e-4ced-8b7c-4a7c7e21d030
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page_photogalery
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.page_photogalery
+target_entity_type_id: node
+target_bundle: page_photogalery
+default_langcode: site_default
+language_alterable: false

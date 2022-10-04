@@ -1,0 +1,37 @@
+uuid: 556cfc46-a78b-4aef-86f8-2e5d5f162cd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fond_video.body
+    - field.field.node.fond_video.field_fond_project
+    - field.field.node.fond_video.field_op_main_image
+    - field.field.node.fond_video.field_order_number
+    - field.field.node.fond_video.field_youtube_video_id
+    - node.type.fond_video
+  module:
+    - text
+    - user
+id: node.fond_video.default
+targetEntityType: node
+bundle: fond_video
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_fond_project: true
+  field_op_main_image: true
+  field_order_number: true
+  field_youtube_video_id: true
+  langcode: true

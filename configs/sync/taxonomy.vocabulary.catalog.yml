@@ -1,0 +1,8 @@
+uuid: 3aa27dd4-b72c-4ed1-b9bd-ea71d8a77937
+langcode: uk
+status: true
+dependencies: {  }
+name: Каталог
+vid: catalog
+description: ''
+weight: 0

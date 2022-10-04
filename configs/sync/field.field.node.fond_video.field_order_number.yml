@@ -1,0 +1,23 @@
+uuid: 7f908c75-ca09-4ae4-8ecb-8f7f403e8a6b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_number
+    - node.type.fond_video
+id: node.fond_video.field_order_number
+field_name: field_order_number
+entity_type: node
+bundle: fond_video
+label: 'Порядковий номер'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

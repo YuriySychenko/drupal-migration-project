@@ -1,0 +1,21 @@
+uuid: 6d2d8179-7066-4d6b-b037-a2389b76013b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_part
+    - node.type.openpublish_blog_post
+  module:
+    - text
+id: node.openpublish_blog_post.field_body_part
+field_name: field_body_part
+entity_type: node
+bundle: openpublish_blog_post
+label: 'Опис статті + блок "Читайте також"'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: 1711903a-f960-4bdf-905b-39cbddd5d422
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+id: node.fond_video.status
+field_name: status
+entity_type: node
+bundle: fond_video
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

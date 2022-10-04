@@ -1,0 +1,22 @@
+uuid: c76d0862-1ac1-4f21-8b93-6cfe60bd8cb7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+id: node.fond_video.sticky
+field_name: sticky
+entity_type: node
+bundle: fond_video
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

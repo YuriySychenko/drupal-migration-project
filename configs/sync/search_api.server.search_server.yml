@@ -1,0 +1,14 @@
+uuid: 232733f6-2fe7-4559-b681-73735f9e8886
+langcode: uk
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: search_server
+name: 'Search server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words

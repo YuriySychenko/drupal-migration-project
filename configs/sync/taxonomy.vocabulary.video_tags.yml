@@ -1,0 +1,8 @@
+uuid: 6413f4b1-3c42-43d5-a511-8c693b5e2691
+langcode: uk
+status: true
+dependencies: {  }
+name: Відео
+vid: video_tags
+description: ''
+weight: 0

@@ -1,0 +1,20 @@
+uuid: 4f4b411b-0375-4837-b1e6-aa1c92459f82
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.profile
+  module:
+    - path
+id: node.profile.path
+field_name: path
+entity_type: node
+bundle: profile
+label: URL-синонім
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

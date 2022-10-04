@@ -1,0 +1,8 @@
+uuid: 3913ec1a-3788-49cc-b335-f948cdf63205
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Рубрики новин'
+vid: news_category
+description: ''
+weight: 0

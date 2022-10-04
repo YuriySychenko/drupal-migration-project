@@ -1,0 +1,8 @@
+uuid: c17d6225-1902-47e2-9027-c18b40e1cd6c
+langcode: uk
+status: true
+dependencies: {  }
+name: Магазин
+vid: store
+description: ''
+weight: 0

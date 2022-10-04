@@ -1,0 +1,18 @@
+uuid: d2cdcfd2-70fa-4123-bf9d-a32b67b0e33f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.video_tags
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.video_tags
+target_entity_type_id: taxonomy_term
+target_bundle: video_tags
+default_langcode: site_default
+language_alterable: true

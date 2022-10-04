@@ -1,0 +1,18 @@
+uuid: 68f49487-f322-434c-9ffd-6cbda56d69c3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.openpublish_article
+id: node.openpublish_article.changed
+field_name: changed
+entity_type: node
+bundle: openpublish_article
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

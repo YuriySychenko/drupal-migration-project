@@ -1,0 +1,38 @@
+uuid: 909fb79c-4291-494a-a8cc-17b83869cb4d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_op_gallery_image_image
+    - paragraphs.paragraphs_type.op_gallery_image
+  module:
+    - image
+id: paragraph.op_gallery_image.field_op_gallery_image_image
+field_name: field_op_gallery_image_image
+entity_type: paragraph
+bundle: op_gallery_image
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

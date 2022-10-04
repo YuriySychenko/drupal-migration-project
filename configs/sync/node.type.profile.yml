@@ -1,0 +1,17 @@
+uuid: 806e7255-b0a2-4bf0-8ecb-e9e3225405f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Профіль
+type: profile
+description: 'Create a profile for a person, which may be an author, a staff member, or even a business.'
+help: 'This is the name used as the title of this content. This may be comprised of the First and Last names, or of the Organization name, or any other name that you choose.'
+new_revision: false
+preview_mode: 1
+display_submitted: false

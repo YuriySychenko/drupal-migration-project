@@ -1,0 +1,8 @@
+uuid: 7ff7d6c6-dd7c-45f5-b922-7888491490d7
+langcode: und
+status: true
+dependencies: {  }
+id: day_custom_time_d_f_h_i
+label: 'd F, H:i'
+locked: false
+pattern: 'd F, H:i'

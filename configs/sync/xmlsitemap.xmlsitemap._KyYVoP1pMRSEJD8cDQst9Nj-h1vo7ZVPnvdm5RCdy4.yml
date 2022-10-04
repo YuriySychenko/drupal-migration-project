@@ -1,0 +1,8 @@
+uuid: b9447124-0c50-43ce-becb-4c19a4ade5c7
+langcode: uk
+status: true
+dependencies: {  }
+id: _KyYVoP1pMRSEJD8cDQst9Nj-h1vo7ZVPnvdm5RCdy4
+label: 'Day RU'
+context:
+  language: ru

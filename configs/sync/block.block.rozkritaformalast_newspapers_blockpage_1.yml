@@ -1,0 +1,50 @@
+uuid: 5459ab91-4fca-4c98-969b-fdca25de6cfd
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.last_newspapers_block
+  module:
+    - block_title_link
+    - context
+    - views
+  theme:
+    - day_theme
+third_party_settings:
+  block_title_link:
+    title_link_url: ''
+    link_title: ''
+    title_link_target: ''
+    title_link_enable: 0
+id: rozkritaformalast_newspapers_blockpage_1
+theme: day_theme
+region: phantom
+weight: -5
+provider: null
+plugin: 'views_exposed_filter_block:last_newspapers_block-page_1'
+settings:
+  id: 'views_exposed_filter_block:last_newspapers_block-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  context:
+    id: context
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid

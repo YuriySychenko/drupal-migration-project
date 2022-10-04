@@ -1,0 +1,23 @@
+uuid: 9016c859-9e5c-40b9-bb58-526a31049b23
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editors_choice
+    - node.type.openpublish_video
+id: node.openpublish_video.field_editors_choice
+field_name: field_editors_choice
+entity_type: node
+bundle: openpublish_video
+label: 'Вибір редакції'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

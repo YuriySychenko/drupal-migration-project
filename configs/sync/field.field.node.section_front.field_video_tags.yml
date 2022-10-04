@@ -1,0 +1,29 @@
+uuid: bf9ba515-e320-4e1e-b8cf-f878462d1474
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_tags
+    - node.type.section_front
+    - taxonomy.vocabulary.video_tags
+id: node.section_front.field_video_tags
+field_name: field_video_tags
+entity_type: node
+bundle: section_front
+label: Video_tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      video_tags: video_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: ecedffc9-6741-4a1d-9957-3765da00e73f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aktsiya
+    - node.type.product
+id: node.product.field_aktsiya
+field_name: field_aktsiya
+entity_type: node
+bundle: product
+label: Акція
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

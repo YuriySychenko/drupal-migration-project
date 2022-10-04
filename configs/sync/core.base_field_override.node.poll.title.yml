@@ -1,0 +1,18 @@
+uuid: ca253c4c-57ac-4dbb-bda7-9f7637a0fe5a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.poll
+id: node.poll.title
+field_name: title
+entity_type: node
+bundle: poll
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

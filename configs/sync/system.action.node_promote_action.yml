@@ -1,0 +1,13 @@
+uuid: fb1885e6-35fc-40a4-9964-f06e85dd9de9
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: N0RDBTqiK4dKoN4p4oW2j0SGWycdHyALUe9M-Ofp89U
+id: node_promote_action
+label: 'Винести матеріал на головну сторінку'
+type: node
+plugin: node_promote_action
+configuration: {  }

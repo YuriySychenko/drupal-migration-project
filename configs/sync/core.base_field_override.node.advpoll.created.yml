@@ -1,0 +1,18 @@
+uuid: 530dd2e7-ef40-4d83-b5f8-ae070b15d0ec
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.advpoll
+id: node.advpoll.created
+field_name: created
+entity_type: node
+bundle: advpoll
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

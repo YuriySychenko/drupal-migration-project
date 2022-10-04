@@ -1,0 +1,18 @@
+uuid: 74692ee9-2871-4573-9b84-f0e33ce0a953
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads_campaign
+id: node.simpleads_campaign.created
+field_name: created
+entity_type: node
+bundle: simpleads_campaign
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

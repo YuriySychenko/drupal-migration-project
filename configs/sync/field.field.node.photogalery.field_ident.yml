@@ -1,0 +1,19 @@
+uuid: 9f637e0d-c042-4e0d-a0cb-fd9f14e65164
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ident
+    - node.type.photogalery
+id: node.photogalery.field_ident
+field_name: field_ident
+entity_type: node
+bundle: photogalery
+label: ident
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

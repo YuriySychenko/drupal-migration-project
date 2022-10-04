@@ -1,0 +1,18 @@
+uuid: 3cdafed3-0189-4a54-96d9-2b7f231ee1fb
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.report
+id: node.report.created
+field_name: created
+entity_type: node
+bundle: report
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

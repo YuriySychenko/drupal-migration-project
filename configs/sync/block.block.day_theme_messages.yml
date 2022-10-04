@@ -1,0 +1,22 @@
+uuid: 5d3b0b4e-2168-4c04-9a2c-d12bb8cb6e97
+langcode: uk
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - day_theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: day_theme_messages
+theme: day_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Повідомлення про стан'
+  label_display: '0'
+  provider: system
+visibility: {  }

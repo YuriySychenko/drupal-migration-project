@@ -1,0 +1,20 @@
+uuid: 888dfa5a-4b33-44ff-a56c-43cb7012ef08
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads_campaign
+  module:
+    - path
+id: node.simpleads_campaign.path
+field_name: path
+entity_type: node
+bundle: simpleads_campaign
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

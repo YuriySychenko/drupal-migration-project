@@ -1,0 +1,22 @@
+uuid: 2df9f1a0-aedd-4c0f-ae60-23fa738797b4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.product
+id: node.product.status
+field_name: status
+entity_type: node
+bundle: product
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

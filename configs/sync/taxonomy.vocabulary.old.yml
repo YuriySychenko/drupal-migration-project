@@ -1,0 +1,8 @@
+uuid: b80fca43-0a74-4b09-ba50-70ec428d2177
+langcode: uk
+status: true
+dependencies: {  }
+name: Застарілі
+vid: old
+description: 'Темы которые сейчас не используются, но использовались раньше'
+weight: 0

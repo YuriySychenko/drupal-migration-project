@@ -1,0 +1,19 @@
+uuid: 1f38ca60-061a-448b-b8a9-784557ab9ce7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.report
+id: node.report.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: report
+label: Підзаголовок
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

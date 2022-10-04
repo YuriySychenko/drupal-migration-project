@@ -1,0 +1,22 @@
+uuid: cbe2e760-a79a-45e0-953f-ea8038b70263
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.advpoll
+id: node.advpoll.promote
+field_name: promote
+entity_type: node
+bundle: advpoll
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

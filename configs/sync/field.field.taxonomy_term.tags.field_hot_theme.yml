@@ -1,0 +1,23 @@
+uuid: b84888ce-061c-4c01-92a0-2be3a2a7e9f0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hot_theme
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags.field_hot_theme
+field_name: field_hot_theme
+entity_type: taxonomy_term
+bundle: tags
+label: 'Гаряча тема'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: c2bf4b48-03ea-41a4-ae46-85776f2e1aa0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_inform
+id: node.fond_inform.menu_link
+field_name: menu_link
+entity_type: node
+bundle: fond_inform
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

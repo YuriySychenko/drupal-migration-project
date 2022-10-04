@@ -1,0 +1,18 @@
+uuid: 92c471c1-918a-4e3f-aba9-15e4247d68de
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photoseason
+id: node.photoseason.metatag
+field_name: metatag
+entity_type: node
+bundle: photoseason
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

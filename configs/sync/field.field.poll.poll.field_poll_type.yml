@@ -1,0 +1,23 @@
+uuid: f956c038-3263-441f-aba7-a8f3ba52ae6e
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.poll.field_poll_type
+  module:
+    - options
+    - poll
+_core:
+  default_config_hash: NWUb8MbSFAJ8efktA20ZdcxPwkPlMvgKYKHLR_E2_2k
+id: poll.poll.field_poll_type
+field_name: field_poll_type
+entity_type: poll
+bundle: poll
+label: 'Poll Type'
+description: 'Select the type of poll.  Default is a standard single choice poll.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

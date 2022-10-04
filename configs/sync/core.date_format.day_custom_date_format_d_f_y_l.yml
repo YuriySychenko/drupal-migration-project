@@ -1,0 +1,8 @@
+uuid: 98fc9fec-69da-4d9c-9fca-70583831df7a
+langcode: und
+status: true
+dependencies: {  }
+id: day_custom_date_format_d_f_y_l
+label: 'd F, Y l'
+locked: false
+pattern: 'd F, Y l'

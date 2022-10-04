@@ -1,0 +1,23 @@
+uuid: 78498d37-dc97-4367-99a6-3ea81ae5951b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_weight
+    - node.type.product
+id: node.product.field_product_weight
+field_name: field_product_weight
+entity_type: node
+bundle: product
+label: Вага
+description: грам
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' гр.'
+field_type: integer

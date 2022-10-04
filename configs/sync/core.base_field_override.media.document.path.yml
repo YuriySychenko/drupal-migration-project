@@ -1,0 +1,20 @@
+uuid: 14cafd05-7417-4c4b-ad19-59ccbc1cef27
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.document
+  module:
+    - path
+id: media.document.path
+field_name: path
+entity_type: media
+bundle: document
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

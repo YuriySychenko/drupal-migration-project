@@ -1,0 +1,23 @@
+uuid: a079be89-a032-4ad2-84a8-67a68a855b5b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editors_choice
+    - node.type.news
+id: node.news.field_editors_choice
+field_name: field_editors_choice
+entity_type: node
+bundle: news
+label: 'Вибір редакції'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

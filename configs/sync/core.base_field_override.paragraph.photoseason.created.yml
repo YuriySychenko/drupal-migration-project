@@ -1,0 +1,18 @@
+uuid: 961848ef-cda1-4519-9a0b-ee3cfb240e0a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.photoseason
+id: paragraph.photoseason.created
+field_name: created
+entity_type: paragraph
+bundle: photoseason
+label: Створено
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

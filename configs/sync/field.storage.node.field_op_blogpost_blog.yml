@@ -1,0 +1,20 @@
+uuid: 72f0306b-c112-48e4-a264-e21016a3b463
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_op_blogpost_blog
+field_name: field_op_blogpost_blog
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

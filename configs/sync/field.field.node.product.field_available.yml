@@ -1,0 +1,23 @@
+uuid: 1ac2421e-8edf-4555-81d6-cb34184d1122
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available
+    - node.type.product
+  module:
+    - options
+id: node.product.field_available
+field_name: field_available
+entity_type: node
+bundle: product
+label: Наявність
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

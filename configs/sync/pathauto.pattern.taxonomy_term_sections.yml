@@ -1,0 +1,22 @@
+uuid: 41b70022-7a5d-4fcf-b1a3-901be597da1a
+langcode: uk
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_term_sections
+label: 'Taxonomy term - Sections'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'article/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      sections: sections
+selection_logic: and
+weight: 0
+relationships: {  }

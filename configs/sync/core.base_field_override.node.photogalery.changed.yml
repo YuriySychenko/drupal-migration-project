@@ -1,0 +1,18 @@
+uuid: 20518e63-e7a1-4e9d-aaec-b0dde13b30ef
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photogalery
+id: node.photogalery.changed
+field_name: changed
+entity_type: node
+bundle: photogalery
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

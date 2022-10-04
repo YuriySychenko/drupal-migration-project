@@ -1,0 +1,45 @@
+uuid: 624c3060-8e2f-4193-90f0-f6c94ccba103
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_source_image
+    - taxonomy.vocabulary.sources
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: taxonomy_term.sources.field_source_image
+field_name: field_source_image
+entity_type: taxonomy_term
+bundle: sources
+label: Source_image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

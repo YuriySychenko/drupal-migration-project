@@ -1,0 +1,116 @@
+uuid: a7d71eaa-eb26-4e5f-8dba-033816c73b52
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_344499
+title: '2012 рік: яким ми його запам’ятали?'
+description: null
+category: null
+elements: |
+  vash_reyting_znakovih_podiy_v_ukrayini_sviti:
+    '#type': textarea
+    '#title': 'Ваш рейтинг знакових подій в Україні, світі та вашому особистому житті за 2012 рік. Які з них зі знаком «плюс», а які — зі знаком «мінус»?' 
+    '#description': ""
+    '#required': true
+  yak_na_vashu_dumku_za_ostanniy_rik_zminilisya_ukrayina:
+    '#type': textarea
+    '#title': 'Як, на вашу думку, за останній рік змінилися Україна та українці?' 
+    '#description': ""
+    '#required': true
+  hto_dlya_vas_lyudina_roku:
+    '#type': textarea
+    '#title': 'Хто для вас людина року?' 
+    '#description': ""
+    '#required': true
+  yaka_knizhka_z_prochitanih_2012_roku_vrazila_vas_naybilshe:
+    '#type': textarea
+    '#title': 'Яка книжка з прочитаних 2012 року вразила вас найбільше й чому?' 
+    '#description': ""
+    '#required': true
+  yake_misce_vi_vidvidali_u_roci_shcho_minaie:
+    '#type': textarea
+    '#title': 'Яке місце ви відвідали у році, що минає, куди обов’язково порадили б піти/поїхати друзям, колегам, рідним, щоб збагатитися духовно та емоційно?' 
+    '#description': ""
+    '#required': true
+  podilitsya_prikladami_situaciy_abo_lyudey_yaki_dodayut_vam_sil_ta_optimizmu:
+    '#type': textarea
+    '#title': 'Поділіться прикладами ситуацій або людей, які додають вам сил та оптимізму' 
+    '#description': ""
+    '#required': true
+  vasha_novorichna_ilyustraciya_abo_foto:
+    '#type': managed_file
+    '#max_filesize': '2'
+    '#file_extensions': 'gif jpg png'
+    '#title': 'Ваша новорічна ілюстрація або фото' 
+    '#description': ""
+  vashe_imya_ta_prizvishche:
+    '#type': textfield
+    '#title': 'Ваше ім"я та прізвище' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо!</p>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: day.webeditor@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Новорічна анкета з сайту!'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

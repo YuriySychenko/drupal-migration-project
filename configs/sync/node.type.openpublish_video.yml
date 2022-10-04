@@ -1,0 +1,17 @@
+uuid: 7a6f1f4b-0976-437a-ba29-867076ab0a1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Video
+type: openpublish_video
+description: 'Create content items with embedded video media assets.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

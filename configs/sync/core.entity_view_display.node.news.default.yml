@@ -1,0 +1,58 @@
+uuid: 4faffc3b-e049-4445-8cf3-1c550df97270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_autocreate_share_image
+    - field.field.node.news.field_body_part
+    - field.field.node.news.field_editors_choice
+    - field.field.node.news.field_ident
+    - field.field.node.news.field_is_partner
+    - field.field.node.news.field_main_image_big
+    - field.field.node.news.field_op_main_image
+    - field.field.node.news.field_op_related_nref
+    - field.field.node.news.field_op_section_term
+    - field.field.node.news.field_share_image
+    - field.field.node.news.field_tag_news
+    - field.field.node.news.field_tag_source
+    - node.type.news
+  module:
+    - text
+    - user
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  field_body_part:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_editors_choice:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_autocreate_share_image: true
+  field_ident: true
+  field_is_partner: true
+  field_main_image_big: true
+  field_op_main_image: true
+  field_op_related_nref: true
+  field_op_section_term: true
+  field_share_image: true
+  field_tag_news: true
+  field_tag_source: true
+  langcode: true
+  links: true

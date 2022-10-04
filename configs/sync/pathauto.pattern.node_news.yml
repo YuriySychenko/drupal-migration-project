@@ -1,0 +1,21 @@
+uuid: 68162259-5b5f-4b68-a420-93578f2a799f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_news
+label: 'Content - Новина'
+type: 'canonical_entities:node'
+pattern: 'news/[current-date:custom:d:m:y]-[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      news: news
+selection_logic: and
+weight: 0
+relationships: {  }

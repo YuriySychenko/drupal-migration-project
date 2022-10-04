@@ -1,0 +1,141 @@
+uuid: d913615e-4c55-40a9-a89b-670f50079b81
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_484949
+title: 'ХXIII Міжнародний фотоконкурс газети «День»'
+description: null
+category: null
+elements: |
+  pib:
+    '#type': textfield
+    '#title': 'П.І.Б.' 
+    '#description': ""
+    '#required': true
+  data_narodzhennya:
+    '#type': date
+    '#title': 'Дата народження' 
+    '#description': ""
+    '#required': true
+  misto:
+    '#type': textfield
+    '#title': 'Місто' 
+    '#description': ""
+    '#required': true
+  adresa:
+    '#type': textfield
+    '#title': 'Адреса' 
+    '#description': ""
+    '#required': true
+  kontaktnyy_telefon:
+    '#type': textfield
+    '#title': 'Контактний телефон' 
+    '#description': ""
+    '#required': true
+  alternatyvnyy_telefon:
+    '#type': textfield
+    '#title': 'Альтернативний телефон' 
+    '#description': ""
+  elektronna_adresa:
+    '#type': textfield
+    '#title': 'Електронна адреса' 
+    '#description': ""
+  e_mail_elektronna_adresa:
+    '#type': email
+    '#size': 20
+    '#title': 'E-mail (електронна адреса)' 
+    '#description': ""
+    '#required': true
+  doklasty_foto_robit:
+    '#title': 'Докласти фоторобіт (до 10 шт. або 80 мб.)' 
+    '#description': "Фотографії додаються по одній. Розмір одного файлу не повинен перевищувати <b>8MB</b>. Файли у форматі jpg. У разі перевищення ліміту надсилайте фото на пошту day.bild@gmail.com (до 20 шт.)."
+    '#required': true
+  opys_foto:
+    '#type': textarea
+    '#title': 'Опис фото' 
+    '#description': ""
+  kopiya_kvytanciyi_pro_vnesok_za_uchast_u_fotokonkursi:
+    '#type': managed_file
+    '#max_filesize': '8'
+    '#file_extensions': 'jpg jpeg png'
+    '#title': 'Копія квитанції про внесок 200 грн за участь у фотоконкурсі' 
+    '#description': "Реквізити: ТОВ «Українська прес-група»  код 24249388, АТ «Райффайзен Банк Аваль», МФО 380805, П/р № 26007478064. У призначенні платежу вкажіть своє П.І.Б. та примітку 'За участь у фотоконкурсі'</b>"
+    '#required': true
+  skanovanyy_dozvil_i_kontaktna_informaciya_batkiv_dytyny_vikom_do_18_rokiv_shcho_zobrazhena_na_foto:
+    '#type': managed_file
+    '#max_filesize': '8'
+    '#file_extensions': 'jpg'
+    '#title': 'Сканований дозвіл і контактна інформація батьків дитини віком до 18 років, що зображена на фото' 
+    '#description': ""
+  skanovanyy_dozvil_i_kontaktna_informaciya_batkiv_avtora_foto____dytyny_vikom_do_14_rokiv____na_uchast_u_konkursi:
+    '#type': managed_file
+    '#max_filesize': '8'
+    '#file_extensions': 'jpg'
+    '#title': 'Сканований дозвіл і контактна інформація батьків автора фото — дитини віком до 14 років — на участь у конкурсі' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<h2 style="color:green; font-size:40px; padding: 40px 0px;line-height: 50px; text-align:center;">Дякуємо! Ми отримали фото.<br />Про результати відбору Ви дізнаєтесь незабаром.</h2>'
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_6:
+    id: email
+    handler_id: email_6
+    label: 'Email 6'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 6
+    settings:
+      states:
+        - completed
+      to_mail: 'alesha123456@gmail.com,day.bild@gmail.com'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: webedit@day.kiev.ua
+      from_options: {  }
+      from_name: DaySite
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: PhotoKonkurs
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

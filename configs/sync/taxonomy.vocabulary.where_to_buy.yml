@@ -1,0 +1,8 @@
+uuid: b68d4d1a-b8b6-47d6-8126-4041c2342f03
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Де купити книжки'
+vid: where_to_buy
+description: ''
+weight: 0

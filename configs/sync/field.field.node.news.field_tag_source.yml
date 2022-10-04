@@ -1,0 +1,25 @@
+uuid: 97a7362d-37e0-40e1-9234-937b6a347ae8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tag_source
+    - node.type.news
+id: node.news.field_tag_source
+field_name: field_tag_source
+entity_type: node
+bundle: news
+label: Джерело
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: entity_reference_taxonomy_vocabularies
+      display_name: entity_reference_4
+      arguments: {  }
+field_type: entity_reference

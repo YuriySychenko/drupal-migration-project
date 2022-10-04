@@ -1,0 +1,18 @@
+uuid: 7221ac82-97aa-422f-87ed-8be17c1abad4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.foto_dnya
+id: node.foto_dnya.changed
+field_name: changed
+entity_type: node
+bundle: foto_dnya
+label: Змінено
+description: 'Час останнього редагування матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

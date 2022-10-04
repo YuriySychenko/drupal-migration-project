@@ -1,0 +1,22 @@
+uuid: 867d8daa-cfa6-4fae-87f7-b4efc7bcf1cf
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photogalery
+id: node.photogalery.sticky
+field_name: sticky
+entity_type: node
+bundle: photogalery
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

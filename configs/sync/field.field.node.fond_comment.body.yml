@@ -1,0 +1,23 @@
+uuid: 3c4b5e63-c582-4bb1-a40c-5488450c69df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fond_comment
+  module:
+    - text
+id: node.fond_comment.body
+field_name: body
+entity_type: node
+bundle: fond_comment
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

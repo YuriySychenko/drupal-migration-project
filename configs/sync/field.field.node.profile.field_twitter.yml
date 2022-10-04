@@ -1,0 +1,21 @@
+uuid: eea8f57c-2c2e-4c1b-b34a-d913c7cab866
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter
+    - node.type.profile
+id: node.profile.field_twitter
+field_name: field_twitter
+entity_type: node
+bundle: profile
+label: 'Twitter Username'
+description: 'Provide a Twitter username for this profile.'
+required: false
+translatable: true
+default_value:
+  -
+    value: '@openpublish'
+default_value_callback: ''
+settings: {  }
+field_type: string

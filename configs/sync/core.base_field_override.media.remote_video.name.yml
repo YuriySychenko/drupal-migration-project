@@ -1,0 +1,20 @@
+uuid: 7776e654-dc30-4688-82dd-5385c56ab527
+langcode: uk
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.name
+field_name: name
+entity_type: media
+bundle: remote_video
+label: 'Назва (ім''я)'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

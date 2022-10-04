@@ -1,0 +1,23 @@
+uuid: 290ea695-9a7b-4e23-bdd8-2f1bf8d9935d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.poll.field_start_date
+  module:
+    - datetime
+    - poll
+_core:
+  default_config_hash: KHN25bdPopioLdvuUL6z-JSibnIPBA1Iz07J0IuUfsE
+id: poll.poll.field_start_date
+field_name: field_start_date
+entity_type: poll
+bundle: poll
+label: 'Poll Start Date'
+description: 'Date poll should be opened for voting.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

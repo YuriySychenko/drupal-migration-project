@@ -1,0 +1,38 @@
+uuid: 25251aa3-54d5-4751-a57e-ff0cb61dcde7
+langcode: uk
+status: true
+dependencies:
+  module:
+    - options
+    - poll
+_core:
+  default_config_hash: F45q2Gzw7kgrTb3lzI9hdMfms5sU20YeNIKQomYkOx8
+id: poll.field_poll_type
+field_name: field_poll_type
+entity_type: poll
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: approval
+      label: Підтвердження
+    -
+      value: borda
+      label: 'Borda Count'
+    -
+      value: instant
+      label: 'Instant Runoff'
+    -
+      value: pooled
+      label: Pooled
+    -
+      value: ranked
+      label: 'Ranked Choice'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

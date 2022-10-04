@@ -1,0 +1,104 @@
+uuid: 1bac1497-b976-4f5e-aadf-31285b7fde51
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.fond_comment
+    - node.type.fond_gift
+    - node.type.fond_inform
+    - node.type.fond_project
+    - node.type.fond_video
+    - node.type.openpublish_article
+    - node.type.openpublish_site_page
+    - node.type.openpublish_video
+    - node.type.page_photogalery
+    - node.type.photogalery
+    - node.type.product
+  module:
+    - block
+    - contextual
+    - filter
+    - image
+    - language
+    - locale
+    - node
+    - path
+    - pathauto
+    - quicktabs
+    - shortcut
+    - system
+    - toolbar
+id: marketolog
+label: маркетолог
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'administer blocks'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer languages'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer quicktabs'
+  - 'administer shortcuts'
+  - 'administer url aliases'
+  - 'create fond_comment content'
+  - 'create fond_gift content'
+  - 'create fond_inform content'
+  - 'create fond_project content'
+  - 'create fond_video content'
+  - 'create openpublish_article content'
+  - 'create openpublish_site_page content'
+  - 'create openpublish_video content'
+  - 'create page_photogalery content'
+  - 'create photogalery content'
+  - 'create product content'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete any fond_comment content'
+  - 'delete any fond_gift content'
+  - 'delete any fond_inform content'
+  - 'delete any fond_project content'
+  - 'delete any fond_video content'
+  - 'delete any product content'
+  - 'delete own fond_comment content'
+  - 'delete own fond_gift content'
+  - 'delete own fond_inform content'
+  - 'delete own fond_project content'
+  - 'delete own fond_video content'
+  - 'delete own openpublish_article content'
+  - 'delete own openpublish_site_page content'
+  - 'delete own openpublish_video content'
+  - 'delete own page_photogalery content'
+  - 'delete own photogalery content'
+  - 'delete own product content'
+  - 'edit any fond_comment content'
+  - 'edit any fond_gift content'
+  - 'edit any fond_inform content'
+  - 'edit any fond_project content'
+  - 'edit any fond_video content'
+  - 'edit any openpublish_site_page content'
+  - 'edit any product content'
+  - 'edit own fond_comment content'
+  - 'edit own fond_gift content'
+  - 'edit own fond_inform content'
+  - 'edit own fond_project content'
+  - 'edit own fond_video content'
+  - 'edit own openpublish_article content'
+  - 'edit own openpublish_site_page content'
+  - 'edit own openpublish_video content'
+  - 'edit own page_photogalery content'
+  - 'edit own photogalery content'
+  - 'edit own product content'
+  - 'notify of path changes'
+  - 'switch shortcut sets'
+  - 'translate interface'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

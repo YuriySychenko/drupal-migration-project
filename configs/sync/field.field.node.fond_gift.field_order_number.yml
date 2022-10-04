@@ -1,0 +1,25 @@
+uuid: d565613e-6d68-428b-8af0-2a7774e5e624
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_number
+    - node.type.fond_gift
+id: node.fond_gift.field_order_number
+field_name: field_order_number
+entity_type: node
+bundle: fond_gift
+label: 'Порядковий номер'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

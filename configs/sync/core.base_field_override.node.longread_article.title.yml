@@ -1,0 +1,18 @@
+uuid: ca1950f4-8c81-47aa-9999-a3ad7f97ee90
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.longread_article
+id: node.longread_article.title
+field_name: title
+entity_type: node
+bundle: longread_article
+label: 'Заголовок (Назва)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

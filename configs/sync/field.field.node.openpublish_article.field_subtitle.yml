@@ -1,0 +1,19 @@
+uuid: f4b4f163-645e-4d38-8e8a-6bf5570ffd6b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.openpublish_article
+id: node.openpublish_article.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: openpublish_article
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

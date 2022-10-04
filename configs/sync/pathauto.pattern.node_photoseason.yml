@@ -1,0 +1,21 @@
+uuid: f92964ac-f7c7-4c52-839f-a9c2c16c824e
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node_photoseason
+label: 'Content - Фотосезон'
+type: 'canonical_entities:node'
+pattern: 'photoseason/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      photoseason: photoseason
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: 054d7f4c-11dd-4f63-965f-3a4b1fc5df8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.openpublish_video
+  module:
+    - text
+id: node.openpublish_video.body
+field_name: body
+entity_type: node
+bundle: openpublish_video
+label: Body
+description: '<b>Note</b>: The "Edit Summary" function above can be used to provide a custom teaser for your Video as it appears in certain lists/views.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

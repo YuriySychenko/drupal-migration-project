@@ -1,0 +1,23 @@
+uuid: 297d3215-f710-4a85-88c4-d2385556c757
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.openpublish_article
+  module:
+    - text
+id: node.openpublish_article.body
+field_name: body
+entity_type: node
+bundle: openpublish_article
+label: Body
+description: '<b>Note</b>: The "Edit Summary" function above can be used to provide a custom teaser for your Article that appears in certain lists/views.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

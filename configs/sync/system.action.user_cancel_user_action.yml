@@ -1,0 +1,13 @@
+uuid: 69f2c234-852e-4876-b9a2-2f49ef2c57c8
+langcode: uk
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: nvrL9bFilzBvm2bjO9rQnFDpBA7dBBUjShSSt6NS-DU
+id: user_cancel_user_action
+label: 'Скасувати облікові записи вибраних користувачів'
+type: user
+plugin: user_cancel_user_action
+configuration: {  }

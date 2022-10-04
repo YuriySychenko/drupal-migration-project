@@ -1,0 +1,18 @@
+uuid: 81eb8127-8b87-4fc0-ba32-5e77a90842d4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.simpleads_campaign
+id: node.simpleads_campaign.metatag
+field_name: metatag
+entity_type: node
+bundle: simpleads_campaign
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

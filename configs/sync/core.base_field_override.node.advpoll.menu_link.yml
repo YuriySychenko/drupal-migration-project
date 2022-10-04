@@ -1,0 +1,20 @@
+uuid: ab5260a9-e04b-4843-a31d-4f6cb6ad561d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.advpoll
+id: node.advpoll.menu_link
+field_name: menu_link
+entity_type: node
+bundle: advpoll
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

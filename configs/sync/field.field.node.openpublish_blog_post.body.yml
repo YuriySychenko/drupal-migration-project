@@ -1,0 +1,23 @@
+uuid: e0eed87d-0d9f-4ff1-8efa-cffa9fe54d92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.openpublish_blog_post
+  module:
+    - text
+id: node.openpublish_blog_post.body
+field_name: body
+entity_type: node
+bundle: openpublish_blog_post
+label: Body
+description: '<b>Note</b>: The "Edit Summary" function above can be used to provide a custom teaser for your Blog Post as it appears in certain lists/views.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

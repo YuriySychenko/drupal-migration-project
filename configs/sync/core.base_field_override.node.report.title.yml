@@ -1,0 +1,18 @@
+uuid: a673cceb-9b11-4b54-824f-5f0ee282e446
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.report
+id: node.report.title
+field_name: title
+entity_type: node
+bundle: report
+label: Заголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

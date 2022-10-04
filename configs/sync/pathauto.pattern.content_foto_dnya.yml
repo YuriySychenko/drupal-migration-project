@@ -1,0 +1,22 @@
+uuid: 361501d8-9a07-4587-a783-7c8433d123f0
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: content_foto_dnya
+label: 'Content - Фото дня'
+type: 'canonical_entities:node'
+pattern: 'content/[node:title]'
+selection_criteria:
+  1e02373d-669a-4859-8c0d-88e54c31e9de:
+    id: node_type
+    negate: false
+    uuid: 1e02373d-669a-4859-8c0d-88e54c31e9de
+    context_mapping:
+      node: node
+    bundles:
+      foto_dnya: foto_dnya
+selection_logic: and
+weight: -5
+relationships: {  }

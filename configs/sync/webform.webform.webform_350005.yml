@@ -1,0 +1,169 @@
+uuid: 813a92f5-63d6-4169-8dac-0392b57152dd
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: webform_350005
+title: '10 злободенних питань для читачів «Дня»'
+description: null
+category: null
+elements: |
+  yaki_knigi_u_vashomu_intelektualnomu_racioni:
+    '#type': textfield
+    '#title': 'Які книги у вашому інтелектуальному раціоні?' 
+    '#description': ""
+  obirayuchi_pevnu_knizhku_yakimi_kriteriyami_viboru_keruietes:
+    '#type': textarea
+    '#title': 'Обираючи певну книжку, якими критеріями вибору керуєтесь?' 
+    '#description': ""
+  de_zazvichay_berete_knizhki:
+    '#type': textarea
+    '#title': 'Де зазвичай берете книжки?' 
+    '#description': ""
+  skilki_priblizno_knig_na_rik_vi_chitaiete:
+    '#type': textarea
+    '#title': 'Скільки приблизно книг на рік ви читаєте?' 
+    '#description': ""
+  vam_ie_z_kim_pogovoriti_pro_knizhki_shcho_vam_neshchodavno_trapilis_u_yakomu_seredovishchi_vi_obgoroyuiete_prochitane:
+    '#type': textarea
+    '#title': 'Вам є з ким поговорити про книжки, що вам нещодавно трапились? У якому середовищі ви обгороюєте прочитане?' 
+    '#description': ""
+  vas_zadovolnyaie_asortiment_knigaren_yakshcho_ni_to_yakih_same_knizhok_ne__vistachaie:
+    '#type': textarea
+    '#title': 'Вас задовольняє асортимент книгарень? Якщо ні, то яких саме книжок не  вистачає?' 
+    '#description': ""
+  vam_imponuie_shkilna_programma_z_literaturi_ta_vlasne_pidhid_do_vikladannya_yakbi_mali_zmogu_to_shcho_udoskonalili_b:
+    '#type': textarea
+    '#title': 'Вам імпонує шкільна программа з літератури та, власне, підхід до викладання? Якби мали змогу, то що удосконалили б?' 
+    '#description': ""
+  dlya_vas_vazhliva_obkladinka_yakist_paperu_poligrafiyi_chi_gotovi_vi_platiti_za_ce:
+    '#type': textarea
+    '#title': 'Для вас важлива обкладинка, якість паперу, поліграфії? Чи готові ви платити за це?' 
+    '#description': ""
+  dlya_pidvishchennya_interesu_ukrayinciv_do_knigochitannya_na_vash_poglyad_potribno:
+    '#type': textarea
+    '#title': 'Для підвищення інтересу українців до книгочитання, на ваш погляд, потрібно…' 
+    '#description': ""
+  nayvazhlivisha_kniga_dlya_suchasnogo_ukrayincya___ce:
+    '#type': textfield
+    '#title': 'Найважливіша книга для сучасного українця – це…' 
+    '#description': ""
+  vashe_imya:
+    '#type': textfield
+    '#title': 'Ваше ім"я' 
+    '#description': ""
+    '#required': true
+  vasha_elektronna_adresa:
+    '#type': textfield
+    '#title': 'Ваша електронна адреса' 
+    '#description': ""
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: '<p>Дякуємо, ми отримали Ваші відповіді</p>'
+  limit_total: null
+  limit_user: 2
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers:
+  email_1:
+    id: email
+    handler_id: email_1
+    label: 'Email 1'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: vaverchak.n@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: webeditor@day.kiev.ua
+      from_options: {  }
+      from_name: 'Надіслано з газети "День"'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: '[webform_submission:values:yaki_knigi_u_vashomu_intelektualnomu_racioni:raw]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_2:
+    id: email
+    handler_id: email_2
+    label: 'Email 2'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: artem.day@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: webeditor@day.kiev.ua
+      from_options: {  }
+      from_name: 'Надіслано з газети "День"'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: '[webform_submission:values:yaki_knigi_u_vashomu_intelektualnomu_racioni:raw]'
+      body: |-
+        Написано [webform_submission:date:long]
+        Користувач: [current-user:name]
+        Submitted values are:
+        [webform_submission:values]
+
+        The results of this submission may be viewed at:
+        [webform_submission:url]
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

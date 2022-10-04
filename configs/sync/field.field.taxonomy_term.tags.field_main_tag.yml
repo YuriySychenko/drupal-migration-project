@@ -1,0 +1,23 @@
+uuid: 6275405d-4018-4882-bf66-a6d99d1908bc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_main_tag
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags.field_main_tag
+field_name: field_main_tag
+entity_type: taxonomy_term
+bundle: tags
+label: 'Основний тег'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

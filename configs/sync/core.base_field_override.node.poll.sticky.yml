@@ -1,0 +1,22 @@
+uuid: 1c518df1-aa98-45ca-a472-5de794abb265
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.poll
+id: node.poll.sticky
+field_name: sticky
+entity_type: node
+bundle: poll
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

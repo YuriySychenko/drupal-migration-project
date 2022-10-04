@@ -1,0 +1,25 @@
+uuid: 603cacec-43cf-4e5c-9ab7-6603b1e5b930
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_op_section_term
+    - node.type.photogalery
+id: node.photogalery.field_op_section_term
+field_name: field_op_section_term
+entity_type: node
+bundle: photogalery
+label: Section
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: entity_reference_taxonomy_vocabularies
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

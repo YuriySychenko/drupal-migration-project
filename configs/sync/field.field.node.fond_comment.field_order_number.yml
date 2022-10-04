@@ -1,0 +1,25 @@
+uuid: 121b2c55-a3ba-4254-9b96-f267e3f3cfe6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_number
+    - node.type.fond_comment
+id: node.fond_comment.field_order_number
+field_name: field_order_number
+entity_type: node
+bundle: fond_comment
+label: 'Порядковий номер'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

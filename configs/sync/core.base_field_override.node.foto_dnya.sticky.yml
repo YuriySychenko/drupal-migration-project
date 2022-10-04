@@ -1,0 +1,22 @@
+uuid: c5852cb4-f2c9-4765-8329-fd26fd1c57ff
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.foto_dnya
+id: node.foto_dnya.sticky
+field_name: sticky
+entity_type: node
+bundle: foto_dnya
+label: 'Прикріплено зверху списків'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

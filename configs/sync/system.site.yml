@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: uk
+uuid: 01c85ffd-6fdb-480f-984a-c3440d8fc93c
+name: 'Газета «День»'
+mail: harryexsive@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/784806
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: uk

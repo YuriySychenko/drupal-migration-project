@@ -1,0 +1,22 @@
+uuid: 6196ccc8-294d-4a2e-b814-1d2e833c86c3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_inform
+id: node.fond_inform.status
+field_name: status
+entity_type: node
+bundle: fond_inform
+label: Опубліковано
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

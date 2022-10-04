@@ -1,0 +1,20 @@
+uuid: bb5b40c2-8dc5-435a-bcfa-98d7d834b865
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.old
+  module:
+    - path
+id: taxonomy_term.old.path
+field_name: path
+entity_type: taxonomy_term
+bundle: old
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

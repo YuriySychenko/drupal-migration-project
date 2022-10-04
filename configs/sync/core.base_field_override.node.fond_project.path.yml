@@ -1,0 +1,20 @@
+uuid: 56dd5188-0e55-42d7-87fc-f6cd5b5b9ebc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_project
+  module:
+    - path
+id: node.fond_project.path
+field_name: path
+entity_type: node
+bundle: fond_project
+label: URL-синонім
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

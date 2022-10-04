@@ -1,0 +1,25 @@
+uuid: 810a3a73-c5ec-4e8b-a632-24c7a177db80
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_number
+    - node.type.fond_inform
+id: node.fond_inform.field_order_number
+field_name: field_order_number
+entity_type: node
+bundle: fond_inform
+label: 'Порядковий номер'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

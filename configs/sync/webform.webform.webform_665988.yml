@@ -1,0 +1,99 @@
+uuid: b07ec35d-bba9-40f6-9d5f-0ae220b194ec
+langcode: uk
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 32526
+template: false
+archive: false
+id: webform_665988
+title: 'XX International Photo Contest of the Day newspaper'
+description: null
+category: null
+elements: |
+  full_name:
+    '#type': textfield
+    '#title': 'Full Name' 
+    '#description': ""
+    '#required': true
+  date_of_birth:
+    '#type': date
+    '#title': 'Date of birth' 
+    '#description': ""
+    '#required': true
+  city:
+    '#type': textfield
+    '#title': 'City' 
+    '#description': ""
+    '#required': true
+  address:
+    '#type': textfield
+    '#title': 'Address' 
+    '#description': ""
+    '#required': true
+  contact_phone:
+    '#type': textfield
+    '#title': 'Contact phone' 
+    '#description': ""
+    '#required': true
+  alternative_phone:
+    '#type': textfield
+    '#title': 'Alternative phone' 
+    '#description': ""
+  e_mail:
+    '#type': textfield
+    '#title': 'E-mail' 
+    '#description': ""
+    '#required': true
+  photo_works:
+    '#title': 'Add photo works (up to 10 pcs or 80 Mb.)' 
+    '#description': ""
+    '#required': true
+  photo_description:
+    '#type': textarea
+    '#title': 'Photo description' 
+    '#description': ""
+  a_copy_of_the_receip:
+    '#type': managed_file
+    '#max_filesize': '8'
+    '#file_extensions': 'jpg jpeg png'
+    '#title': 'A copy of the receipt for the contribution of 100 UAH for participation in the photo contest' 
+    '#description': "Details: LLC Ukrainian Press Group Code 24249388, JSC Raiffeisen Bank Aval, MFO 380805, P / R No. 26007478064. In the purpose of payment, please indicate your full name and a note 'For Participation in a Photographic Competition' </ b>"
+    '#required': true
+  scanned_permission_18:
+    '#type': managed_file
+    '#max_filesize': '8'
+    '#file_extensions': 'jpg jpeg png'
+    '#title': 'Scanned permission and contact information of parents of a child under the age of 18, shown in the photo' 
+    '#description': ""
+  scanned_permission_14:
+    '#type': managed_file
+    '#max_filesize': '8'
+    '#file_extensions': 'jpg jpeg png'
+    '#title': 'Scanned permission and contact information of parents of the author of the photo - a child under the age of 14 - to participate in the competition' 
+    '#description': ""
+css: ''
+javascript: ''
+settings:
+  page: true
+  wizard_progress_bar: true
+  preview: 0
+  draft: '0'
+  draft_auto_save: false
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_message: ''
+  limit_total: null
+  limit_user: null
+  form_submit_label: ''
+  wizard_complete: 1
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+handlers: {  }
+variants: {  }

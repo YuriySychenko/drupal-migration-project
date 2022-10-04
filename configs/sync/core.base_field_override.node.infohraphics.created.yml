@@ -1,0 +1,18 @@
+uuid: c0bf02d6-ad3e-4f0c-b9c4-0623f41d3ebc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.infohraphics
+id: node.infohraphics.created
+field_name: created
+entity_type: node
+bundle: infohraphics
+label: Створено
+description: 'Час створення матеріалу.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

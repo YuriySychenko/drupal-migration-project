@@ -1,0 +1,19 @@
+uuid: 778fad5c-565c-4165-b45f-cb6d107cbfb2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_first_name
+    - node.type.profile
+id: node.profile.field_profile_first_name
+field_name: field_profile_first_name
+entity_type: node
+bundle: profile
+label: 'First Name'
+description: 'If this is a Person''s Profile, enter their First Name.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

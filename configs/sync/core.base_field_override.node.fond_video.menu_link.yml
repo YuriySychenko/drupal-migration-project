@@ -1,0 +1,20 @@
+uuid: 9f3bc42c-5bc0-470b-b638-ea2ee74f48c5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.fond_video
+id: node.fond_video.menu_link
+field_name: menu_link
+entity_type: node
+bundle: fond_video
+label: 'Посилання меню'
+description: 'Обчислене посилання меню для матеріала (доступно лише під час збереження матеріала).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
