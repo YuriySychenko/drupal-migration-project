@@ -1,0 +1,22 @@
+uuid: 3b748223-5196-4d60-9d80-f9c0663b66a3
+langcode: uk
+status: true
+dependencies: {  }
+id: node__openpublish_article
+label: 'Вміст: Article'
+tags:
+  abstract: '[node:summary]'
+  canonical_url: '[current-page:url:absolute]'
+  description: '[node:field_subtitle]'
+  rights: 'Газета "День"'
+  robots: 'index, follow'
+  shortlink: '[current-page:url:unaliased]'
+  title: '[node:title] | [site:name]'
+  fb_admins: '650969031'
+  fb_app_id: '650402038447283'
+  og_description: '[node:summary]'
+  og_image: '[node:field_op_main_image],[node:field-op-author:0:field_profile_photo]'
+  og_image_height: '390'
+  og_image_width: '650'
+  og_title: '[node:title]'
+  og_url: '[current-page:url:absolute]'

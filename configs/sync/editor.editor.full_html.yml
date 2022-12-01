@@ -19,12 +19,15 @@ settings:
           items:
             - Bold
             - Italic
+            - Underline
             - Strike
-            - Superscript
-            - Subscript
             - '-'
             - RemoveFormat
-            - day_blockquote
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - Blockquote
         -
           name: Linking
           items:
@@ -35,9 +38,14 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Cut
+            - Copy
+            - Paste
+            - PasteText
         -
           name: Media
           items:
+            - ImceImage
             - DrupalImage
             - Table
             - HorizontalRule
@@ -45,11 +53,17 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
+            - Maximize
             - ShowBlocks
             - Source
+            - Subscript
+            - Superscript
+            - Undo
+            - Redo
   plugins:
     language:
       language_list: un

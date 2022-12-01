@@ -1,0 +1,23 @@
+uuid: 096281ac-23e2-4977-bbe1-ff84eb466a45
+langcode: uk
+status: true
+dependencies: {  }
+id: node__news
+label: 'Вміст: Новина'
+tags:
+  abstract: '[node:summary]'
+  canonical_url: '[current-page:url:absolute]'
+  description: '[node:summary]'
+  rights: 'Газета "День"'
+  robots: 'index, follow'
+  shortlink: '[current-page:url:unaliased]'
+  title: '[node:title] | [site:name]'
+  fb_admins: '650969031'
+  fb_app_id: '650402038447283'
+  og_description: '[node:summary]'
+  og_image_height: '390'
+  og_image_url: '[node:field_main_image_big]'
+  og_image_width: '650'
+  og_title: '[node:title]'
+  og_type: news
+  og_url: '[current-page:url:absolute]'
