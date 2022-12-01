@@ -31,6 +31,8 @@
 
 # Custom
 /.lando
+.lando
+web/.htaccess
 /web/modules/custom/day_migrate
 
 # Ignore custom theme node_modules/
