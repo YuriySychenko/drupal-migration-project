@@ -47,7 +47,6 @@ module:
   day_custom_breadcrumbs: 0
   day_hooks: 0
   day_infinite_scroll_next_node: 0
-  day_migrate: 0
   day_tabs_news_block: 0
   dblog: 0
   dynamic_page_cache: 0
