@@ -30,10 +30,16 @@
 *.zip
 
 # Custom
-/.lando
 .lando
+.lando.yml
 web/.htaccess
 /web/modules/custom/day_migrate
+
+# DS_Store
+.DS_Store
+web/.DS_Store
+web/sites/.DS_Store
+web/sites/default/.DS_Store
 
 # Ignore custom theme node_modules/
 /web/themes/custom/day_theme/node_modules/

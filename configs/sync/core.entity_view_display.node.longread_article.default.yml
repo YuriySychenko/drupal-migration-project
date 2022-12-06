@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.longread_article.field_body_part
     - field.field.node.longread_article.field_op_main_image
     - field.field.node.longread_article.field_op_section_term
+    - field.field.node.longread_article.field_scheduled_publish
     - node.type.longread_article
   module:
     - image
+    - scheduled_publish
     - text
     - user
 id: node.longread_article.default
@@ -23,6 +25,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   field_body_part:
     type: text_default
@@ -48,6 +55,15 @@ content:
     third_party_settings: {  }
     weight: 104
     region: content
+  field_scheduled_publish:
+    type: scheduled_publish_generic_formatter
+    label: above
+    settings:
+      date_format: html_datetime
+      text_pattern: '%moderation_state% - %date%'
+    third_party_settings: {  }
+    weight: 105
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -55,3 +71,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true
