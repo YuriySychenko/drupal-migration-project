@@ -1,0 +1,24 @@
+uuid: 9db5ed8b-c50c-48f4-a283-6b4166cf19f9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scheduled_publish
+    - node.type.news
+  module:
+    - scheduled_publish
+id: node.news.field_scheduled_publish
+field_name: field_scheduled_publish
+entity_type: node
+bundle: news
+label: 'Планування публікації'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    moderation_state: null
+    value: null
+default_value_callback: ''
+settings: {  }
+field_type: scheduled_publish

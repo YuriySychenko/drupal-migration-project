@@ -7,11 +7,15 @@ dependencies:
     - field.field.node.longread_article.field_body_part
     - field.field.node.longread_article.field_op_main_image
     - field.field.node.longread_article.field_op_section_term
+    - field.field.node.longread_article.field_scheduled_publish
     - image.style.thumbnail
     - node.type.longread_article
+    - workflows.workflow.publish_content
   module:
+    - content_moderation
     - image
     - path
+    - scheduled_publish
     - text
 id: node.longread_article.default
 targetEntityType: node
@@ -56,12 +60,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_scheduled_publish:
+    type: scheduled_publish
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
