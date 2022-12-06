@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.openpublish_video.field_op_related_nref
     - field.field.node.openpublish_video.field_op_section_term
     - field.field.node.openpublish_video.field_op_video_embed
+    - field.field.node.openpublish_video.field_scheduled_publish
     - field.field.node.openpublish_video.field_subtitle
     - field.field.node.openpublish_video.field_tag_news
     - field.field.node.openpublish_video.field_video
     - field.field.node.openpublish_video.field_video_tags
     - node.type.openpublish_video
   module:
+    - scheduled_publish
     - text
     - user
     - video_embed_field
@@ -64,6 +66,15 @@ content:
       height: 480
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_scheduled_publish:
+    type: scheduled_publish_generic_formatter
+    label: above
+    settings:
+      date_format: html_datetime
+      text_pattern: '%moderation_state% - %date%'
+    third_party_settings: {  }
+    weight: 105
     region: content
   links:
     settings: {  }
