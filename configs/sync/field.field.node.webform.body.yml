@@ -13,7 +13,7 @@ id: node.webform.body
 field_name: body
 entity_type: node
 bundle: webform
-label: Body
+label: Вміст
 description: ''
 required: false
 translatable: true

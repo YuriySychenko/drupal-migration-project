@@ -1,0 +1,58 @@
+uuid: 164483d0-a112-4c26-88ed-5199b2a481f5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.aphorism
+    - node.type.longread_article
+    - node.type.news
+    - node.type.openpublish_article
+    - node.type.openpublish_blog_post
+    - node.type.openpublish_video
+    - node.type.page_photogalery
+    - node.type.photogalery
+    - node.type.poll
+  module:
+    - content_moderation
+id: publish_content
+label: 'Publish content'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      weight: 0
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 1
+      published: true
+      default_revision: true
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: 0
+    publish:
+      label: Publish
+      from:
+        - draft
+        - published
+      to: published
+      weight: 1
+  entity_types:
+    node:
+      - aphorism
+      - longread_article
+      - news
+      - openpublish_article
+      - openpublish_blog_post
+      - openpublish_video
+      - page_photogalery
+      - photogalery
+      - poll
+  default_moderation_state: draft

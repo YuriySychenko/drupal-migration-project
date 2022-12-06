@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.news.field_op_main_image
     - field.field.node.news.field_op_related_nref
     - field.field.node.news.field_op_section_term
+    - field.field.node.news.field_scheduled_publish
     - field.field.node.news.field_share_image
     - field.field.node.news.field_tag_news
     - field.field.node.news.field_tag_source
@@ -34,6 +35,11 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -49,7 +55,9 @@ hidden:
   field_op_main_image: true
   field_op_related_nref: true
   field_op_section_term: true
+  field_scheduled_publish: true
   field_share_image: true
   field_tag_news: true
   field_tag_source: true
   langcode: true
+  search_api_excerpt: true

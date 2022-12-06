@@ -69,7 +69,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-          label: 'Тип матеріалів'
+          label: 'Content type'
           exclude: false
           alter:
             alter_text: false
@@ -132,7 +132,7 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-          label: Автор
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -331,7 +331,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Тип матеріалів'
+            label: 'Content type'
             description: ''
             use_operator: false
             operator: type_op
@@ -422,7 +422,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Мова
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
