@@ -267,7 +267,7 @@ display:
           entity_type: media
           entity_field: uid
           plugin_id: field
-          label: Автор
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -764,7 +764,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Мова
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
