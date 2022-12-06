@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.poll.body
     - field.field.node.poll.field_poll
-    - field.field.node.poll.field_scheduled_publish
     - node.type.poll
   module:
     - text
@@ -36,6 +35,5 @@ content:
     region: content
 hidden:
   field_poll: true
-  field_scheduled_publish: true
   langcode: true
   search_api_excerpt: true

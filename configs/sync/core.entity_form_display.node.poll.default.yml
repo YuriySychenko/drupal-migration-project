@@ -5,13 +5,9 @@ dependencies:
   config:
     - field.field.node.poll.body
     - field.field.node.poll.field_poll
-    - field.field.node.poll.field_scheduled_publish
     - node.type.poll
-    - workflows.workflow.publish_content
   module:
-    - content_moderation
     - path
-    - scheduled_publish
     - text
 id: node.poll.default
 targetEntityType: node
@@ -44,24 +40,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_scheduled_publish:
-    type: scheduled_publish
-    weight: 122
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    region: content
-    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -118,4 +102,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  moderation_state: true
