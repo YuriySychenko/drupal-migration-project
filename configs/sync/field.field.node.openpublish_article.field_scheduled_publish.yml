@@ -1,0 +1,24 @@
+uuid: fbdff377-3814-44d0-aa2d-2ab1b9c1bf8d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scheduled_publish
+    - node.type.openpublish_article
+  module:
+    - scheduled_publish
+id: node.openpublish_article.field_scheduled_publish
+field_name: field_scheduled_publish
+entity_type: node
+bundle: openpublish_article
+label: 'Планування публікації'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    moderation_state: null
+    value: null
+default_value_callback: ''
+settings: {  }
+field_type: scheduled_publish

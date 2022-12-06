@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.longread_article.field_body_part
     - field.field.node.longread_article.field_op_main_image
     - field.field.node.longread_article.field_op_section_term
+    - field.field.node.longread_article.field_scheduled_publish
     - node.type.longread_article
   module:
     - text
@@ -39,5 +40,6 @@ hidden:
   field_body_part: true
   field_op_main_image: true
   field_op_section_term: true
+  field_scheduled_publish: true
   langcode: true
   search_api_excerpt: true

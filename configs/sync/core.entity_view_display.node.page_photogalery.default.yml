@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.page_photogalery.body
     - field.field.node.page_photogalery.field_images_gallery
     - field.field.node.page_photogalery.field_op_main_image
+    - field.field.node.page_photogalery.field_scheduled_publish
     - node.type.page_photogalery
   module:
+    - scheduled_publish
     - text
     - user
 id: node.page_photogalery.default
@@ -26,6 +28,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: -20
+    region: content
+  field_scheduled_publish:
+    type: scheduled_publish_generic_formatter
+    label: above
+    settings:
+      date_format: html_datetime
+      text_pattern: '%moderation_state% - %date%'
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }
