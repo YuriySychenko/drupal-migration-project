@@ -1,0 +1,63 @@
+label: 'Scheduled publish'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        nid:
+          separator: ', '
+        delta:
+          format_plural_string: !!binary MQNAY291bnQ=
+        nothing:
+          admin_label: 'Global: Custom text (edit link)'
+          alter:
+            text: Edit
+            path: 'admin/content/scheduled-publish/edit/{{ nid }}/{{ delta }}'
+        nothing_1:
+          admin_label: 'Global: Custom text (delete link)'
+          alter:
+            text: Delete
+            path: 'admin/content/scheduled-publish/delete/{{ nid }}/{{ delta }}'
+        title:
+          label: Title
+          separator: ', '
+        sp_dynamic:
+          label: 'Execution time'
+          separator: ', '
+        sp_dynamic_1:
+          label: 'Future moderation state'
+          separator: ', '
+        dropbutton:
+          label: Operations
+      filters:
+        title:
+          expose:
+            label: Title
+        sp_dynamic_moderation_state:
+          expose:
+            label: 'Future moderation state'
+      title: 'Scheduled publish'
+      header:
+        area:
+          content:
+            value: "<div class=\"action-links\">\r\n  <a href=\"[site:url]/admin/content/scheduled-publish/add\" class=\"button button-action button--primary button--small\">Add bulk scheduled publishing entries</a>\r\n</div>"
+  block_1:
+    display_title: Block

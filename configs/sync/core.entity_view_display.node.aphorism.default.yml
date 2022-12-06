@@ -4,14 +4,21 @@ status: true
 dependencies:
   config:
     - field.field.node.aphorism.field_aphorism_author
+    - field.field.node.aphorism.field_scheduled_publish
     - node.type.aphorism
   module:
+    - scheduled_publish
     - user
 id: node.aphorism.default
 targetEntityType: node
 bundle: aphorism
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_aphorism_author:
     type: string
     label: above
@@ -20,6 +27,15 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  field_scheduled_publish:
+    type: scheduled_publish_generic_formatter
+    label: above
+    settings:
+      date_format: html_datetime
+      text_pattern: '%moderation_state% - %date%'
+    third_party_settings: {  }
+    weight: 102
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -27,3 +43,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true
