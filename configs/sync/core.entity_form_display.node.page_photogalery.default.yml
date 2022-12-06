@@ -6,13 +6,9 @@ dependencies:
     - field.field.node.page_photogalery.body
     - field.field.node.page_photogalery.field_images_gallery
     - field.field.node.page_photogalery.field_op_main_image
-    - field.field.node.page_photogalery.field_scheduled_publish
     - node.type.page_photogalery
-    - workflows.workflow.publish_content
   module:
-    - content_moderation
     - path
-    - scheduled_publish
     - text
 id: node.page_photogalery.default
 targetEntityType: node
@@ -35,24 +31,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_scheduled_publish:
-    type: scheduled_publish
-    weight: 122
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    region: content
-    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -107,3 +91,4 @@ content:
 hidden:
   field_images_gallery: true
   field_op_main_image: true
+  moderation_state: true

@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.news.field_op_main_image
     - field.field.node.news.field_op_related_nref
     - field.field.node.news.field_op_section_term
-    - field.field.node.news.field_scheduled_publish
     - field.field.node.news.field_share_image
     - field.field.node.news.field_tag_news
     - field.field.node.news.field_tag_source
@@ -22,7 +21,6 @@ dependencies:
   module:
     - image
     - path
-    - scheduled_publish
     - text
 id: node.news.default
 targetEntityType: node
@@ -114,12 +112,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_scheduled_publish:
-    type: scheduled_publish
-    weight: 26
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_share_image:
     type: image_image
     weight: 12
@@ -206,4 +198,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  moderation_state: true

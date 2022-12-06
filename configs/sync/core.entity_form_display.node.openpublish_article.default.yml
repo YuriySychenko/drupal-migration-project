@@ -16,18 +16,14 @@ dependencies:
     - field.field.node.openpublish_article.field_op_related_nref
     - field.field.node.openpublish_article.field_op_section_term
     - field.field.node.openpublish_article.field_quot_image
-    - field.field.node.openpublish_article.field_scheduled_publish
     - field.field.node.openpublish_article.field_subtitle
     - field.field.node.openpublish_article.field_tag_news
     - image.style.thumbnail
     - node.type.openpublish_article
-    - workflows.workflow.publish_content
   module:
-    - content_moderation
     - field_group
     - image
     - path
-    - scheduled_publish
     - text
 third_party_settings:
   field_group:
@@ -176,12 +172,6 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_scheduled_publish:
-    type: scheduled_publish
-    weight: 101
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_subtitle:
     type: string_textfield
     weight: 2
@@ -206,12 +196,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    region: content
-    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -268,4 +252,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  moderation_state: true
