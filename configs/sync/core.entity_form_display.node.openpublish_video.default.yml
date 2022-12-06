@@ -11,20 +11,16 @@ dependencies:
     - field.field.node.openpublish_video.field_op_related_nref
     - field.field.node.openpublish_video.field_op_section_term
     - field.field.node.openpublish_video.field_op_video_embed
-    - field.field.node.openpublish_video.field_scheduled_publish
     - field.field.node.openpublish_video.field_subtitle
     - field.field.node.openpublish_video.field_tag_news
     - field.field.node.openpublish_video.field_video
     - field.field.node.openpublish_video.field_video_tags
     - image.style.thumbnail
     - node.type.openpublish_video
-    - workflows.workflow.publish_content
   module:
-    - content_moderation
     - file
     - image
     - path
-    - scheduled_publish
     - text
     - video_embed_field
 id: node.openpublish_video.default
@@ -103,12 +99,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_scheduled_publish:
-    type: scheduled_publish
-    weight: 101
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_subtitle:
     type: string_textfield
     weight: 1
@@ -146,12 +136,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    region: content
-    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -208,4 +192,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  moderation_state: true

@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.page_photogalery.body
     - field.field.node.page_photogalery.field_images_gallery
     - field.field.node.page_photogalery.field_op_main_image
-    - field.field.node.page_photogalery.field_scheduled_publish
     - node.type.page_photogalery
   module:
     - text
@@ -38,6 +37,5 @@ content:
 hidden:
   field_images_gallery: true
   field_op_main_image: true
-  field_scheduled_publish: true
   langcode: true
   search_api_excerpt: true
