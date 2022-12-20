@@ -263,7 +263,7 @@ function day_theme_preprocess_page(&$variables) {
       'label' => 'Media',
     ],
     'ukraine_incognita' => [
-      'id' => '',
+      'id' => '1424',
       'label' => 'Ukraine Incognita',
     ],
     'time_out' => [
@@ -291,10 +291,10 @@ function day_theme_preprocess_page(&$variables) {
       $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag['label']);
       $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = $url_langcode . $alias_manager->getAliasByPath('/taxonomy/term/' . $menu_newspaper_tag['id']);
     }
-    elseif ($menu_newspaper_tag_key == 'ukraine_incognita') {
-      $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag['label']);
-      $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = 'http://incognita.day.kyiv.ua';
-    }
+//    elseif ($menu_newspaper_tag_key == 'ukraine_incognita') {
+//      $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag['label']);
+//      $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = 'http://incognita.day.kyiv.ua';
+//    }
   }
 
   // Pass $menu_newspaper_tags var to templates.
