@@ -64,6 +64,7 @@
         "drupal/search_api": "^1.28",
         "drupal/search_api_fast": "^2.1",
         "drupal/seo_checklist": "^5.1",
+        "drupal/simplelogin": "^6.0",
         "drupal/simplify_menu": "^2.1",
         "drupal/superfish": "^1.4",
         "drupal/taxonomy_menu": "^3.5",
