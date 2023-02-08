@@ -115,6 +115,7 @@ module:
   seo_checklist: 0
   serialization: 0
   shortcut: 0
+  simplelogin: 0
   simplify_menu: 0
   state_machine: 0
   statistics: 0
