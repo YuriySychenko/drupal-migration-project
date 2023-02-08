@@ -235,66 +235,140 @@ function day_theme_preprocess_page(&$variables) {
   // Newspaper tags ids.
   $menu_newspaper_tags_ids = [
     'day_of_ukraine' => [
-      'id' => '1445',
-      'label' => 'Day of Ukraine',
+      'ua' => [
+        'id' => '1445',
+        'label' => 'Day of Ukraine',
+      ],
+      'ru' => [
+        'id' => '1446',
+        'label' => 'Day of Ukraine',
+      ]
     ],
     'day_of_planet' => [
-      'id' => '1455',
-      'label' => 'Day of planet',
+      'ua' => [
+        'id' => '1455',
+        'label' => 'Day of planet',
+      ],
+      'ru' => [
+        'id' => '1454',
+        'label' => 'Day of planet',
+      ],
     ],
     'politics' => [
-      'id' => '1565',
-      'label' => 'Politics',
+      'ua' => [
+        'id' => '1565',
+        'label' => 'Politics',
+      ],
+      'ru' => [
+        'id' => '1566',
+        'label' => 'Politics',
+      ],
     ],
     'economics' => [
-      'id' => '1422',
-      'label' => 'Economics',
+      'ua' => [
+        'id' => '1422',
+        'label' => 'Economics',
+      ],
+      'ru' => [
+        'id' => '1423',
+        'label' => 'Economics',
+      ],
     ],
     'social' => [
-      'id' => '1426',
-      'label' => 'Social',
+      'ua' => [
+        'id' => '1426',
+        'label' => 'Social',
+      ],
+      'ru' => [
+        'id' => '1427',
+        'label' => 'Social',
+      ],
     ],
     'culture' => [
-      'id' => '1416',
-      'label' => 'Culture',
+      'ua' => [
+        'id' => '1416',
+        'label' => 'Culture',
+      ],
+      'ru' => [
+        'id' => '1415',
+        'label' => 'Culture',
+      ],
     ],
     'media' => [
-      'id' => '1419',
-      'label' => 'Media',
+      'ua' => [
+        'id' => '1419',
+        'label' => 'Media',
+      ],
+      'ru' => [
+        'id' => '1420',
+        'label' => 'Media',
+      ],
     ],
     'ukraine_incognita' => [
-      'id' => '1424',
-      'label' => 'Ukraine Incognita',
+      'ua' => [
+        'id' => '1424',
+        'label' => 'Ukraine Incognita',
+      ],
+      'ru' => [
+        'id' => '1425',
+        'label' => 'Ukraine Incognita',
+      ],
     ],
     'time_out' => [
-      'id' => '1439',
-      'label' => 'Time-out',
+      'ua' => [
+        'id' => '1439',
+        'label' => 'Time-out',
+      ],
+      'ru' => [
+        'id' => '1441',
+        'label' => 'Time-out',
+      ],
     ],
     'top_net' => [
-      'id' => '2058',
-      'label' => 'Top-Net',
+      'ua' => [
+        'id' => '2058',
+        'label' => 'Top-Net',
+      ],
+      'ru' => [
+        'id' => '2059',
+        'label' => 'Top-Net',
+      ],
     ],
     'travels' => [
-      'id' => '1521',
-      'label' => 'Travels',
+      'ua' => [
+        'id' => '1521',
+        'label' => 'Travels',
+      ],
+      'ru' => [
+        'id' => '1522',
+        'label' => 'Travels',
+      ],
     ],
     'ukrainians_read' => [
-      'id' => '1417',
-      'label' => 'Ukrainians - read!',
+      'ua' => [
+        'id' => '1417',
+        'label' => 'Ukrainians - read!',
+      ],
+      'ru' => [
+        'id' => '1418',
+        'label' => 'Ukrainians - read!',
+      ],
     ],
   ];
 
   // Build array with newspaper tags.
   $menu_newspaper_tags = [];
   foreach ($menu_newspaper_tags_ids as $menu_newspaper_tag_key => $menu_newspaper_tag) {
-    if ($path_alias_repository->lookupBySystemPath('/taxonomy/term/' . $menu_newspaper_tag['id'], $langcode)) {
-      $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag['label']);
-      $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = $url_langcode . $alias_manager->getAliasByPath('/taxonomy/term/' . $menu_newspaper_tag['id']);
-    }
+    foreach ($menu_newspaper_tag as $menu_newspaper_tag_value) {
+      if ($path_alias_repository->lookupBySystemPath('/taxonomy/term/' . $menu_newspaper_tag_value['id'], $langcode)) {
+        $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag_value['label']);
+        $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = $url_langcode . $alias_manager->getAliasByPath('/taxonomy/term/' . $menu_newspaper_tag_value['id']);
+      }
 //    elseif ($menu_newspaper_tag_key == 'ukraine_incognita') {
 //      $menu_newspaper_tags[$menu_newspaper_tag_key]['label'] = t($menu_newspaper_tag['label']);
 //      $menu_newspaper_tags[$menu_newspaper_tag_key]['url'] = 'http://incognita.day.kyiv.ua';
 //    }
+    }
   }
 
   // Pass $menu_newspaper_tags var to templates.
