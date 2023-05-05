@@ -150,16 +150,20 @@ function day_theme_preprocess_page(&$variables) {
   // Formatting author info for blog post node.
   if ($node instanceof NodeInterface) {
     if ($node->bundle() == 'profile') {
-      // Get author photo.
-      if ($author_photo_tid = $node->get('field_profile_photo')
-        ->getValue()[0]['target_id']) {
-        if (!empty($author_photo_tid)) {
-          $author_photo = File::load($author_photo_tid);
-          $image_uri = $author_photo->getFileUri();
 
-          $variables['author_photo_uri'] = $image_uri;
+      // Get author photo.
+      $image_uri = '';
+      if (!$node->get('field_profile_photo')->isEmpty()) {
+        if ($author_photo_tid = $node->get('field_profile_photo')
+          ->getValue()[0]['target_id']) {
+          if (!empty($author_photo_tid)) {
+            $author_photo = File::load($author_photo_tid);
+            $image_uri = $author_photo->getFileUri();
+          }
         }
       }
+
+      $variables['author_photo_uri'] = $image_uri;
 
       $variables['author_name'] = $node->getTitle();
       if (!$node->get('body')->isEmpty()) {
