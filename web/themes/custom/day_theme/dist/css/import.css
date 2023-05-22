@@ -2633,6 +2633,10 @@ a {
   margin: auto !important;
 }
 
+.node a {
+  color: #c81015;
+}
+
 ._link {
   transition: color 0.15s ease-out;
   color: #006e97;
