@@ -93,6 +93,10 @@
   }
 }
 
+.node a {
+  color: #c81015;
+}
+
 ._link {
   transition: color $transition-fast;
   color: #006e97;
@@ -133,7 +137,6 @@
   }
 
 }
-
 
 ._link-icon-brand {
   a:hover {
