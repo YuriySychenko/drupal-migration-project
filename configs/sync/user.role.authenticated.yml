@@ -10,7 +10,6 @@ dependencies:
     - commerce_payment
     - commerce_product
     - fivestar
-    - google_analytics
     - media
     - poll
     - system
@@ -28,7 +27,6 @@ permissions:
   - 'cancel own vote'
   - 'change own username'
   - 'manage own commerce_payment_method'
-  - 'opt-in or out of google analytics tracking'
   - 'post comments'
   - 'rate content'
   - 'skip CAPTCHA'
