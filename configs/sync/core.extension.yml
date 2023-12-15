@@ -60,7 +60,7 @@ module:
   file: 0
   filter: 0
   fivestar: 0
-  google_analytics: 0
+  ga4_google_analytics: 0
   help: 0
   history: 0
   image: 0

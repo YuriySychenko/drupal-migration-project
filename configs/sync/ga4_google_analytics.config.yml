@@ -1,0 +1,13 @@
+measurement_id: UA-29284004-1
+ga4_access_roles:
+  anonymous: 0
+  authenticated: 0
+  administrator: 0
+  kontent_menedzher: 0
+  marketolog: 0
+  amir: 0
+  bloger: 0
+ga4_access_pages:
+  id: request_path
+  pages: "admin\r\nadmin/*\r\nbatch\r\nnode/add*\r\nnode/*/*\r\nuser/*/*"
+  negate: '1'
