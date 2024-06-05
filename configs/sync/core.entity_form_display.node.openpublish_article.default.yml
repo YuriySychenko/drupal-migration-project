@@ -84,10 +84,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_archive_section:
-    type: options_select
+    type: entity_reference_autocomplete
     weight: 9
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_author:
     type: string_textfield
