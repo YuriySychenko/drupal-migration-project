@@ -10,7 +10,6 @@ module:
   automated_cron: 0
   better_exposed_filters: 0
   better_status_messages: 0
-  big_pipe: 0
   blazy: 0
   blazy_ui: 0
   block: 0
@@ -49,7 +48,6 @@ module:
   day_infinite_scroll_next_node: 0
   day_tabs_news_block: 0
   dblog: 0
-  dynamic_page_cache: 0
   editor: 0
   entity: 0
   entity_reference_revisions: 0
@@ -84,17 +82,14 @@ module:
   metatag_facebook: 0
   metatag_open_graph: 0
   migrate: 0
-  migrate_drupal: 0
-  migrate_drupal_ui: 0
   migrate_plus: 0
-  migrate_skip_on_404: 0
   migrate_source_csv: 0
   migrate_tools: 0
+  mysql: 0
   node: 0
   node_revision_delete: 0
   options: 0
   other_view_filter: 0
-  page_cache: 0
   path: 0
   path_alias: 0
   path_redirect_import: 0
@@ -129,10 +124,8 @@ module:
   toolbar: 0
   tour: 0
   twig_tweak: 0
-  twig_vardumper: 0
   ultimate_cron: 0
   update: 0
-  upgrade_status: 0
   user: 0
   video_embed_field: 0
   views_bulk_operations: 0
@@ -145,7 +138,6 @@ module:
   views_ui: 0
   votingapi: 0
   webform: 0
-  webform_migrate: 0
   webform_node: 0
   webform_ui: 0
   workflows: 0
