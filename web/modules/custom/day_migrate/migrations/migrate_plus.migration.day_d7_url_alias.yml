@@ -1,0 +1,41 @@
+id: day_d7_url_alias
+label: Url aliases
+migration_group: day_migrate
+migration_tags:
+  - Drupal 7
+  - Url aliases
+
+source:
+  plugin: d7_url_alias
+  key: migrate
+  constants:
+    slash: /
+
+process:
+  source:
+    plugin: concat
+    source:
+      - constants/slash
+      - source
+  alias:
+    plugin: concat
+    source:
+      - constants/slash
+      - alias
+  langcode: language
+  node_translation:
+    -
+      plugin: explode
+      source: source
+      delimiter: /
+    -
+      # If the source path has no slashes return a dummy default value.
+      plugin: extract
+      default: 'INVALID_NID'
+      index:
+        - 1
+    -
+      plugin: migration_lookup
+      migration: d7_node_translation
+destination:
+  plugin: url_alias

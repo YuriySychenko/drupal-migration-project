@@ -1,0 +1,88 @@
+id: day_d7_webform_content
+label: Section front
+migration_group: day_migrate
+migration_tags:
+  – Drupal 7
+  – Content
+
+source:
+  plugin: day_migrate_d7_webform_node
+  key: migrate
+  node_type: webform
+  translations: true
+process:
+  nid: tnid
+  type: type
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: "und"
+  title:
+    plugin: default_value
+    source: title
+    default_value: "Empty Title"
+  uid: node_uid
+  path: alias
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  body/summary: body/0/summary
+  body/value: body/0/value
+  body/format: format
+  field_op_main_image:
+    -
+      plugin: sub_process
+      source: field_op_main_image
+      process:
+        '@destination_ids':
+          plugin: migration_lookup
+          migration: day_migrate_d7_file
+          source: fid
+        target_id:
+          plugin: custom_get_ids
+          source: '@@@destination_ids'
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_main_image_big:
+    -
+      plugin: sub_process
+      source: field_main_image_big
+      process:
+        '@destination_ids':
+          plugin: migration_lookup
+          migration: day_migrate_d7_file
+          source: fid
+        target_id:
+          plugin: custom_get_ids
+          source: '@@@destination_ids'
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_op_section_term:
+    -
+      plugin: sub_process
+      source: field_op_section_term
+      process:
+        '@destination_ids':
+          plugin: migration_lookup
+          migration:
+            - day_d7_taxonomy_term
+            - day_d7_taxonomy_term_translation_2
+            - day_d7_taxonomy_term_translation
+          source: tid
+        target_id:
+          plugin: custom_get_ids
+          source: '@@@destination_ids'
+  content_translation_source: language
+destination:
+  plugin: entity:node
+  translations: true
+  destination_module: content_translation

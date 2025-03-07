@@ -1,0 +1,9 @@
+name: Day Migrate Helper
+description: Performs Migration from D7 to D9.
+package: Other
+dependencies:
+  – migrate
+  – migrate_plus
+  – migrate_tools
+type: module
+core_version_requirement: ^8 || ^9

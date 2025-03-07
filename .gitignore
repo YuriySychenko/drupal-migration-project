@@ -30,10 +30,10 @@
 *.zip
 
 # Custom
-.lando
-.lando.yml
-web/.htaccess
-/web/modules/custom/day_migrate
+#.lando
+#.lando.yml
+#web/.htaccess
+#/web/modules/custom/day_migrate
 
 # DS_Store
 .DS_Store

@@ -1,0 +1,58 @@
+id: day_d7_profile_content
+label: Profile
+migration_group: day_migrate
+migration_tags:
+  – Drupal 7
+  – Content
+
+source:
+  plugin: day_migrate_d7_profile_node
+  key: migrate
+  node_type: profile
+  translations: true
+process:
+  nid: tnid
+  type: type
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: "und"
+  title: title
+  uid: node_uid
+  path: alias
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  body/value: body/0/value
+  body/format: format
+  field_profile_address: field_profile_address/0/value
+  field_profile_photo/target_id: field_profile_photo/0/fid
+  field_profile_photo/alt: field_profile_photo/0/alt
+  field_profile_photo/title: field_profile_photo/0/title
+  field_profile_photo/width: field_profile_photo/0/width
+  field_profile_photo/height: field_profile_photo/0/height
+  field_profile_first_name: field_profile_first_name/0/value
+  field_profile_last_name: field_profile_last_name/0/value
+  field_profile_job_title: field_profile_job_title/0/value
+  field_main_image_big/target_id: field_main_image_big/0/fid
+  field_main_image_big/alt: field_main_image_big/0/alt
+  field_main_image_big/title: field_main_image_big/title
+  field_main_image_big/width: field_main_image_big/width
+  field_main_image_big/height: field_main_image_bigheight
+  field_profile_organization: field_profile_organization/0/value
+  field_profile_phone: field_profile_phone/0/value
+  field_profile_email: field_profile_email/0/value
+  field_facebook_url/uri: field_facebook_url/0/url
+  field_facebook_url/title: field_facebook_url/0/title
+  field_twitter: field_twitter/0/value
+  field_subtitle: field_subtitle/0/value
+  content_translation_source: language
+destination:
+  plugin: entity:node
+  translations: true
+  destination_module: content_translation

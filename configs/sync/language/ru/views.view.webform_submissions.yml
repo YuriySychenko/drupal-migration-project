@@ -60,6 +60,7 @@ display:
           label: Создано
           separator: ', '
         completed:
+          label: Завершено
           separator: ', '
         remote_addr:
           label: IP-адрес
@@ -92,6 +93,7 @@ display:
           label: Создано
           separator: ', '
         completed:
+          label: Завершено
           separator: ', '
         remote_addr:
           label: IP-адрес
@@ -126,6 +128,7 @@ display:
           label: Создано
           separator: ', '
         completed:
+          label: Завершено
           separator: ', '
         remote_addr:
           label: IP-адрес
